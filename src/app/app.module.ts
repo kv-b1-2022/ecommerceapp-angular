@@ -12,6 +12,7 @@ import { MoviesModule } from './movies/movies.module';
 import { GroceryModule } from './grocery/grocery.module';
 import { EmployeesModule } from './employees/employees.module';
 import { OrderModule } from './order/order.module';
+import { MembershipModule } from './membership/membership.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { OrderModule } from './order/order.module';
     MoviesModule,
     GroceryModule,
     EmployeesModule,
-    OrderModule
+    OrderModule,
+    MembershipModule
 
   ],
   providers: [],
