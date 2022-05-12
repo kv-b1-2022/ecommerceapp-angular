@@ -10,9 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MoviesModule } from './movies/movies.module';
 import { GroceryModule } from './grocery/grocery.module';
-<<<<<<< HEAD
 import { UserModule } from './user/user.module';
-=======
 import { TicketModule } from './ticket/ticket.module';
 import { CakesModule } from './cakes/cakes.module';
 import { PaymentModule } from './payment/payment.module';
@@ -22,7 +20,6 @@ import { MembershipModule } from './membership/membership.module';
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
 
->>>>>>> 344b92db599c9e5202ba895a11df2c7400852ef0
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,10 +35,8 @@ import { PayrollModule } from './payroll/payroll.module';
     BrowserAnimationsModule,
     ToastrModule.forRoot(), 
     MoviesModule,
-<<<<<<< HEAD
     GroceryModule,
-    UserModule
-=======
+    UserModule,
     CakesModule,
     GroceryModule,
     TicketModule,
@@ -53,7 +48,6 @@ import { PayrollModule } from './payroll/payroll.module';
     StockModule,
     PayrollModule
 
->>>>>>> 344b92db599c9e5202ba895a11df2c7400852ef0
   ],
   providers: [],
   bootstrap: [AppComponent]
