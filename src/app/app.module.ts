@@ -8,6 +8,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MoviesModule } from './movies/movies.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(), 
+    MoviesModule
 
   ],
   providers: [],
