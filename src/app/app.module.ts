@@ -16,6 +16,7 @@ import { PaymentModule } from './payment/payment.module';
 import { OrderModule } from './order/order.module';
 import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module';
+import { PayrollModule } from './payroll/payroll.module';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { MembershipModule } from './membership/membership.module';
     EmployeesModule,
     OrderModule,
     MembershipModule,
-    PaymentModule
+    PaymentModule,
+    PayrollModule
 
   ],
   providers: [],
