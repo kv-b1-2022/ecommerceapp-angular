@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MoviesModule } from './movies/movies.module';
+import { CakesModule } from './cakes/cakes.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { MoviesModule } from './movies/movies.module';
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(), 
-    MoviesModule
+    MoviesModule,
+    CakesModule
 
   ],
   providers: [],
