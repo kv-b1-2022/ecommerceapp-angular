@@ -16,11 +16,8 @@ import { PaymentModule } from './payment/payment.module';
 import { OrderModule } from './order/order.module';
 import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module';
-<<<<<<< HEAD
 import { StockModule } from './stock/stock.module';
-=======
 import { PayrollModule } from './payroll/payroll.module';
->>>>>>> e92a1b3b39350d49b052aceddf664fad1503066a
 
 @NgModule({
   declarations: [
@@ -45,11 +42,8 @@ import { PayrollModule } from './payroll/payroll.module';
     OrderModule,
     MembershipModule,
     PaymentModule,
-<<<<<<< HEAD
-    StockModule
-=======
+    StockModule,
     PayrollModule
->>>>>>> e92a1b3b39350d49b052aceddf664fad1503066a
 
   ],
   providers: [],
