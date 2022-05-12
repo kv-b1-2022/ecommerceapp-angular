@@ -19,6 +19,7 @@ import { ApplyCouponComponent } from './apply-coupon/apply-coupon.component';
 =======
 import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module';
+import { PayrollModule } from './payroll/payroll.module';
 
 >>>>>>> cffcf4c7734449f91b9f5e890cb926538e6394a4
 @NgModule({
@@ -44,7 +45,8 @@ import { MembershipModule } from './membership/membership.module';
     EmployeesModule,
     OrderModule,
     MembershipModule,
-    PaymentModule
+    PaymentModule,
+    PayrollModule
 
   ],
   providers: [],
