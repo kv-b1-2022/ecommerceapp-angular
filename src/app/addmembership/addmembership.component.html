@@ -1,0 +1,29 @@
+<section style="margin-left:650px; margin-top:250px;">
+    <div  class="card" style="width:50%">
+        <div class="shadow p-3 mb-0 bg-body  rounded">
+        <form ngNativeValidate (submit)="memberShip()">
+           <div >
+               <h1 style="text-align:center">ADD MEMBERSHIP</h1>
+           </div>
+           <hr>
+          <label style="margin-left:210px">CHOOSE PREMIUM</label>
+            <div style="padding-bottom:10px;width:100%">
+                <select name="value" [(ngModel)]="value" required style="width: 100%; height: 70px;">
+                    <option  value="1" style="color:rgb(255, 217, 0);">GOLD</option>
+                    <option  value="2" style="color:silver;">PLATINUM</option>
+                    <option value="3" style="color:plum;">DIAMOND</option>
+                </select>
+
+            </div>
+            <div style="padding-top:20px">
+                <input type="number" id="userId" name="userId"[(ngModel)]="userId" placeholder="Enter user Id" required autofocus style="width:100%; height:70px;">
+            </div>
+            <hr>
+            <div style="margin-left: 150px;padding-bottom:30px;">
+                <button type="submit" class="btn btn-primary">Pay</button>
+                <button type="reset" class="btn btn-danger" style="margin-left:160px;">Reset</button>
+            </div>
+        </form>
+    </div>
+    </div>
+    </section>
