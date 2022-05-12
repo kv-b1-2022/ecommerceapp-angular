@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MoviesModule } from './movies/movies.module';
 import { CakesModule } from './cakes/cakes.module';
+import { GroceryModule } from './grocery/grocery.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { CakesModule } from './cakes/cakes.module';
     BrowserAnimationsModule,
     ToastrModule.forRoot(), 
     MoviesModule,
-    CakesModule
+    CakesModule,
+    GroceryModule
 
   ],
   providers: [],
