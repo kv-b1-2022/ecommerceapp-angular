@@ -15,6 +15,8 @@ import { CakesModule } from './cakes/cakes.module';
 import { PaymentModule } from './payment/payment.module';
 import { OrderModule } from './order/order.module';
 import { EmployeesModule } from './employees/employees.module';
+import { MembershipModule } from './membership/membership.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +38,7 @@ import { EmployeesModule } from './employees/employees.module';
     GroceryModule,
     EmployeesModule,
     OrderModule,
+    MembershipModule,
     PaymentModule
 
   ],
