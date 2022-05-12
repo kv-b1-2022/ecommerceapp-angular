@@ -12,11 +12,13 @@ import { MoviesModule } from './movies/movies.module';
 import { GroceryModule } from './grocery/grocery.module';
 import { EmployeesModule } from './employees/employees.module';
 import { OrderModule } from './order/order.module';
+import { ApplyCouponComponent } from './apply-coupon/apply-coupon.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    ApplyCouponComponent
   ],
   imports: [
     BrowserModule,
