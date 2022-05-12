@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styles: [
+    
   ]
 })
 export class HomeComponent implements OnInit {
