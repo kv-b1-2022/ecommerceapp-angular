@@ -10,9 +10,17 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MoviesModule } from './movies/movies.module';
 import { GroceryModule } from './grocery/grocery.module';
-import { EmployeesModule } from './employees/employees.module';
+import { TicketModule } from './ticket/ticket.module';
+import { CakesModule } from './cakes/cakes.module';
+import { PaymentModule } from './payment/payment.module';
 import { OrderModule } from './order/order.module';
+<<<<<<< HEAD
 import { ApplyCouponComponent } from './apply-coupon/apply-coupon.component';
+=======
+import { EmployeesModule } from './employees/employees.module';
+import { MembershipModule } from './membership/membership.module';
+
+>>>>>>> cffcf4c7734449f91b9f5e890cb926538e6394a4
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,9 +37,14 @@ import { ApplyCouponComponent } from './apply-coupon/apply-coupon.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(), 
     MoviesModule,
+    CakesModule,
+    GroceryModule,
+    TicketModule,
     GroceryModule,
     EmployeesModule,
-    OrderModule
+    OrderModule,
+    MembershipModule,
+    PaymentModule
 
   ],
   providers: [],

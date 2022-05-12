@@ -1,0 +1,33 @@
+<section id="cardDetails" style="margin-left:500px;margin-top:50px;">
+    <div id="credentials">
+        <div class="card" style="width:40%">
+            <div class="shadow p-3 mb-0 bg-body rounded">
+            <form (submit)="verifyCard()"></form>
+            <div>
+                <h5 style="text-align: center;"><i><b>Enter card details</b></i></h5>
+            </div>
+            <hr>
+            <div>
+                 <input type="number" name="cardNumber" id="cardNumber" style="width:100%;padding:10px" placeholder="Enter card number" required>
+            </div>
+            <hr>
+            <div>
+                <input type="number" name="month" id="month" placeholder="month"  style="width:50%;padding:10px" required>
+                <input type="number" name="year" id="year" placeholder="year" style="width:50%;padding:10px" required>
+            </div>
+            <hr>
+            <div>
+                <input type="text" name="name" id="name" placeholder="card holders name" style="width:100%;padding:10px" required>
+            </div>
+            <hr>
+            <div>
+                <input type="number" name="cvv" id="cvv"  placeholder="cvv" style="width:100%;padding:10px" required>
+            </div>
+            <hr>
+            <div style="margin-left:110px;padding:10px;">
+                <button type="submit" name="submit" class="btn btn-secondary" id="submit">Verify</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
