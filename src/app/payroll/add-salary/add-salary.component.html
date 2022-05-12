@@ -1,0 +1,22 @@
+<p>add-salary works!</p>
+<form (ngSubmit)="addSalary()"ngNativeValidate>
+    <div>
+        <label for="salaryID">salaryID</label>
+        <input type="number" name="salaryId" [(ngModel)]="salaryId" placeholder="Enter salary id" required autofocus>
+    </div>
+    <br>
+    <div>
+        <label for="designation">Designation</label>
+        <input type="text" name="designation" [(ngModel)]="designation" placeholder="Enter designation" required>
+    </div>
+    <br>
+     <div>
+        <label for="salary">salary</label>
+        <input type="number" name="salary" [(ngModel)]="salary" placeholder="Enter salary" required>
+    </div>
+    <br>
+    <div>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </div>
+</form>

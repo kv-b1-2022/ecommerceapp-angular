@@ -1,0 +1,13 @@
+<p>add-product-stock works!</p>
+<h5>Add Product Stock</h5>
+<form (ngSubmit)="addProductStock()">
+    <div>
+        <label for="productId">Product Id:</label>
+        <input type="number" name="productId" [(ngModel)]="productId" placeholder="Enter the product Id" autofocus required>
+    </div>
+    <div>
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" [(ngModel)]="quantity" placeholder="Enter Quantity" required>
+    </div>
+    <button type="submit">Submit</button>
+</form>
