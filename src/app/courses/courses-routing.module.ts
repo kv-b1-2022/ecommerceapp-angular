@@ -6,11 +6,10 @@ import { ViewCourseTypeComponent } from './view-course-type/view-course-type.com
 import { ViewEnrolledCoursesComponent } from './view-enrolled-courses/view-enrolled-courses.component';
 
 const routes: Routes = [
-  {path:'coursetype',component:ViewCourseTypeComponent},
+  {path:'courses',component:ViewCourseTypeComponent},
   {path:'viewallcourses',component:ListAllCoursesComponent},
   {path:'viewcourse',component:ViewCourseDetailsComponent},
-  {path:'enrolledcourses',component:ViewEnrolledCoursesComponent},
-  {path:'', redirectTo:'coursetype',pathMatch:'full'}
+  {path:'enrolledcourses',component:ViewEnrolledCoursesComponent}
 ];
 
 @NgModule({

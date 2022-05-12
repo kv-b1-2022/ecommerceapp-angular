@@ -13,6 +13,7 @@ import { GroceryModule } from './grocery/grocery.module';
 import { EmployeesModule } from './employees/employees.module';
 import { OrderModule } from './order/order.module';
 import {PaymentModule} from './payment/payment.module'
+import { CoursesModule } from './courses/courses.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import {PaymentModule} from './payment/payment.module'
     GroceryModule,
     EmployeesModule,
     OrderModule,
-    PaymentModule
+    PaymentModule,
+    CoursesModule
 
   ],
   providers: [],
