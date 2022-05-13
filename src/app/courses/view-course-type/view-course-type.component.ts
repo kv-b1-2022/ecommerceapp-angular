@@ -25,7 +25,7 @@ export class ViewCourseTypeComponent implements OnInit {
       this.courseData=res;
     },err=>{
       console.log(err.error.message);
-      alert(err.error.message);
+     // alert(err.error.message);
     })
   }
   
