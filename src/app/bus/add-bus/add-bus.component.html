@@ -1,0 +1,35 @@
+<h1>Insert Bus</h1>
+<br>
+<form (ngSubmit)="addBus()">
+    <div>
+    <label for="name">Bus Name : </label>
+    <input type="text" name="name" [(ngModel)]="name" required placeholder="Enter Bus Name" autofocus>
+    </div> 
+    <br>
+    <div>
+    <label for="from">Bus From : </label>
+    <input type="text" name="from" [(ngModel)]="from" required placeholder="Enter Bus From" > 
+    </div>
+    <br>
+    <div>
+    <label for="to">Bus To : </label>
+    <input type="text" name="to" [(ngModel)]="to" required placeholder="Enter Bus To" >
+    </div>
+    <br>
+    <div>
+    <label for="timing">Bus Timing :  </label>
+    <input type="time" name="timing" [(ngModel)]="timing" required placeholder="Enter Bus Timing" >
+    </div>
+    <br>
+    <div>
+        <label for="ticketsAvailable">Bus Tickets Available : </label>
+        <input type="number" name="ticketsAvailable" [(ngModel)]="ticketsAvailable" required placeholder="Enter Bus TicketsAvailable" >
+        </div>
+        <br>
+        <div>
+            <label for="ticketPrice">Bus Ticket Price : </label>
+            <input type="number" name="ticketPrice" [(ngModel)]="ticketPrice" required placeholder="Enter Bus TicketPrice" >
+            </div>
+            <br>
+            <button class="btn btn-danger"(click)="addBus()">Submit</button>
+</form>
