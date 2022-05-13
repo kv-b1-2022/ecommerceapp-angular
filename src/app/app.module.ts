@@ -16,7 +16,8 @@ import { PaymentModule } from './payment/payment.module';
 import { OrderModule } from './order/order.module';
 import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+  
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,8 @@ import { MembershipModule } from './membership/membership.module';
     EmployeesModule,
     OrderModule,
     MembershipModule,
-    PaymentModule
+    PaymentModule,
+    NgbModule
 
   ],
   providers: [],

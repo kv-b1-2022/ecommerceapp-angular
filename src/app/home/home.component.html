@@ -1,41 +1,29 @@
+<body style="background-color: #551080;">
 <section class="header">
-    <h1>Ecommerce</h1>
-    <p>Accelerate the world to new era</p>
+    <h1 class="head">Ecommerce</h1>
+    <p class="para">Accelerate the world to new era</p>
     
 </section>
 
-<!-- <section>
-<ul>
-    <li>
-        <img src="https://img.freepik.com/free-vector/flat-horizontal-sale-banner-template-with-photo_23-2149015614.jpg?t=st=1652352683~exp=1652353283~hmac=0189cba14e06e349ef9cccd724d01212e37d1b7a7dcb332cbe2f6242777fc677&w=1380"/>
-    </li>
-</ul>
 
-</section> -->
-
-
- 
-
-
-
-
-
-
-
-
-
-
- 
-
-  <div class="slider">
-    <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav"/>
-    <input type="radio" name="slider" title="slide2" class="slider__nav"/>
-    <input type="radio" name="slider" title="slide3" class="slider__nav"/>
-    <input type="radio" name="slider" title="slide4" class="slider__nav"/>
-    <div class="slider__inner">
-      <div class="slider__contents"><img src="https://img.freepik.com/free-vector/dark-style-realistic-smart-watch-horizontal-banner-with-advertising-site-vector-illustration_1284-30193.jpg?t=st=1652358059~exp=1652358659~hmac=1713e1f680540da4e553f6ee579871b4aa8492777e455deb9b78745e611d18a1&w=996"/>
+<div class="container-fluid">
+  <ngb-carousel>
+    <ng-template ngbSlide *ngFor="let image of images">
+      <div class="wrapper">
+        <img [src]="image.src" alt="Random first slide">
       </div>
-      <div class="slider__contents"><img src="https://img.freepik.com/free-psd/bakery-shop-banner-template-concept_23-2148659246.jpg?t=st=1652358210~exp=1652358810~hmac=1fbea259e82ad8ba43c16b915b3433470a59db64ca07780b0339ca95094d1de9&w=1060"/>
-     
-    </div>
+      <div class="carousel-caption">
+        <h3>{{ image.title }}</h3>
+        <p>{{ image.short }}</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+      
   </div>
+</body>
+<div>
+<footer class="foot" style="background-color: #110527;">
+<p>hi</p>
+
+</footer>
+</div>
