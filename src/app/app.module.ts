@@ -18,15 +18,14 @@ import { TicketModule } from './ticket/ticket.module';
 import { CakesModule } from './cakes/cakes.module';
 import { PaymentModule } from './payment/payment.module';
 import { OrderModule } from './order/order.module';
-
-
-
 import { CoursesModule } from './courses/courses.module';
 import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
+import { CouponCodeModule } from './coupon-code/coupon-code.module';
+
 
 import { ProductpriceModule } from './productprice/productprice.module';
 
@@ -51,8 +50,7 @@ import { TrainModule } from './train/train.module';
     ToastrModule.forRoot(), 
     MoviesModule,
     GroceryModule,
-    ReviewModule,
-    
+    ReviewModule,    
     UserModule,
     CakesModule,
     GroceryModule,
@@ -69,7 +67,8 @@ import { TrainModule } from './train/train.module';
     NgbModule,
     StockModule,
     BusModule,
-    TrainModule
+    TrainModule,
+    CouponCodeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
