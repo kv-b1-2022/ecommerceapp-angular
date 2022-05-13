@@ -18,7 +18,7 @@ export class ListReviewComponent implements OnInit {
   reviews!:any;
 getAllReview()
 {
-  const url="http://localhost:9000/Books/list";
+  const url="http://localhost:9002/ratings/list";
   this.http.get(url).subscribe((res)=>{
     this.reviews= res;
   },err=>{

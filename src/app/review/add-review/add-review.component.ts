@@ -9,24 +9,31 @@ import { ToastrService } from 'ngx-toastr';
   ]
 })
 export class AddReviewComponent implements OnInit {
-  productId!:number;
-  userId!:number;
-  ratings!:number;
-  review!:string;
+  productId!:any;
+  userId!:any;
+  ratings!:any;
+  review!:any;
     constructor(private http:HttpClient,private toastrService:ToastrService) { 
   
   }
     ngOnInit(): void {
-      this.addReview();
+      
     }
     
     addReview(){
-      const addreviewObj={"productId":this.productId,"userId":this.userId,"ratings":this.ratings,"review":this.review};
+      let productId=this.productId;
+      let userId=this.userId;
+      let ratings=this.ratings;
+      let review=this.review;
+      console.log(ratings)
+
+      
+      const addreviewObj={"productId":productId,"userId":userId,"ratings":ratings,"review":review};
   
-      const url="http://localhost:9001/ratings/save";
+      const url="http://localhost:9002/ratings/save";
       this.http.post(url,addreviewObj).subscribe((res)=>{
         console.log(res);
-        this.toastrService.success("reviews and ratings were addede by user");
+        this.toastrService.success("reviews and ratings were added by user");
       },(err)=>{
         console.log(err);
         this.toastrService.error("user didn't added any ratings");
