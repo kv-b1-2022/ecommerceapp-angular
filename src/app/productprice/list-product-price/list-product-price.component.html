@@ -1,0 +1,36 @@
+<p>list-product-price works!</p>
+<p>listproducts works!</p>
+
+
+
+
+<table class="table table-success table-striped">
+      
+
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>product id</th>
+            <th>price</th>
+            <th>start Date</th>
+            <th>end Date</th>
+            
+            
+        </tr>
+
+    </thead>
+    <tbody>
+        
+        <tr *ngFor="let product of productprice;">
+            
+            <td>{{product.id}}</td>
+            <td>{{product.productId}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.startDate}}</td>
+            <td>{{product.endDate}}</td>
+            
+           
+           
+        </tr>
+    </tbody>
+</table>

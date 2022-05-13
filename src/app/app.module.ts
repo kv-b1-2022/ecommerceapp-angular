@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MoviesModule } from './movies/movies.module';
 import { GroceryModule } from './grocery/grocery.module';
+import { ReviewModule } from './review/review.module';
 import { UserModule } from './user/user.module';
 import { TicketModule } from './ticket/ticket.module';
 import { CakesModule } from './cakes/cakes.module';
@@ -24,12 +25,14 @@ import { PayrollModule } from './payroll/payroll.module';
 import { CouponCodeModule } from './coupon-code/coupon-code.module';
 
 
+import { ProductpriceModule } from './productprice/productprice.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import { CouponCodeModule } from './coupon-code/coupon-code.module';
     ToastrModule.forRoot(), 
     MoviesModule,
     GroceryModule,
+    ReviewModule,    
     UserModule,
     CakesModule,
     GroceryModule,
@@ -52,11 +56,16 @@ import { CouponCodeModule } from './coupon-code/coupon-code.module';
     CoursesModule,
     MembershipModule,
     PaymentModule,
+    PayrollModule,
+    ProductpriceModule,
     NgbModule,
     StockModule,
     PayrollModule,
-    CouponCodeModule
-  ],
+    CouponCodeModule,
+    PayrollModul,
+    PayrollModule,
+    BusModule
+],
   providers: [],
   bootstrap: [AppComponent]
 })
