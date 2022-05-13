@@ -13,17 +13,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" routerLink="home">Home</a>
                     </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" routerLink="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Movies
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" routerLink="movielist">Movieslist</a></li>
-                        <li><a class="dropdown-item" routerLink="add-movie">Add movies</a></li>
-                        <li><a class="dropdown-item" routerLink="displaymovies">Movies</a></li>   
-                      </ul>
-                    </li>
+                    
                     <!-- <li class="nav-item">
                         <a class="nav-link active" aria-current="page" routerLink="cakes">Cakes</a>
 
@@ -44,17 +34,23 @@
                     
                     
                 </ul>
-                   
-                   
 
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" routerLink="coursestype">Courses</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link dropdown-toggle" aria-current="page" routerLink="coursestype">Courses</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" routerLink="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">Movies
+                    </a>
+
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                       <li><a class="dropdown-item" routerLink="movielist"><i class="fa-solid fa-film"></i> Movieslist</a></li>
+                       <li><a class="dropdown-item" routerLink="add-movie">Add movies</a></li>
+                       <li><a class="dropdown-item" routerLink="displaymovies">Movies</a></li>   
+                     </ul>
                   </li>
                     
-                    <li>
-                        <a class="nav-link active" aria-current="page" routerLink="add-salary">payroll</a>
-                    </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" routerLink="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -74,12 +70,6 @@
                     Tickets Booking
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li>
-                      <ul><a class="dropdown-item" routerLink="create-ticket"><i class="fa-solid fa-film"></i> Movies Tickets</a>
-
-                      </ul>
-                    </li>
-
 
                     <li><a class="dropdown-item" routerLink="list-tickets"><i class="fa-solid fa-bus"></i> Bus Tickets</a></li>
                     <li><a class="dropdown-item" routerLink="view-tickets"><i class="fa-solid fa-train-subway"></i> Train Tickets</a></li>   
@@ -93,7 +83,7 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li>
-                      <a class="dropdown-item" routerLink="list-tickets" routerLink="add-salary">payroll</a>
+                      <a class="dropdown-item" routerLink="list-tickets" routerLink="add-salary"><i class="fa-solid fa-hand-holding-dollar"></i> payroll</a>
                       
                   </li>
 
