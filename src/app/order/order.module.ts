@@ -3,11 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { OrderRoutingModule } from './order-routing.module';
 import { CreateOrderComponent } from './create-order/create-order.component';
+import { ListOrderComponent } from './list-order/list-order.component';
+import { MyorderComponent } from './myorder/myorder.component';
 
 
 @NgModule({
   declarations: [
-    CreateOrderComponent
+    CreateOrderComponent,
+    ListOrderComponent,
+    MyorderComponent
   ],
   imports: [
     CommonModule,

@@ -6,10 +6,11 @@ import { MovielistComponent } from './movielist/movielist.component';
 import { AddMoviesComponent } from './add-movies/add-movies.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DisplaymoviesComponent } from './displaymovies/displaymovies.component';
 
 
 @NgModule({
-  declarations: [MovielistComponent,AddMoviesComponent],
+  declarations: [MovielistComponent,AddMoviesComponent,DisplaymoviesComponent],
   imports: [
     CommonModule,
     MoviesRoutingModule,

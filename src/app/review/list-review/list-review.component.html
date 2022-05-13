@@ -1,0 +1,21 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>productId</th>
+            <th>userId</th>
+            <th>ratings</th>
+            <th>review</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let review of reviews;">
+            <td>{{review.productId}}</td>
+            <td>{{review.userId}}</td>
+            <td>{{review.ratings}}</td>
+            <td>{{review.review}}</td>
+            
+           
+        </tr>
+    </tbody>
+</table>
