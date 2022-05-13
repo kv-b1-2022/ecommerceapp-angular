@@ -11,7 +11,10 @@ import { MyorderComponent } from './myorder/myorder.component';
   declarations: [
     CreateOrderComponent,
     ListOrderComponent,
-    MyorderComponent
+    MyorderComponent,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   imports: [
     CommonModule,
