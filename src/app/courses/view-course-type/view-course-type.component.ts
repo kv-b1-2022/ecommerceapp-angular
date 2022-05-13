@@ -27,6 +27,7 @@ export class ViewCourseTypeComponent implements OnInit {
     },err=>{
       console.log(err.error.message);
       this.toastr.error(err.error.message);
+     // alert(err.error.message);
     })
   }
   

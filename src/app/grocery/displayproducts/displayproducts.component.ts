@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { CartService } from 'src/app/cart.service';
 
 @Component({
   selector: 'app-displayproducts',
@@ -9,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class DisplayproductsComponent implements OnInit {
 
-  constructor(private http:HttpClient,private toastrService: ToastrService) { }
+  constructor(private http:HttpClient,private toastrService: ToastrService, private cartService:CartService) { }
 
 
 
