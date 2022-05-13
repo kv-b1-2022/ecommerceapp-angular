@@ -18,6 +18,8 @@ import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module';
 import { PayrollModule } from './payroll/payroll.module';
 
+import { ProductpriceModule } from './productprice/productprice.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,8 @@ import { PayrollModule } from './payroll/payroll.module';
     OrderModule,
     MembershipModule,
     PaymentModule,
-    PayrollModule
+    PayrollModule,
+    ProductpriceModule
 
   ],
   providers: [],
