@@ -21,6 +21,8 @@ import { MembershipModule } from './membership/membership.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
+import { CouponCodeModule } from './coupon-code/coupon-code.module';
+
 
 
 @NgModule({
@@ -52,8 +54,8 @@ import { PayrollModule } from './payroll/payroll.module';
     PaymentModule,
     NgbModule,
     StockModule,
-    PayrollModule
-
+    PayrollModule,
+    CouponCodeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
