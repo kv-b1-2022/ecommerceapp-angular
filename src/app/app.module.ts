@@ -32,6 +32,7 @@ import { ProductpriceModule } from './productprice/productprice.module';
 
 
 import { BusModule } from './bus/bus.module';
+import { TrainModule } from './train/train.module';
 
 
 @NgModule({
@@ -67,6 +68,8 @@ import { BusModule } from './bus/bus.module';
     ProductpriceModule,
     NgbModule,
     StockModule,
+    BusModule,
+    TrainModule
   ],
   providers: [],
   bootstrap: [AppComponent]
