@@ -26,10 +26,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
 
-<<<<<<< HEAD
 import { ProductpriceModule } from './productprice/productprice.module';
-=======
->>>>>>> 5727faaf6171feadc3adec6f15e221fcaa7abd5e
 
 @NgModule({
   declarations: [
@@ -61,14 +58,11 @@ import { ProductpriceModule } from './productprice/productprice.module';
     CoursesModule,
     MembershipModule,
     PaymentModule,
-<<<<<<< HEAD
     PayrollModule,
-    ProductpriceModule
-=======
+    ProductpriceModule,
     NgbModule,
     StockModule,
     PayrollModule
->>>>>>> 5727faaf6171feadc3adec6f15e221fcaa7abd5e
 
   ],
   providers: [],
