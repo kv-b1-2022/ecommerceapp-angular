@@ -27,6 +27,7 @@ import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
 
 import { ProductpriceModule } from './productprice/productprice.module';
+import { BusModule } from './bus/bus.module';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { ProductpriceModule } from './productprice/productprice.module';
     ProductpriceModule,
     NgbModule,
     StockModule,
-    PayrollModule
+    PayrollModule,
+    BusModule
 
   ],
   providers: [],

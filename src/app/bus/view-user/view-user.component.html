@@ -1,0 +1,50 @@
+<!-- 
+<form (ngSubmit)="getUserById()">
+<label for="text">UserId :</label>
+<input type="text" name="id" [(ngModel)]="id">
+<br>
+<button class="btn btn-danger">Submit</button>
+</form> -->
+<h3>Users Registered</h3>
+<table class="table" style="width:1000px" >
+    <thead>
+      <tr>
+        <th scope="col" >S.No</th>
+        <th scope="col">UserName</th>
+        <th scope="col">UserEmailId</th>
+        <th scope="col">UserPassword</th>
+        <th scope="col">UserPhoneNumber</th>              
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf=" user">
+          <td>{{user.userId}}</td>
+          <td>{{user.userName}}</td> 
+          <td>{{user.emailId}}</td>
+          <td>{{user.password}}</td>
+          <td>{{user.phoneNumber}}</td>
+       </tr>
+    </tbody>
+  </table>
+  <!-- <div *ngIf="selectedUser">
+    <h2>{{user.userName.name | uppercase}} Details</h2>
+    <div>UserId: {{user.userId}}</div>
+    <div>
+      <label for="name">User Name: </label>
+      <input id="name" [(ngModel)]="selectedUser.userName" placeholder="UserName">
+    </div>
+    <div>
+        <label for="email">User EmailId: </label>
+        <input id="email" [(ngModel)]="selectedUser.emailId" placeholder="UserEmailId">
+      </div>
+      <div>
+        <label for="password">User Password: </label>
+        <input id="password" [(ngModel)]="selectedUser.password" placeholder="UserPassword">
+      </div>
+      <div>
+        <label for="phoneNumber">User PhoneNumber: </label>
+        <input id="phoneNumber" [(ngModel)]="selectedUser.phoneNumber" placeholder="UserPhoneNumber">
+      </div>
+  </div> -->
+     
+ 
