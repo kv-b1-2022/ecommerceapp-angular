@@ -12,7 +12,7 @@ export class AddproductsComponent implements OnInit {
   brand!: String;
   category!: String;
   
-  image!:String
+  image!:String;
 
 
   constructor(private http:HttpClient,private toastrService: ToastrService) { }
