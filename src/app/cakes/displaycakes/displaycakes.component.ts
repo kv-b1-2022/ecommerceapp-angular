@@ -21,7 +21,7 @@ export class DisplaycakesComponent implements OnInit {
   cakes!:any;
   getAllcakes()
   {
-    const url="http://localhost:9000/cakes/list";
+     const url="https://product-apii.herokuapp.com/cakes/list";
     this.http.get(url).subscribe((res)=>{
       this.cakes = res;
     },err=>{
