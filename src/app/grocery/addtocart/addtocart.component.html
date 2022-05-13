@@ -1,0 +1,40 @@
+<h2>Cart Products</h2>
+
+<table class="table table-bordered">
+    
+
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>brand</th>
+            <th>category</th>
+            <th>price</th>
+            <th>image</th>
+            
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products;let i=index">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.brand}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.image}}</td>
+            <td><button type="button" (click)="removeItem(i)">Remove</button></td>
+         <!-- <td><a routerLink="/addtocart/{{product.id}}" class="btn btn-info">Remove</a></td>-->
+          <!--  <td><button type="button" (click)="deleteProduct(product.id)" class="btn btn-danger">Delete</button></td>-->
+           
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>TotalAmount</td>
+            <td>{{getTotalAmount()}}</td></tr>
+    </tfoot>
+</table>
+
+
+<td><a href="/create-order?amount={{getTotalAmount()}}" class="btn btn-info">Confirm Order</a></td>
