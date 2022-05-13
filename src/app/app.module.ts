@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MoviesModule } from './movies/movies.module';
+
+
 import { GroceryModule } from './grocery/grocery.module';
 import { ReviewModule } from './review/review.module';
 import { UserModule } from './user/user.module';
@@ -27,12 +29,16 @@ import { CouponCodeModule } from './coupon-code/coupon-code.module';
 
 import { ProductpriceModule } from './productprice/productprice.module';
 
+
+import { BusModule } from './bus/bus.module';
+import { TrainModule } from './train/train.module';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -60,12 +66,10 @@ import { ProductpriceModule } from './productprice/productprice.module';
     ProductpriceModule,
     NgbModule,
     StockModule,
-    PayrollModule,
-    CouponCodeModule,
-    PayrollModul,
-    PayrollModule,
-    BusModule
-],
+    BusModule,
+    TrainModule,
+    CouponCodeModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
