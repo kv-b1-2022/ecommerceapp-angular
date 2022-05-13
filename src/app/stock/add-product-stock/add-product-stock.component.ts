@@ -20,7 +20,8 @@ export class AddProductStockComponent implements OnInit {
   addProductStock(){
     const stockObj={"productId":this.productId,"quantity":this.quantity};
     console.log(stockObj)
-    const url="http://localhost:9001/stock/save";
+    //const url="http://localhost:9001/stock/save";
+    const url="https://stockapp-apii.herokuapp.com/stock/save";
     this.http.post(url,stockObj).subscribe((res)=>{
       console.log(res);
       this.toastr.success('successfully Stock added');
