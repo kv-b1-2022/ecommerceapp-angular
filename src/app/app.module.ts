@@ -10,20 +10,29 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MoviesModule } from './movies/movies.module';
 import { GroceryModule } from './grocery/grocery.module';
+import { ReviewModule } from './review/review.module';
+import { UserModule } from './user/user.module';
 import { TicketModule } from './ticket/ticket.module';
 import { CakesModule } from './cakes/cakes.module';
 import { PaymentModule } from './payment/payment.module';
 import { OrderModule } from './order/order.module';
+
+
+
+import { CoursesModule } from './courses/courses.module';
 import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -34,14 +43,21 @@ import { PayrollModule } from './payroll/payroll.module';
     BrowserAnimationsModule,
     ToastrModule.forRoot(), 
     MoviesModule,
+    GroceryModule,
+    ReviewModule,
+    
+    UserModule,
     CakesModule,
     GroceryModule,
     TicketModule,
     GroceryModule,
     EmployeesModule,
     OrderModule,
+    PaymentModule,
+    CoursesModule,
     MembershipModule,
     PaymentModule,
+    NgbModule,
     StockModule,
     PayrollModule
 
