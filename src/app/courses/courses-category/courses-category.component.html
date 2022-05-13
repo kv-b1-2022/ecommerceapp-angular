@@ -1,0 +1,14 @@
+<p>Available Categories</p>
+<div class="row">
+    <ng-container  *ngFor="let item of courses">
+    <div class="col-4" >
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{item.image}}" alt="Course type" width="287px" height="180px">
+        <div class="card-body">
+          <h5 class="card-title">{{item.category}}</h5>
+          <button routerLink="/coursesbytype/{{item.id}}" class="btn btn-primary">View Courses</button>
+        </div>
+      </div>
+    </div>
+    </ng-container>   
+</div>

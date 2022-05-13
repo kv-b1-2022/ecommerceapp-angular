@@ -1,0 +1,33 @@
+<form [formGroup]="myForm" (ngSubmit)="logIn()" class="row g-3" style="text-align:center">
+    <div class="col-md-3">
+        <label for="validationServer02" class="form-label"></label>
+        <input type="email" id="price" class="form-control " [ngClass]="isValid('email')" formControlName="email" id="validationServer02" placeholder="Enter your Email Id">
+  
+        <div class="valid-feedback">
+          <i class="fa-solid fa-face-smile-beam" style="color:green"></i>
+        </div>
+  
+        <div class="invalid-feedback">
+          <p *ngIf="email?.errors?.['email']">Enter valid email (abcd@gmail.com)</p>
+            <p *ngIf="email?.errors?.['required']">Email cannot be empty</p>
+        </div>      
+      </div>
+      <div class="col-md-3">
+        <label for="validationServerUsername" class="form-label"></label>
+        <div class="input-group has-validation">
+          <input type="password" class="form-control" [ngClass]="isValid('password')" formControlName="password" id="validationServerUsername" placeholder="Enter your password" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback">
+        
+          <div class="valid-feedback">
+            <i class="fa-solid fa-face-smile-beam" style="color:green"></i>
+          </div>
+        
+          <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            <p *ngIf="password?.errors?.['minlength'||'maxlength']">Password must be minimum 8 characters and maximum 16 characters</p>
+          <p *ngIf="password?.errors?.['required']">Password cannot be empty</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit" [disabled]="this.myForm.invalid">Login</button>
+      </div>
+</form>

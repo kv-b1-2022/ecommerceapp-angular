@@ -1,1 +1,29 @@
+<body style="background-color: #551080;">
+<section class="header">
+    <h1 class="head">Ecommerce</h1>
+    <p class="para">Accelerate the world to new era</p>
+    
+</section>
 
+
+<div class="container-fluid">
+  <ngb-carousel>
+    <ng-template ngbSlide *ngFor="let image of images">
+      <div class="wrapper">
+        <img [src]="image.src" alt="Random first slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>{{ image.title }}</h3>
+        <p>{{ image.short }}</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+      
+  </div>
+</body>
+<div>
+<footer class="foot" style="background-color: #110527;">
+<p>hi</p>
+
+</footer>
+</div>
