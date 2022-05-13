@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -9,21 +9,25 @@ import { ToastrService } from 'ngx-toastr';
   ]
 })
 export class AddProductStockComponent implements OnInit {
-  productId!:number;
-  quantity!:number;
+  
+  @Input()
+  productId!:any;
+  quantity!:any;
   constructor(private http:HttpClient,private toastr:ToastrService) { }
 
   ngOnInit(): void {
   }
   addProductStock(){
     const stockObj={"productId":this.productId,"quantity":this.quantity};
-    const url="http://localhost:9001/stock/save";
+    console.log(stockObj)
+    //const url="http://localhost:9001/stock/save";
+    const url="https://stockapp-apii.herokuapp.com/stock/save";
     this.http.post(url,stockObj).subscribe((res)=>{
       console.log(res);
       this.toastr.success('successfully Stock added');
     },(err)=>{
       console.log(err);
-      this.toastr.success('successfully Stock added');
+      this.toastr.error('Unsuccessfully Stock added');
     })
   }
 }
