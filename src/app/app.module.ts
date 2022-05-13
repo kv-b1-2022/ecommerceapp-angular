@@ -26,6 +26,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
 
+import { ProductpriceModule } from './productprice/productprice.module';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,8 @@ import { PayrollModule } from './payroll/payroll.module';
     CoursesModule,
     MembershipModule,
     PaymentModule,
+    PayrollModule,
+    ProductpriceModule,
     NgbModule,
     StockModule,
     PayrollModule

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { CartService } from 'src/app/cart.service';
 
 @Component({
   selector: 'app-displayproducts',
@@ -9,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class DisplayproductsComponent implements OnInit {
 
-  constructor(private http:HttpClient,private toastrService: ToastrService) { }
+  constructor(private http:HttpClient,private toastrService: ToastrService, private cartService:CartService) { }
 
 
 
@@ -24,7 +25,7 @@ export class DisplayproductsComponent implements OnInit {
   products!:any;
   getAllProducts()
   {
-    const url="http://localhost:8080/product/productlist";
+    const url="https://product-apii.herokuapp.com/product/productlist";
     this.http.get(url).subscribe((res)=>{
       this.products = res;
     },err=>{
