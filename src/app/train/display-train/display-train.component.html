@@ -10,22 +10,17 @@
         <th scope="col">Train From</th>
         <th scope="col">Train To</th>
         <th scope="col">Timing</th>
-        <th scope="col" >Tickets Available</th>
-        <th scope="col">Ticket Price</th>
-        <th scope="col">View</th>
-        <th scope="col">Delete</th>
-        <th scope="col">Update</th>
-      </tr>
+        <th scope="col">Ticket Rate</th>
+        </tr>
     </thead>
     <tbody>
       <tr *ngFor="let train of trains;">
-        <td>{{train.trainId}}</td>
-          <td>{{train.trainName}}</td>
-          <td>{{train.trainFrom}}</td>
-          <td>{{train.trainTo}}</td>
-          <td>{{train.trainTiming}}</td>
-          <td>{{train.trainTicketsAvailable}}</td>
-          <td>{{train.trainTicketPrice}}</td>
+        <td>{{train.id}}</td>
+          <td>{{train.name}}</td>
+          <td>{{train.from}}</td>
+          <td>{{train.to}}</td>
+          <td>{{train.timing}}</td>
+         <td>{{train.rate}}</td>
           
        </tr>
     </tbody>
