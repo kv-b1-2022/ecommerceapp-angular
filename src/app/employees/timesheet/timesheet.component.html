@@ -1,0 +1,29 @@
+<body>
+    <h1>EMPLOYEE TIMESHEET</h1>
+    <form (ngSubmit)="timesheet()" linespace="35px">
+        <div>
+            <label for="task">Project:</label>
+            <textarea id="task" name="task" [(ngModel)]="task"  placeholder="enter the tasks" required ></textarea>
+        </div>
+        <div>
+            <label for="working-hours">working hours:</label>
+            <input type="text" name="working" [(ngModel)]="working" id="working"   placeholder="enter working hours" required />
+            <select name="time" id="time" >
+                <option value="hours">hrs</option>
+                <option value="minutes">mins</option>
+            </select>
+        </div>
+        <div>
+            <label for="leaving-hours">leaving hours:</label>
+            <input type="text" id="leaving" name="leaving" [(ngModel)]="leaving"   placeholder="enter leaving hours" required />
+            <select name="time" id="time" >
+                <option value="hours">hrs</option>
+                <option value="minutes">mins</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit" id="submit">SUBMIT</button> &nbsp;
+            <button type="reset" id="reset">RESET</button>
+        </div>
+    </form>
+    </body>
