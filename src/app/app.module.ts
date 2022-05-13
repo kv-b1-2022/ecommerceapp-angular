@@ -10,11 +10,16 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MoviesModule } from './movies/movies.module';
 import { GroceryModule } from './grocery/grocery.module';
+import { ReviewModule } from './review/review.module';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+  
+ 
   ],
   imports: [
     BrowserModule,
@@ -25,7 +30,9 @@ import { GroceryModule } from './grocery/grocery.module';
     BrowserAnimationsModule,
     ToastrModule.forRoot(), 
     MoviesModule,
-    GroceryModule
+    GroceryModule,
+    ReviewModule,
+    
 
   ],
   providers: [],
