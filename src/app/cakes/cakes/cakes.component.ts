@@ -17,7 +17,7 @@ export class CakesComponent implements OnInit {
   }
   cakes:any;
   getAllCakes() {
-    const url="http://localhost:8080/cake/list"
+    const url="http://localhost:8080/cakes/list"
     this.http.get(url).subscribe((res)=>{
       this.cakes= res;
     },err=>{
