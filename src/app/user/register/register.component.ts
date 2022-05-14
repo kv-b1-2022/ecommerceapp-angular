@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -13,12 +14,12 @@ export class RegisterComponent implements OnInit {
 
   myForm!:FormGroup;
 
-  constructor(private formBuilder:FormBuilder, private toastr:ToastrService,private http:HttpClient) { }
+  constructor(private formBuilder:FormBuilder, private toastr:ToastrService,private http:HttpClient, private router:Router) { }
 
   ngOnInit(): void {
     this.myForm=new FormGroup({
       name:new FormControl('',[Validators.required,Validators.minLength(3),Validators.nullValidator,Validators.pattern('[a-zA-Z ]*')]),
-      email:new FormControl('',[Validators.required,Validators.email]),
+      mail:new FormControl('',[Validators.required,Validators.email]),
       mobile:new FormControl('',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]),
       password:new FormControl('',[Validators.required,Validators.maxLength(16),Validators.minLength(8)])
     });
@@ -26,8 +27,8 @@ export class RegisterComponent implements OnInit {
   get name(){
     return this.myForm.get('name');
   }
-  get email(){
-    return this.myForm.get('email');
+  get mail(){
+    return this.myForm.get('mail');
   }
   get mobile(){
     return this.myForm.get('mobile');
@@ -49,19 +50,35 @@ export class RegisterComponent implements OnInit {
     return clazz;
   }
   register(){
-    const userObj = {
+    // const userObj = {
+    //   "name": this.name?.value,
+    //   "mail":this.mail?.value,
+    //   "mobile":this.mobile?.value,
+    //   "password":this.password?.value,
+    // };
+    // let usersJson = localStorage.getItem('USERS');
+    // let users = usersJson != null ? JSON.parse(usersJson) : [];
+    // // let users = [];
+    // users.push(userObj);
+    // localStorage.setItem('USERS', JSON.stringify(users));  
+    // this.toastr.success("Register Successful");
+    const user = {
       "name": this.name?.value,
-      "email":this.email?.value,
+      "mail":this.mail?.value,
       "mobile":this.mobile?.value,
       "password":this.password?.value,
-      "role":"user"
     };
-    let usersJson = localStorage.getItem('USERS');
-    let users = usersJson != null ? JSON.parse(usersJson) : [];
-    // let users = [];
-    users.push(userObj);
-    localStorage.setItem('USERS', JSON.stringify(users));  
-    this.toastr.success("Register Successful");
+    const url = " https://userapp-apii.herokuapp.com/user/register";
+    this.http.post(url,user).subscribe((res:any)=>{
+      let output = res;
+      console.log(res);
+      this.toastr.success("Registered Successfully");
+      this.router.navigate(["login"]);
+    },(err)=>{
+      console.log(err.error);
+      this.toastr.error(err.error.message);
+     // window.location.reload();
+    });
 
   }
 }
