@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '../auth.guard';
 import { AddmoneytowalletComponent } from './addmoneytowallet/addmoneytowallet.component';
 import { BuyusingwalletComponent } from './buyusingwallet/buyusingwallet.component';
 import { CardpaymentComponent } from './cardpayment/cardpayment.component';
@@ -10,7 +11,7 @@ import { WalletsetupComponent } from './walletsetup/walletsetup.component';
 const routes: Routes = [
   { path:'cardpayment/:orderId/:amount',component:CardpaymentComponent},
   { path:'walletsetup',component:WalletsetupComponent},
-  { path:'addmoneytowallet',component:AddmoneytowalletComponent},
+  { path:'addmoneytowallet',component:AddmoneytowalletComponent,canActivate:[AuthGuard]},
   { path:'walletcardpayment/:amount',component:WalletcardpaymentComponent},
   { path:'buyusingwallet/:orderId/:amount',component:BuyusingwalletComponent},
   { path:'forgottransactionpin',component:ForgottransactionpinComponent}
