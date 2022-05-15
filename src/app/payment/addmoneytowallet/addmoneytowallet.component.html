@@ -1,0 +1,68 @@
+<section>
+    <div class="row">
+        <div class="col-4">
+            <div class="card" style="margin-left:10px;margin-top:10px;width:60%;height:520px;">
+              <div class="card" style="width:100%;padding: 10px;">
+                <div class="shadow p-3 mb-0 bg-body rounded">
+                    <aside style="float:left">
+                        <div style="padding-top:10px">
+                            <h5 style="text-align:center"><i><b>Wallet</b></i></h5>
+                        </div>
+                        <hr>
+                        <div>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                      Wallet Balance
+                                    </button>
+                                  </h2>
+                                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                      <h6 style="text-align:center"><i><strong>{{balance}} rs.</strong></i></h6>
+                                    </div>
+                                  </div>
+                                </div>
+                                </div>
+                        </div>
+                        <hr style="width:210px">
+                        <div>
+                            <a href="http://localhost:4200/addmoneytowallet"><h6 style="padding-left:10px;color: black;"><i><b>Add money</b></i></h6></a>
+                        </div>
+                        <hr>
+                        <div>
+                            <a href="http://localhost:4200/forgottransactionpin"><h6 style="padding-left:10px;color: black;"><i><b>change transaction pin</b></i></h6></a>
+                        </div>
+                        <hr>
+                        <div>
+                            <a href="#"><h6 style="padding-left:10px;color: black;"><i><b>Wallet transactions</b></i></h6></a>
+
+                        </div>
+                    </aside>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="card" style="width:40%;margin-top:150px;margin-left:80px">
+                <div class="shadow p-3 mb-0 bg-body rounded">
+               <form>
+                    <div id="title">
+                        <h5 style="text-align:center;"><i>Enter amount to add</i></h5>
+                    </div>
+                    <hr>
+                    <div>
+                        <input type="number" name="amount" id="amount" style="width:100%" placeholder="Enter amount" required [(ngModel)]="amount">
+                    </div>
+                    <hr>
+                    <div style="text-align:center;">
+                        <button type="button" class="btn btn-secondary" name="submit" id="submit" routerLink="/walletcardpayment/{{amount}}">Add</button>
+                    </div>
+               </form>
+            </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+

@@ -18,7 +18,7 @@ import { OrderModule } from './order/order.module';
 import { CoursesModule } from './courses/courses.module';
 import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
+ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
 
@@ -27,7 +27,7 @@ import { PayrollModule } from './payroll/payroll.module';
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
