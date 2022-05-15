@@ -1,1 +1,19 @@
-<p>view-course-details works!</p>
+
+<div class="float-container">
+    <div class="left">
+      <h2 style="color:blue"><strong>{{courseData.cname}}</strong></h2>
+      <p style="color:darkblue"><i>By {{courseData.tutor}}</i></p>
+      <p style="color:darkgreen"><b>{{courseData.duration}}</b></p>
+      <br>
+      <p>{{courseData.description}}</p>
+    </div>
+    <div class="right">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{courseData.imageurl}}" alt="image" width="287px" height="180px">
+        <div class="card-body">
+          <i>click here to Enroll</i><br>
+          <button class="btn btn-primary" >Enroll</button>
+        </div>
+      </div>
+    </div>
+  </div>
