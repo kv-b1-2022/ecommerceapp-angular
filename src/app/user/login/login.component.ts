@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
         "mail":this.mail?.value,
         "password":this.password?.value
       };
-      const url = " https://userapp-apii.herokuapp.com/user/login";
+      const url = "https://userapp-apii.herokuapp.com/user/login";
       this.http.post(url,user).subscribe((res:any)=>{
         let output = res;
         console.log(res);

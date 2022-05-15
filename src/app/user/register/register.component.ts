@@ -68,7 +68,7 @@ export class RegisterComponent implements OnInit {
       "mobile":this.mobile?.value,
       "password":this.password?.value,
     };
-    const url = " https://userapp-apii.herokuapp.com/user/register";
+    const url = "https://userapp-apii.herokuapp.com/user/register";
     this.http.post(url,user).subscribe((res:any)=>{
       let output = res;
       console.log(res);
