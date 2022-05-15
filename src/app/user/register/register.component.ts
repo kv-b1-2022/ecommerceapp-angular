@@ -13,12 +13,12 @@ import { ToastrService } from 'ngx-toastr';
 export class RegisterComponent implements OnInit {
 
   myForm!:FormGroup;
-
+  nonWhitespaceRegExp: RegExp = new RegExp("\\S");
   constructor(private formBuilder:FormBuilder, private toastr:ToastrService,private http:HttpClient, private router:Router) { }
 
   ngOnInit(): void {
     this.myForm=new FormGroup({
-      name:new FormControl('',[Validators.required,Validators.minLength(3),Validators.nullValidator,Validators.pattern('[a-zA-Z ]*')]),
+      name:new FormControl(null,[Validators.required,Validators.minLength(3),Validators.pattern('[a-zA-Z ]*'), Validators.pattern(this.nonWhitespaceRegExp)]),
       mail:new FormControl('',[Validators.required,Validators.email]),
       mobile:new FormControl('',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]),
       password:new FormControl('',[Validators.required,Validators.maxLength(16),Validators.minLength(8)])
