@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ApplyCouponComponent } from './apply-coupon/apply-coupon.component';
+import { DisplayTrainComponent } from './display-train/display-train.component';
 
 const routes: Routes = [
-  {
-    path:'apply-coupon',component:ApplyCouponComponent
-  }
+  {path:'display-train',component:DisplayTrainComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class CouponCodeRoutingModule { }
+export class TrainRoutingModule { }

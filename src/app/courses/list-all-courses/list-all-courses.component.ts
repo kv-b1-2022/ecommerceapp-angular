@@ -19,7 +19,7 @@ export class ListAllCoursesComponent implements OnInit {
   courses!:any;
   listCourses(){
 
-    const url = "http://localhost:8000/course/list";
+    const url = "https://courses-api.herokuapp.com/course/list";
     this.http.get(url).subscribe(res=>{
       this.courses=res;
     },err=>{
