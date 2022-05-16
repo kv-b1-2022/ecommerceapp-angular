@@ -21,17 +21,18 @@ import { OrderModule } from './order/order.module';
 import { CoursesModule } from './courses/courses.module';
 import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
+ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
 import { CouponCodeModule } from './coupon-code/coupon-code.module';
 
 
 import { ProductpriceModule } from './productprice/productprice.module';
-
-
 import { BusModule } from './bus/bus.module';
 import { TrainModule } from './train/train.module';
+import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
+import { AuthModule } from './auth/auth.module';
+import { DataTablesModule } from 'angular-datatables';
 
 
 @NgModule({
@@ -39,6 +40,8 @@ import { TrainModule } from './train/train.module';
     AppComponent,
     HomeComponent,
     HeaderComponent,
+    AdminSidebarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -66,9 +69,12 @@ import { TrainModule } from './train/train.module';
     ProductpriceModule,
     NgbModule,
     StockModule,
+    PayrollModule,
     BusModule,
     TrainModule,
-    CouponCodeModule
+    CouponCodeModule,
+    AuthModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

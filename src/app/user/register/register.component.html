@@ -9,10 +9,9 @@
       </div>
 
       <div class="invalid-feedback">
-          <p *ngIf="name?.errors?.['minlength']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Name should contain minimum 3 characters</p>
+          <p *ngIf="name?.errors?.['minlength']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Name should contain atleast 3 characters</p>
           <p *ngIf="name?.errors?.['required']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Name cannot be empty</p>
-          <p *ngIf="name?.errors?.['pattern']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Name should contain only letters</p>
-          <p *ngIf="name?.errors?.['nullValidator']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Name cannot be empty</p>
+          <p *ngIf="name?.errors?.['pattern']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> No whitespaces or numbers allowed</p>
       </div>
 
   </div>
@@ -41,7 +40,8 @@
         </div>
 
         <div id="validationServerUsernameFeedback" class="invalid-feedback">
-            <p *ngIf="mobile?.errors?.['maxlength'|| 'minlength']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Enter valid mobile number (9876543210)</p>
+            <p *ngIf="mobile?.errors?.['maxlength']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Enter valid mobile number (9876543210)</p>
+            <p *ngIf="mobile?.errors?.['minlength']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Enter valid mobile number (9876543210)</p>
             <p *ngIf="mobile?.errors?.['required']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Mobile number cannot be empty</p>
         </div>
       </div>
@@ -50,7 +50,7 @@
     <div class="col-md-4" style="text-align:center">
         <label for="validationServerUsername" class="form-label"></label>
         <div class="input-group has-validation">
-          <input type="password" style="text-align: center;" class="form-control" [ngClass]="isValid('password')" formControlName="password" id="validationServerUsername" placeholder="Enter your password" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback">
+          <input type="password" style="text-align: center;" class="form-control" [ngClass]="isValid('password')" formControlName="password" id="validationServerUserpassword" placeholder="Enter your password" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback">
                    
           <div class="valid-feedback">
             <i class="fa-solid fa-face-smile" style="color:darkgreen"></i>

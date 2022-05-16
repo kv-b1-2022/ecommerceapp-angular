@@ -1,0 +1,16 @@
+<section>
+    <div>
+        <h5><i><b>Wallet created successfully</b></i></h5>
+        <h5>please set transaction pin</h5>
+    </div>
+    <div>
+        <form (submit)="setTransactionPin()">
+            <div>
+                <input type="number" name="tpin" id="tpin" [(ngModel)]="tpin">
+            </div>
+            <div>
+                <button type="submit" name="submit" id="submit">Set</button>
+            </div>
+        </form>
+    </div>
+</section>
