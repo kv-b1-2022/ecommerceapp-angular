@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { CouponCodeRoutingModule } from './coupon-code-routing.module';
 import { ApplyCouponComponent } from './apply-coupon/apply-coupon.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { ApplyCouponComponent } from './apply-coupon/apply-coupon.component';
   ],
   imports: [
     CommonModule,
-    CouponCodeRoutingModule
+    CouponCodeRoutingModule,
+    FormsModule,
+    BrowserModule
   ]
 })
 export class CouponCodeModule { }

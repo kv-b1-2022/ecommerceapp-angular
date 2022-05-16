@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-verifycard',
-  templateUrl: './verifycard.component.html',
+  selector: 'app-starters',
+  templateUrl: './starters.component.html',
   styles: [
   ]
 })
-export class VerifycardComponent implements OnInit {
+export class StartersComponent implements OnInit {
 
   constructor() { }
 

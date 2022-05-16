@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MoviesModule } from './movies/movies.module';
+
+
 import { GroceryModule } from './grocery/grocery.module';
 import { ReviewModule } from './review/review.module';
 import { UserModule } from './user/user.module';
@@ -16,16 +18,26 @@ import { TicketModule } from './ticket/ticket.module';
 import { CakesModule } from './cakes/cakes.module';
 import { PaymentModule } from './payment/payment.module';
 import { OrderModule } from './order/order.module';
-
-
-
 import { CoursesModule } from './courses/courses.module';
 import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
+ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
+<<<<<<< HEAD
 import { CharityModule } from './charity/charity.module';
+=======
+import { CouponCodeModule } from './coupon-code/coupon-code.module';
+
+
+import { ProductpriceModule } from './productprice/productprice.module';
+import { BusModule } from './bus/bus.module';
+import { TrainModule } from './train/train.module';
+import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
+import { AuthModule } from './auth/auth.module';
+import { DataTablesModule } from 'angular-datatables';
+import { FoodsModule } from './foods/foods.module';
+>>>>>>> c12956a550611301fa05d344fc91a5e13951df55
 
 
 @NgModule({
@@ -33,7 +45,8 @@ import { CharityModule } from './charity/charity.module';
     AppComponent,
     HomeComponent,
     HeaderComponent,
-
+    AdminSidebarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -45,8 +58,7 @@ import { CharityModule } from './charity/charity.module';
     ToastrModule.forRoot(), 
     MoviesModule,
     GroceryModule,
-    ReviewModule,
-    
+    ReviewModule,    
     UserModule,
     CakesModule,
     GroceryModule,
@@ -58,11 +70,22 @@ import { CharityModule } from './charity/charity.module';
     CoursesModule,
     MembershipModule,
     PaymentModule,
+    PayrollModule,
+    ProductpriceModule,
     NgbModule,
     StockModule,
     PayrollModule,
+<<<<<<< HEAD
     CharityModule
 
+=======
+    BusModule,
+    TrainModule,
+    CouponCodeModule,
+    AuthModule,
+    DataTablesModule,
+    FoodsModule
+>>>>>>> c12956a550611301fa05d344fc91a5e13951df55
   ],
   providers: [],
   bootstrap: [AppComponent]

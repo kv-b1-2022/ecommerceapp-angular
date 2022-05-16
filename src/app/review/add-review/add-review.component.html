@@ -1,4 +1,4 @@
-<form (ngSubmit)="addReview">
+<form (ngSubmit)="addReview()">
 
     <div>
         <label for="productId">ProductId</label>
@@ -12,7 +12,7 @@
 <br>
 <div>
     <label for="ratings">Ratings:</label>
-<select name="ratings" id="ratings">
+<select name="ratings" id="ratings" [(ngModel)]="ratings">
     <option value="1">1</option>
     <option value="2">2</option>
     <option value="3">3</option>

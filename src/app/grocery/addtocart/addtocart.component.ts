@@ -15,7 +15,7 @@ export class AddtocartComponent implements OnInit {
 
 
   ngOnInit(): void { 
-    this.toastrService.success('completed..');
+  
     // this.getAllProducts();
     let items= localStorage.getItem("CART_ITEMS")
     this.products = items != null ? JSON.parse(items):[];
