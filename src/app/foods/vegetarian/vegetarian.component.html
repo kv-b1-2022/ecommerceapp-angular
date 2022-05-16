@@ -1,0 +1,34 @@
+<p>vegetarian works!</p>
+<p>list-menus works!</p>
+
+
+  <form onsubmit="vegFood()">
+    <button type="submit">Display vegetarian</button>
+   <!---form ngNativeValidation (submit)="displayMenus()"--->
+
+
+    <div class="row">
+        <ng-container  *ngFor="let foodDetail of foodDetails" style="width: 18rem;">
+            <div    class="col-3"id="c">
+            <div class="card"id="c1">
+                <img class="card-img-top" src="{{foodDetail.foodImages}}" alt="Card image cap" width="50px" height="200px">
+                <div class="card-body">
+                    <!-- <h5 class="card-title">{{value.id}}</h5> -->
+                    <h5 class="card-title">{{foodDetail.foodName}}</h5>
+
+                    <p class="card-text">price - {{foodDetail.price}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" >foodType - {{foodDetail.foodType}}</li>
+
+                    <li class="list-group-item" >foodStyle - [{{foodDetail.foodStyle}}]</li>
+                </ul>
+
+            </div>
+        </div>
+    </ng-container>
+ </div>
+
+  </form>
+ 
+

@@ -7,6 +7,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path:'displaybook',component: DisplaybookComponent},
   
+  
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

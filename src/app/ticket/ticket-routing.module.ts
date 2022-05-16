@@ -7,7 +7,7 @@ import { ViewTicketsComponent } from './view-tickets/view-tickets.component';
 const routes: Routes = [
   {path:'create-ticket',component:CreateTicketComponent},
   {path:'list-tickets',component:ListTicketsComponent},
-  {path:'view-tickets',component:ViewTicketsComponent}
+  {path:'view-tickets/:id',component:ViewTicketsComponent}
 ];
 
 @NgModule({

@@ -12,7 +12,7 @@ export class AddproductsComponent implements OnInit {
   brand!: String;
   category!: String;
   
-  image!:String
+  image!:String;
 
 
   constructor(private http:HttpClient,private toastrService: ToastrService) { }
@@ -26,7 +26,7 @@ export class AddproductsComponent implements OnInit {
   getAddProducts()
   {
     const userObj={"name":this.name,"brand":this.brand,"category":this.category,"image":this.image};
-    const url="http://localhost:8080/product/save";
+    const url="https://product-apii.herokuapp.com/product/save";
     this.http.post(url,userObj).subscribe((res)=>{
       console.log(res);
       this.toastrService.success('successfully added');

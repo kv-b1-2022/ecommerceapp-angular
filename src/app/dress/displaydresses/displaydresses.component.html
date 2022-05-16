@@ -1,0 +1,15 @@
+<div class="row row-cols-1 row-cols-md-5 g-5">
+    <div class="col-4" *ngFor ="let dress of dresslist;">
+      <div class="card" style="width: 20rem;">
+        <img src="assets/dress image/{{dress.image}}" class="card-img-top" alt="..." height="250px">
+        <div class="card-body">
+          <h5 class="card-title">{{dress.name}}</h5>
+          <h5 class="card-title">{{dress.brand}}</h5>
+          <h5><span class="badge bg-success">{{dress.price}}</span></h5>
+  
+         <button type="button" (click)="addToCart" class="btn btn-primary">Add To Cart</button>
+         
+          <!--<p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+        </div>
+      </div>
+    </div>
