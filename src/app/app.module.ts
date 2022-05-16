@@ -31,7 +31,7 @@ import { PayrollModule } from './payroll/payroll.module';
 import { CharityModule } from './charity/charity.module';
 import { CouponCodeModule } from './coupon-code/coupon-code.module';
 
-
+import { DressModule } from './dress/dress.module';
 import { ProductpriceModule } from './productprice/productprice.module';
 import { BusModule } from './bus/bus.module';
 import { TrainModule } from './train/train.module';
@@ -81,7 +81,8 @@ import { DataTablesModule } from 'angular-datatables';
     CouponCodeModule,
     AuthModule,
     DataTablesModule,
-    FoodsModule
+    FoodsModule,
+    DressModule
   ],
   providers: [],
   bootstrap: [AppComponent]
