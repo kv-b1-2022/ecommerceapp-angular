@@ -9,12 +9,12 @@ import { WalletcardpaymentComponent } from './walletcardpayment/walletcardpaymen
 import { WalletsetupComponent } from './walletsetup/walletsetup.component';
 
 const routes: Routes = [
-  { path:'cardpayment/:orderId/:amount',component:CardpaymentComponent},
-  { path:'walletsetup',component:WalletsetupComponent},
+  { path:'cardpayment/:orderId/:amount',component:CardpaymentComponent,canActivate:[AuthGuard]},
+  { path:'walletsetup',component:WalletsetupComponent,canActivate:[AuthGuard]},
   { path:'addmoneytowallet',component:AddmoneytowalletComponent,canActivate:[AuthGuard]},
-  { path:'walletcardpayment/:amount',component:WalletcardpaymentComponent},
-  { path:'buyusingwallet/:orderId/:amount',component:BuyusingwalletComponent},
-  { path:'forgottransactionpin',component:ForgottransactionpinComponent}
+  { path:'walletcardpayment/:amount',component:WalletcardpaymentComponent,canActivate:[AuthGuard]},
+  { path:'buyusingwallet/:orderId/:amount',component:BuyusingwalletComponent,canActivate:[AuthGuard]},
+  { path:'forgottransactionpin',component:ForgottransactionpinComponent,canActivate:[AuthGuard]}
 ];
 
 @NgModule({
