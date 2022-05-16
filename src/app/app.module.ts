@@ -32,6 +32,7 @@ import { ProductpriceModule } from './productprice/productprice.module';
 
 import { BusModule } from './bus/bus.module';
 import { TrainModule } from './train/train.module';
+import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { TrainModule } from './train/train.module';
     AppComponent,
     HomeComponent,
     HeaderComponent,
+    AdminSidebarComponent,
   ],
   imports: [
     BrowserModule,
