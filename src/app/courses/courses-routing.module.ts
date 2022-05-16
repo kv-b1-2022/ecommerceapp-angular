@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddCourseComponent } from './add-course/add-course.component';
 import { CoursesCategoryComponent } from './courses-category/courses-category.component';
 import { ListAllCoursesComponent } from './list-all-courses/list-all-courses.component';
 import { ListcourseComponent } from './listcourse/listcourse.component';
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path:'viewcourse/:id',component:ViewCourseDetailsComponent},
   {path:'enrolledcourses',component:ViewEnrolledCoursesComponent},
   {path:'coursestype',component:CoursesCategoryComponent},
-  {path:'list-courses',component:ListcourseComponent}
+  {path:'list-courses',component:ListcourseComponent},
+  {path:'add-courses',component:AddCourseComponent}
 ];
 
 @NgModule({
