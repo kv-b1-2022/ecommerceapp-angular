@@ -27,10 +27,7 @@ import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
 
 import { ProductpriceModule } from './productprice/productprice.module';
-<<<<<<< HEAD
-=======
 import { BusModule } from './bus/bus.module';
->>>>>>> 090ab55a8667de3875c5d16305c3666c88ed74d1
 
 @NgModule({
   declarations: [
@@ -66,12 +63,9 @@ import { BusModule } from './bus/bus.module';
     ProductpriceModule,
     NgbModule,
     StockModule,
-<<<<<<< HEAD
     PayrollModule
-=======
-    PayrollModule,
+  ,
     BusModule
->>>>>>> 090ab55a8667de3875c5d16305c3666c88ed74d1
 
   ],
   providers: [],
