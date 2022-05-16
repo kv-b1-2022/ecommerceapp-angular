@@ -25,6 +25,7 @@ import { MembershipModule } from './membership/membership.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
+import { CharityModule } from './charity/charity.module';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { PayrollModule } from './payroll/payroll.module';
     PaymentModule,
     NgbModule,
     StockModule,
-    PayrollModule
+    PayrollModule,
+    CharityModule
 
   ],
   providers: [],
