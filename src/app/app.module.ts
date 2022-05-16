@@ -30,12 +30,15 @@ import { CouponCodeModule } from './coupon-code/coupon-code.module';
 import { ProductpriceModule } from './productprice/productprice.module';
 import { BusModule } from './bus/bus.module';
 import { TrainModule } from './train/train.module';
+import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    HeaderComponent,
+    AdminSidebarComponent,
     HeaderComponent
   ],
   imports: [
