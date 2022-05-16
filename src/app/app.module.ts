@@ -32,6 +32,7 @@ import { BusModule } from './bus/bus.module';
 import { TrainModule } from './train/train.module';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
+import { DataTablesModule } from 'angular-datatables';
 
 
 @NgModule({
@@ -72,7 +73,8 @@ import { AuthModule } from './auth/auth.module';
     BusModule,
     TrainModule,
     CouponCodeModule,
-    AuthModule
+    AuthModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
