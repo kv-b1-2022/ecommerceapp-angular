@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="wrapper">
-    <app-admin-sidebar *ngIf="getUser()?.role=='admin'"></app-admin-sidebar>
+    <app-admin-sidebar *ngIf="this.authService.getUser()?.role=='admin'"></app-admin-sidebar>
     <div class="page {{getStyle()}}" >
         <router-outlet></router-outlet>
     </div>

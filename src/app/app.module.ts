@@ -31,6 +31,7 @@ import { ProductpriceModule } from './productprice/productprice.module';
 import { BusModule } from './bus/bus.module';
 import { TrainModule } from './train/train.module';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
+import { AuthModule } from './auth/auth.module';
 
 
 @NgModule({
@@ -70,7 +71,8 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
     PayrollModule,
     BusModule,
     TrainModule,
-    CouponCodeModule
+    CouponCodeModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

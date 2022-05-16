@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-addmoneytowallet',
@@ -30,7 +31,8 @@ balance!:any;
   }
   findWalletBalance()
   {
-    let mobile=localStorage.getItem("sessionMobile");
+     let mobile=localStorage.getItem("sessionMobile");
+    // let mobile = this.authService.getUser()?.mobile;
     const url="http://localhost:9000/wallet/user/find/balance?mobile="+mobile;
     this.http.get(url).subscribe(res=>{
      this.wallet=res;
