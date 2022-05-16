@@ -1,4 +1,8 @@
 
+<button class="btn btn-primary" (click)="tableClick('true')" *ngIf="btn == 'false'">list sellers</button>
+<button class="btn btn-primary" (click)="tableClick('false')" *ngIf="btn == 'true'">account details</button><button class="btn btn-primary">add sellers</button>
+<div *ngIf="btn == 'true'">
+<h1 style="text-align: center;" > sellers list</h1>
 <table class="table table-dark table-hover">
     <thead>
         <tr>
@@ -30,3 +34,4 @@
         </tr>
     </tbody>
   </table>
+</div>

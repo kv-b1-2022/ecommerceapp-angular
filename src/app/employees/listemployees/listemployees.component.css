@@ -1,12 +1,9 @@
 .head{
     text-align: center;
 }
-.doc-table{
-    display: none;
-}
 #Notifications{
     position: relative;
-    left: 1400px;
+    left: 1100px;
 }
 .notification-div{
     display: none;

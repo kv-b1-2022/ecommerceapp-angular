@@ -14,6 +14,7 @@ export class ListemployeesComponent implements OnInit {
   count!:any
   messageBox!:any
   chat!:any
+  btn='false'
   ngOnInit(): void {
    // const url = "https://employeeapp-apii.herokuapp.com/employees/document/verification"
     const url = "http://localhost:9000/employees/document/verification"
@@ -36,8 +37,9 @@ export class ListemployeesComponent implements OnInit {
     }
   }
   val = 1
-  tableClick(){
+  tableClick(item:string){
     this.docTable = "block"
+    this.btn=item
   }
 
 }

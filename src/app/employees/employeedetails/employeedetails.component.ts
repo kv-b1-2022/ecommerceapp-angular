@@ -19,5 +19,10 @@ export class EmployeedetailsComponent implements OnInit {
     });
     // this.details = JSON.parse(this.details)
   }
-
+  btn='false'
+  docTable:any
+  tableClick(item:string){
+    this.docTable = "block"
+    this.btn=item
+  }
 }
