@@ -39,6 +39,7 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
 import { DataTablesModule } from 'angular-datatables';
 import { BooksModule } from './books/books.module';
+import { ElectronicsModule } from './Electronics/electronics.module';
 
 
 @NgModule({
@@ -84,7 +85,8 @@ import { BooksModule } from './books/books.module';
     DataTablesModule,
     FoodsModule,
     DressModule,
-    BooksModule
+    BooksModule,
+    ElectronicsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

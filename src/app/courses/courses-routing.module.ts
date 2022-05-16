@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '../auth.guard';
 import { CoursesCategoryComponent } from './courses-category/courses-category.component';
 import { ListAllCoursesComponent } from './list-all-courses/list-all-courses.component';
 import { ListcourseComponent } from './listcourse/listcourse.component';
@@ -11,7 +12,7 @@ const routes: Routes = [
   {path:'coursesbytype/:cid',component:ViewCourseTypeComponent},
   {path:'viewallcourses',component:ListAllCoursesComponent},
   {path:'viewcourse/:id',component:ViewCourseDetailsComponent},
-  {path:'enrolledcourses',component:ViewEnrolledCoursesComponent},
+  {path:'enrolledcourses',component:ViewEnrolledCoursesComponent,canActivate:[AuthGuard]},
   {path:'coursestype',component:CoursesCategoryComponent},
   {path:'list-courses',component:ListcourseComponent}
 ];
