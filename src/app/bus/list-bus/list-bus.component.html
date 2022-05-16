@@ -1,0 +1,76 @@
+
+<!-- <form (ngSubmit)="getBusById()">
+    <label for="text">Bus Id : </label>
+    <input type="text" name="id" [(ngModel)]="id">
+    <button class="btn btn-danger">Submit</button>
+    </form> -->
+    <h3>BUS AVAILABLE</h3>
+    <table class="table" style="width:1000px" >
+        <thead>
+          <tr>
+        <th scope="col" >S.No</th>
+        <th scope="col">Bus Name</th>
+        <th scope="col">Bus From</th>
+        <th scope="col">Bus To</th>
+        <th scope="col">Timing</th>
+        <th scope="col" >Tickets Available</th>
+        <th scope="col">Ticket Price</th>
+        <!-- <th scope="col">BusStops</th>
+   -->
+                      
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="bus">
+            <td >{{bus.busId}}</td>
+            <td>{{bus.busName}}</td>
+            <td>{{bus.busFrom}}</td>
+            <td>{{bus.busTo}}</td>
+            <td>{{bus.busTiming}}</td>
+            <td>{{bus.busTicketsAvailable}}</td>
+            <td>{{bus.busTicketPrice}}</td>
+            
+            <!-- <td>{{bus.busStop}} -->
+              <!-- <ul>
+
+                <li *ngFor="let s of getStops(bus)">
+                  {{s}}
+                </li>
+              </ul> -->
+            <!-- <td><button type="button" (click)="deleteBus(bus.busId)" class="btn btn-danger">Delete</button></td> -->
+           </tr>
+        </tbody>
+      </table>
+
+      <h3>Stops</h3>
+      <ul>
+
+        <li *ngFor="let s of getStops(bus)">
+          {{s}}
+        </li>
+      </ul>
+      
+
+      <!-- <div *ngIf="selectedUser">
+        <h2>{{user.userName.name | uppercase}} Details</h2>
+        <div>UserId: {{user.userId}}</div>
+        <div>
+          <label for="name">User Name: </label>
+          <input id="name" [(ngModel)]="selectedUser.userName" placeholder="UserName">
+        </div>
+        <div>
+            <label for="email">User EmailId: </label>
+            <input id="email" [(ngModel)]="selectedUser.emailId" placeholder="UserEmailId">
+          </div>
+          <div>
+            <label for="password">User Password: </label>
+            <input id="password" [(ngModel)]="selectedUser.password" placeholder="UserPassword">
+          </div>
+          <div>
+            <label for="phoneNumber">User PhoneNumber: </label>
+            <input id="phoneNumber" [(ngModel)]="selectedUser.phoneNumber" placeholder="UserPhoneNumber">
+          </div>
+      </div> -->
+         
+     
+    

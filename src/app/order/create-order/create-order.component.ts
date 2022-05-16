@@ -17,7 +17,8 @@ export class CreateOrderComponent implements OnInit {
   createdBy!:number;
   comments!:String;
 
-  constructor(private http:HttpClient,private toastrService: ToastrService,private route:ActivatedRoute) {
+  constructor(private http:HttpClient,private toastrService: ToastrService,private route:ActivatedRoute
+    ) {
     this.amount = this.route.snapshot.queryParams["amount"];
    }
 
