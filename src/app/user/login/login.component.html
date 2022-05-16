@@ -16,14 +16,14 @@
       <div class="col-md-12">
         <label for="validationServerUsername" class="form-label"></label>
         <div class="input-group has-validation">
-          <input type="password" style="width:100%; text-align: center;" class="form-control" [ngClass]="isValid('password')" formControlName="password" id="validationServerUsername" placeholder="Enter your password" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback">
+          <input type="password" style="width:100%; text-align: center;" class="form-control" [ngClass]="isValid('password')" formControlName="password" id="validationServerUserpassword" placeholder="Enter your password" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback">
         
           <div class="valid-feedback">
             <i class="fa-solid fa-face-smile" style="color:darkgreen"></i>
           </div>
         
           <div id="validationServerUsernameFeedback" class="invalid-feedback">
-            <p *ngIf="password?.errors?.['minlength'||'maxlength']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Password must be minimum 8 characters and maximum 16 characters</p>
+            <!-- <p *ngIf="password?.errors?.['minlength'||'maxlength']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Password must be minimum 8 characters and maximum 16 characters</p> -->
           <p *ngIf="password?.errors?.['required']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Password cannot be empty</p>
           </div>
         </div>
@@ -33,3 +33,4 @@
       </div>
       </section>
 </form>
+<p>Admin Credentials: Email:admin@gmail.com, Password:admin123</p>
