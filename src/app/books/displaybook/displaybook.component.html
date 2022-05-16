@@ -1,12 +1,7 @@
 <section>
     <h1 style="text-align:center">ALL BOOKS</h1>
-</section>
-
-<form>
-
-
     <div class="row">
-        <ng-container *ngFor="let item of value" style="width: 18rem;">
+        <ng-container style="width: 18rem;" *ngFor="let item of value">
             <div class="col-3" style="padding:50px;">
                 <div class="card">
                     <img class="card-img-top" src="{{item.imageLink}}" alt="Card image cap" width="50px" height="590px">
@@ -26,3 +21,4 @@
             </div>
         </ng-container>
     </div>
+</section>

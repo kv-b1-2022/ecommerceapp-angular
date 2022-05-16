@@ -38,6 +38,7 @@ import { TrainModule } from './train/train.module';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
 import { DataTablesModule } from 'angular-datatables';
+import { BooksModule } from './books/books.module';
 
 
 @NgModule({
@@ -82,7 +83,8 @@ import { DataTablesModule } from 'angular-datatables';
     AuthModule,
     DataTablesModule,
     FoodsModule,
-    DressModule
+    DressModule,
+    BooksModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -28,26 +28,14 @@ export class DisplaybookComponent implements OnInit {
   
    displayBook()
    {
-     
-   
      const url="http://localhost:9050/book/display";
      this.http.get(url).subscribe((res: any) => {
          this.value = res;
-
+          console.table(res);
        }, (err) => {
          alert(err.error.message);
          this.toastr.error(err.error);
-       });
-     
-       
- 
-     
-    
-     
-         
-     
-    
-     
+       });     
    }
   
 
