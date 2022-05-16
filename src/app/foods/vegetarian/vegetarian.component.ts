@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-vegetarian',
@@ -7,10 +10,32 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class VegetarianComponent implements OnInit {
-
-  constructor() { }
+  foodName!:any;
+  price!:any;
+  foodType  !:any;
+  foodStyle!:any;
+  foodImages!:any;
+  vegetarian!:any;
+  
+  constructor(private http:HttpClient,private route:ActivatedRoute,private toastr:ToastrService) { }
 
   ngOnInit(): void {
   }
+  foodDetails!:any;
+  vegFood(){
+    // const food= this.vegetarian;
+
+    const url="http://localhost:9000/findBycategory/veg";
+    this.http.get(url,{responseType:'json'}).subscribe((res)=>{
+      this.foodDetails=res;
+      console.log(res);
+      
+     
+   },(err)=>{
+     this.toastr.error("food is not available");
+     
+   });
+ 
+ }
 
 }
