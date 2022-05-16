@@ -23,8 +23,8 @@ export class EmployeeloginComponent implements OnInit {
   login()
   {
     const userObj={
-      "empEmail":"selvamani@ecommerce.com",
-      "empPassword":"EMP003"
+      "empEmail":this.email,
+      "empPassword":this.password
   
     };
     const url="http://localhost:9000/emplogin/login";
