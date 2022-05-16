@@ -17,6 +17,13 @@ export class ListOrderComponent implements OnInit {
    }
    orders!:any;
    getAllOrders(){
-     
-   }
-}
+     const url="http://localhost:9000/ordersTable/list";
+   
+     this.http.get(url).subscribe((res)=>{
+      this. orders = res;
+    },err=>{
+    }
+    )
+  }
+ }
+
