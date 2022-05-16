@@ -10,6 +10,11 @@ import { AllMenusComponent } from './all-menus/all-menus.component';
 import { StartersComponent } from './starters/starters.component';
 import { ViewFoodsComponent } from './view-foods/view-foods.component';
 import { AddByAdminComponent } from './add-by-admin/add-by-admin.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 
 
 @NgModule({
@@ -25,7 +30,12 @@ import { AddByAdminComponent } from './add-by-admin/add-by-admin.component';
   ],
   imports: [
     CommonModule,
-    FoodsRoutingModule
+    FoodsRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ]
 })
 export class FoodsModule { }

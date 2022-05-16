@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/auth/auth.service';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addmoneytowallet',
@@ -13,9 +16,10 @@ export class AddmoneytowalletComponent implements OnInit {
  wallet!:any;
 balance!:any;
 
-  constructor(private http:HttpClient,private toastr:ToastrService) { }
+  constructor(private http:HttpClient,private toastr:ToastrService,private authService:AuthService,private route:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
+    this.verifyUserLogin();
     this.findWalletBalance();
   }
   addMoney()
@@ -30,16 +34,26 @@ balance!:any;
   }
   findWalletBalance()
   {
-    let user=localStorage.getItem("LOGGED_IN_USER");
-   // let userObj=JSON.parse(user);
-    let mobile=1;
-    const url="http://localhost:9000/wallet/user/find/balance?mobile="+mobile;
-    this.http.get(url).subscribe(res=>{
+     let mobile = this.authService.getUser()?.mobile;
+     const url="http://localhost:9000/wallet/user/find/balance?mobile="+mobile;
+     this.http.get(url).subscribe(res=>{
      this.wallet=res;
      this.balance=this.wallet.balance;
     },err=>{
      this.toastr.error("can not find wallet balance");
     });
+  }
+  verifyUserLogin()
+  {
+    let mobile=this.authService.getUser()?.mobile;
+    const url="http://localhost:9000/wallet/verify/user/login?mobile="+mobile;
+    this.http.get(url).subscribe(res=>
+      {
+        this.toastr.success("welcome"+this.authService.getUser()?.name);
+      },err=>{
+        this.router.navigate(["walletsetup"]);
+      });
+
   }
 
 }

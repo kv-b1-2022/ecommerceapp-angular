@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-forgottransactionpin',
@@ -16,15 +18,16 @@ export class ForgottransactionpinComponent implements OnInit {
   getTpin="none";
   balance!:any;
   wallet!:any;
-  constructor(private http:HttpClient,private toastr:ToastrService) { }
+  constructor(private http:HttpClient,private toastr:ToastrService,private authService:AuthService,private router:Router) { }
 
   ngOnInit(): void {
+    this.verifyUserLogin();
     this.findWalletBalance();
   }
   findUser()
   {
     let mobile=""+this.mobile;
-     let sessionMobile=localStorage.getItem("sessionMobile");
+    let  sessionMobile=this.authService.getUser()?.mobile;
      
      if(mobile.length!=10)
      {
@@ -46,7 +49,7 @@ export class ForgottransactionpinComponent implements OnInit {
     let pin=""+this.tpin;
     if(pin.length>=4 && this.tpin>0)
     {
-      let userMobile=localStorage.getItem("sessionMobile");
+      let userMobile = this.authService.getUser()?.mobile;
       let walletCredentials={"mobile":userMobile,"transactionPin":this.tpin}
       const url="http://localhost:9000/wallet/user/update/tpin";
       this.http.post(url,walletCredentials).subscribe(res=>{
@@ -62,7 +65,7 @@ export class ForgottransactionpinComponent implements OnInit {
   findWalletBalance()
   {
   
-      let mobile=localStorage.getItem("sessionMobile");
+    let mobile = this.authService.getUser()?.mobile;
       const url="http://localhost:9000/wallet/user/find/balance?mobile="+mobile;
       this.http.get(url).subscribe(res=>{
       this.wallet=res;
@@ -70,6 +73,19 @@ export class ForgottransactionpinComponent implements OnInit {
       },err=>{
       this.toastr.error("can not find wallet balance");
      });
+  }
+  verifyUserLogin()
+  {
+    let mobile=this.authService.getUser()?.mobile;
+    const url="http://localhost:9000/wallet/verify/user/login?mobile="+mobile;
+    this.http.get(url).subscribe(res=>
+      {
+        this.toastr.success("welcome"+this.authService.getUser()?.name);
+      },err=>{
+        this.router.navigate(["walletsetup"]);
+      });
+
+
   }
 
 
