@@ -1,1 +1,32 @@
-<p>employeedetails works!</p>
+
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <td>d_id</td>
+            <td>empName</td>
+            <td>empEmail</td>
+            <td>mobileNumber</td>
+            <td>role</td>
+            <td>aadhar</td>
+            <td>pannum</td>
+            <td>accountNo</td>
+            <td>ifscCode</td>
+         
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of details">
+
+            <td>{{data.empId}}</td>
+            <td>{{data.empName}}</td>
+            <td>{{data.empEmail}}</td>
+            <td>{{data.mobileNumber}}</td>
+            <td>{{data.role}}</td>
+            <td>{{data.aadhar}}</td>
+            <td>{{data.pannum}}</td>
+            <td>{{data.accountNo}}</td>
+            <td>{{data.ifscCode}}</td>
+            
+        </tr>
+    </tbody>
+  </table>
