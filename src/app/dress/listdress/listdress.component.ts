@@ -8,7 +8,8 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-listdress',
   templateUrl:'./listdress.component.html',
-  styleUrls: ['./listdress.component.css']
+  styles: [
+  ]
 })
 export class ListdressComponent implements OnInit {
   toastrService: any;
