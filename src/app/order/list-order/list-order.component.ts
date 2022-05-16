@@ -17,7 +17,7 @@ export class ListOrderComponent implements OnInit {
    }
    orders!:any;
    getAllOrders(){
-     const url="https://order-apii.herokuapp.com/ordersTable/list";
+     const url="http://localhost:9000/ordersTable/list";
    
      this.http.get(url).subscribe((res)=>{
       this. orders = res;
