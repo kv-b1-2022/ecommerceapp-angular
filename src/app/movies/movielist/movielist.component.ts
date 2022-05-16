@@ -21,7 +21,8 @@ export class MovielistComponent implements OnInit {
   movies:any;
   getAllMovies()
   {
-    const url="http://localhost:8080/movies/list";
+    //const url="http://localhost:8080/movies/list";
+    const url="http://moviesapp-apii.herokuapp.com/movies/list";
     this.http.get(url).subscribe((res)=>{
       this.movies =res;
     },err=>{

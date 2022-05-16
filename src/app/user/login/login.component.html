@@ -1,0 +1,36 @@
+<form [formGroup]="myForm" (ngSubmit)="logIn()" class="row g-3" style="text-align:center;width:25%">
+  <section style="text-align:center; margin-left:650px; margin-top:170px" >
+    <div class="col-md-12">
+        <label for="validationServer02" class="form-label"></label>
+        <input type="text" style="width:100%; text-align:center" id="price" class="form-control " [ngClass]="isValid('mail')" formControlName="mail" id="validationServer02" placeholder="Enter your Email Id" autofocus>
+  
+        <div class="valid-feedback">
+          <i class="fa-solid fa-face-smile" style="color:darkgreen"></i>
+        </div>
+  
+        <div class="invalid-feedback">
+          <p *ngIf="mail?.errors?.['email']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Enter valid email (abcd@gmail.com)</p>
+            <p *ngIf="mail?.errors?.['required']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Email cannot be empty</p>
+        </div>      
+      </div>
+      <div class="col-md-12">
+        <label for="validationServerUsername" class="form-label"></label>
+        <div class="input-group has-validation">
+          <input type="password" style="width:100%; text-align: center;" class="form-control" [ngClass]="isValid('password')" formControlName="password" id="validationServerUserpassword" placeholder="Enter your password" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback">
+        
+          <div class="valid-feedback">
+            <i class="fa-solid fa-face-smile" style="color:darkgreen"></i>
+          </div>
+        
+          <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            <!-- <p *ngIf="password?.errors?.['minlength'||'maxlength']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Password must be minimum 8 characters and maximum 16 characters</p> -->
+          <p *ngIf="password?.errors?.['required']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Password cannot be empty</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12" style="padding:15px;">
+        <button class="btn btn-primary" type="submit" [disabled]="this.myForm.invalid">Login</button>
+      </div>
+      </section>
+</form>
+<p>Admin Credentials: Email:admin@gmail.com, Password:admin123</p>

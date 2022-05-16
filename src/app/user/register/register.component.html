@@ -1,0 +1,82 @@
+<form [formGroup]="myForm" (ngSubmit)="register()" class="row g-3" style="text-align:center">
+<section style="text-align:center; margin-left:33.5%; margin-top:150px ">
+  <div class="col-md-4">
+      <label for="validationServer01" class="form-label"></label>
+      <input type="text" style="text-align: center;" class="form-control" [ngClass]="isValid('name')" formControlName="name" id="validationServer01" placeholder="Enter your name" required autofocus>
+       
+      <div class="valid-feedback">
+        <i class="fa-solid fa-face-smile" style="color:darkgreen"></i>
+      </div>
+
+      <div class="invalid-feedback">
+          <p *ngIf="name?.errors?.['minlength']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Name should contain atleast 3 characters</p>
+          <p *ngIf="name?.errors?.['required']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Name cannot be empty</p>
+          <p *ngIf="name?.errors?.['pattern']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> No whitespaces or numbers allowed</p>
+      </div>
+
+  </div>
+
+    <div class="col-md-4" style="text-align:center">
+      <label for="validationServer02" class="form-label"></label>
+      <input type="text" style="text-align: center;" id="price" class="form-control " [ngClass]="isValid('mail')" formControlName="mail" id="validationServer02" placeholder="Enter your Email Id">
+       
+      <div class="valid-feedback">
+        <i class="fa-solid fa-face-smile" style="color:darkgreen"></i>
+      </div>
+
+      <div class="invalid-feedback">
+        <p *ngIf="mail?.errors?.['email']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Enter valid email (kvcet@gmail.com)</p>
+          <p *ngIf="mail?.errors?.['required']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Email cannot be empty</p>
+      </div>      
+    </div>
+
+    <div class="col-md-4" style="text-align:center">
+      <label for="validationServerUsername" class="form-label"></label>
+      <div class="input-group has-validation">
+        <input type="tel" style="text-align:center" class="form-control" [ngClass]="isValid('mobile')" formControlName="mobile" id="validationServerUsername" placeholder="Enter your mobile number" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback">
+         
+        <div class="valid-feedback">
+            <i class="fa-solid fa-face-smile" style="color:darkgreen"></i>
+        </div>
+
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            <p *ngIf="mobile?.errors?.['maxlength']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Enter valid mobile number (9876543210)</p>
+            <p *ngIf="mobile?.errors?.['minlength']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Enter valid mobile number (9876543210)</p>
+            <p *ngIf="mobile?.errors?.['required']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Mobile number cannot be empty</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4" style="text-align:center">
+        <label for="validationServerUsername" class="form-label"></label>
+        <div class="input-group has-validation">
+          <input type="password" style="text-align: center;" class="form-control" [ngClass]="isValid('password')" formControlName="password" id="validationServerUserpassword" placeholder="Enter your password" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback">
+                   
+          <div class="valid-feedback">
+            <i class="fa-solid fa-face-smile" style="color:darkgreen"></i>
+          </div>
+        
+          <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            <p *ngIf="password?.errors?.['minlength' || 'maxlength' ]"> <i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Password must be minimum 8 characters and maximum 16 characters</p>
+          <p *ngIf="password?.errors?.['required']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Password cannot be empty</p>
+          </div>
+        </div>
+      </div>
+ 
+   
+    <!-- <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback">
+        <label class="form-check-label" for="invalidCheck3">
+          <a href="#">Agree to terms and conditions</a>
+        </label>
+        <div id="invalidCheck3Feedback" class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </div> -->
+    </section>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit" [disabled]="this.myForm.invalid">Register</button>
+    </div>
+  </form>

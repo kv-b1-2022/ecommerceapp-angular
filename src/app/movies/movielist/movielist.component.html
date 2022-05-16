@@ -15,9 +15,9 @@
     </tr>
 </thead>
 <tbody>
-    <tr *ngFor="let movie of movies;let i=index">
+    <tr *ngFor="let movie of movies">
       
-        <td>{{i+1}}</td>
+        <td>{{movie.id}}</td>
         <td>{{movie.movieName}}</td>
         <td>{{movie.ticketPrice}}</td>
         <td>{{movie.ratings}}</td>

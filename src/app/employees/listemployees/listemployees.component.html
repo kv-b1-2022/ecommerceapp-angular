@@ -1,0 +1,43 @@
+
+
+<button type="button" id="Notifications" class="btn btn-primary" (click)="notifiactionClick()">
+    Notifications <span class="badge bg-secondary">{{count}}</span>
+  </button>
+  <div class="notification-div" [style.display]="messageBox">
+      <div id="chat-input"><input type="text" name="chat" [(ngModel)]="chat"><button>sent</button></div>
+  </div>
+  <div (click)="tableClick()">
+      validate Documents list
+  </div>
+<div class="doc-table" [style.display]="docTable">
+    <h1 class="head">employees document validation</h1>
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <td>empId</td>
+        <td>empName</td>
+        <td>empEmail</td>
+        <td>mobileNumber</td>
+        <td>role</td>
+        <td>aadhar</td>
+        <td>pannum</td>
+        <td>accountNo</td>
+        <td>ifscCode</td>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of details">
+            <td>{{data.empId}}</td>
+            <td>{{data.empName}}</td>
+            <td>{{data.empEmail}}</td>
+            <td>{{data.mobileNumber}}</td>
+            <td>{{data.role}}</td>
+            <td>{{data.aadhar}}</td>
+            <td>{{data.pannum}}</td>
+            <td>{{data.accountNo}}</td>
+            <td>{{data.ifscCode}}</td>
+            <td>{{data.joineddate}}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>

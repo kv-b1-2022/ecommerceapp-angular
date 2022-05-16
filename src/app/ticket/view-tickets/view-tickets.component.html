@@ -1,0 +1,29 @@
+
+<h2>List Tickets</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>userId</th>
+            <th>ticketTitle</th>
+            <th>description</th>
+            <th>category</th>
+            <th>assignedTo</th>
+            <th>priority</th>
+            <th>status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngIf="ticketsUser">
+            <td>{{ticketsUser.id}}</td>
+            <td>{{ticketsUser.userId}}</td>
+            <td>{{ticketsUser.ticketTitle}}</td>
+            <td>{{ticketsUser.description}}</td>
+            <td>{{ticketsUser.category}}</td>
+            <td>{{ticketsUser.assignedTo}}</td>
+            <td>{{ticketsUser.priority}}</td>
+            <td>{{ticketsUser.status}}</td>
+
+        </tr>
+    </tbody>
+</table>
