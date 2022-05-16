@@ -26,7 +26,7 @@ export class ViewFoodsComponent implements OnInit {
   searchFood(){
     const food= this.search;
 
-    const url="http://localhost:1234/DishesByLetter/food_name?food_name="+this.search;
+    const url="http://localhost:9000/DishesByLetter/food_name?food_name="+this.search;
     this.http.get(url,{responseType:'json'}).subscribe((res)=>{
       this.foodDetails=res;
       console.log(res);
