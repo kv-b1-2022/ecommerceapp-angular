@@ -85,7 +85,7 @@ verifyUserLogin()
     const url="http://localhost:9000/wallet/verify/user/login?mobile="+mobile;
     this.http.get(url).subscribe(res=>
       {
-        this.toastr.success("welcome"+this.authService.getUser()?.name);
+       // this.toastr.success("welcome"+this.authService.getUser()?.name);
       },err=>{
         this.router.navigate(["walletsetup"]);
       });

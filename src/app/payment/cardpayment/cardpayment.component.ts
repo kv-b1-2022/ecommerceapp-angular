@@ -66,7 +66,7 @@ export class CardpaymentComponent implements OnInit {
          let cardDetails={"cardNumber":this.cardNumber,"cvv":this.cvv,"month":this.month,"year":this.year,"amount":totalAmount}; 
          const url="http://localhost:9000/payment/verifycards";
          this.http.post(url,cardDetails).subscribe(res=>{
-            const url1="http://localhost:9000/payment/service/failed";
+            const url1="http://localhost:9000/payment/service/success";
             this.http.post(url1,transactionDetails).subscribe(res=>{
                this.toastr.success("success");
             },err1=>{
