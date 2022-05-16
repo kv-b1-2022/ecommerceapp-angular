@@ -8,35 +8,35 @@ import { ToastrService } from 'ngx-toastr';
   ]
 })
 export class AddByAdminComponent implements OnInit {
-  foodName!:string;
-  price!:string;
-  foodType!:number;
-  foodStyle!:string;
-  foodimage!:string;
+  // foodName!:string;
+  // price!:string;
+  // foodType!:number;
+  // foodStyle!:string;
+  // foodimage!:string;
   constructor(private http:HttpClient,private toastr:ToastrService) { }
 
   ngOnInit(): void {
   }
-  addDish(){
-    const menuObj={
+  // addDish(){
+  //   const menuObj={
         
-      "dishName": this.foodName,
-      "dishType":this.price,
-      "price":this.foodType,
-      "hotelName":this.foodStyle,
-      "ingredients":this.foodimage,
+  //     "dishName": this.foodName,
+  //     "dishType":this.price,
+  //     "price":this.foodType,
+  //     "hotelName":this.foodStyle,
+  //     "ingredients":this.foodimage,
      
   
-  };
-  const url="http://localhost:9000/MenuInsert/save";
-      this.http.post(url,menuObj).subscribe((res)=>{
-        console.log(res);
-        alert("successfully added Dish");
-      },(err)=>{
-        console.log(err);
-        alert("Unsuccessfully added Dish.......");
-      })
-  }
+  // };
+  // const url="http://localhost:9000/MenuInsert/save";
+  //     this.http.post(url,menuObj).subscribe((res)=>{
+  //       console.log(res);
+  //       alert("successfully added Dish");
+  //     },(err)=>{
+  //       console.log(err);
+  //       alert("Unsuccessfully added Dish.......");
+  //     })
+  // }
   
   
   }

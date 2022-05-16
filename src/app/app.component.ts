@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ecommerceapp-ui';
+
+ constructor(public authService:AuthService){}
+  getStyle(){
+    let clazz = '';
+    let role = this.authService.getUser()?.role;
+    if(role=='admin'){
+      clazz = 'sidebar-open';
+    }
+    return clazz;
+  }
 }
