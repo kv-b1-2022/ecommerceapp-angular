@@ -10,6 +10,7 @@ import { CoursesCategoryComponent } from './courses-category/courses-category.co
 import { ListcourseComponent } from './listcourse/listcourse.component';
 import { DataTablesModule } from 'angular-datatables';
 import { AddCourseComponent } from './add-course/add-course.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { AddCourseComponent } from './add-course/add-course.component';
   imports: [
     CommonModule,
     DataTablesModule,
-    CoursesRoutingModule
+    CoursesRoutingModule,
+    FormsModule
   ]
 })
 export class CoursesModule { }
