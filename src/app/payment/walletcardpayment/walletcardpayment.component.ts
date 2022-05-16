@@ -4,23 +4,22 @@ import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-cardpayment',
-  templateUrl: './cardpayment.component.html',
+  selector: 'app-walletcardpayment',
+  templateUrl: './walletcardpayment.component.html',
   styles: [
   ]
 })
-export class CardpaymentComponent implements OnInit {
- cardNumber!:any;
+export class WalletcardpaymentComponent implements OnInit {
+
+  cardNumber!:any;
  month!:any;
  year!:any;
  name!:any;
  cvv!:any;
   constructor(private http:HttpClient,private toastr:ToastrService,private route:ActivatedRoute) { }
- 
 
   ngOnInit(): void {
   }
-  
   verifyCardDetails()
   {
      const currDate=new Date();
@@ -56,30 +55,25 @@ export class CardpaymentComponent implements OnInit {
      }
      else
      {
-        const queryString = window.location.search;
-         const urlParams = new URLSearchParams(queryString);
-         let totalAmount=this.route.snapshot.params['amount'];
-         let orderId=this.route.snapshot.params['orderId'];
-         let userId=localStorage.getItem("sessionId");
-         let transactionDetails={"userId":userId,"orderId":orderId,"totalAmount":totalAmount,"paymentMode":"card"}
+        // const queryString = window.location.search;
+        //  const urlParams = new URLSearchParams(queryString);
+         // const totalAmount = urlParams.get('totalAmount');
+        //  let orderId=this.route.snapshot.params['orderId'];
+        let totalAmount=this.route.snapshot.params['amount'];
+         let mobile=localStorage.getItem("sessionMobile");
          let cardDetails={"cardNumber":this.cardNumber,"cvv":this.cvv,"month":this.month,"year":this.year,"amount":totalAmount}; 
          const url="http://localhost:9000/payment/verifycards";
          this.http.post(url,cardDetails).subscribe(res=>{
-            const url1="http://localhost:9000/payment/service/failed";
-            this.http.post(url1,transactionDetails).subscribe(res=>{
-               this.toastr.success("success");
-            },err1=>{
-              this.toastr.error(err1.error.message);
+            const url1="http://localhost:9000/wallet/user/balance/updation/add?mobile="+mobile+"&amount="+totalAmount;
+            this.http.get(url1).subscribe(res=>{
+               this.toastr.success("successfully added to wallet");
+            },err=>{
+              this.toastr.error(err.error.message);
             });
          },err=>{
-               const url12="http://localhost:9000/payment/service/failed";
-               this.http.post(url,transactionDetails).subscribe(res=>{
-               },err2=>{
-               this.toastr.error(err2.error.message);
-               });
            this.toastr.error(err.error.message);
          });
      }
- }
+    }
 
 }
