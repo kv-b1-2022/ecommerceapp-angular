@@ -33,6 +33,7 @@ import { TrainModule } from './train/train.module';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
 import { DataTablesModule } from 'angular-datatables';
+import { FoodsModule } from './foods/foods.module';
 
 
 @NgModule({
@@ -74,7 +75,8 @@ import { DataTablesModule } from 'angular-datatables';
     TrainModule,
     CouponCodeModule,
     AuthModule,
-    DataTablesModule
+    DataTablesModule,
+    FoodsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
