@@ -12,32 +12,26 @@ import { ToastrService } from 'ngx-toastr';
 export class AllMenusComponent implements OnInit {
   foodName!:any;
   price!:any;
-  foodType  !:any;
+  foodType!:any;
   foodStyle!:any;
+  value!:any;
+  values!:any;
   foodImages!:any;
-  search!:any;
   constructor(private http:HttpClient,private route:ActivatedRoute,private toastr:ToastrService) { }
 
   ngOnInit(): void {
-    this.search= this.route.snapshot.params['search'];
-    this.searchFood()
+    this.getAllMenu();
   }
-  foodDetails!:any;
-  searchFood(){
-    const food= this.search;
-
-    const url="http://localhost:1234/DishesByLetter/food_name?food_name="+this.search;
-    this.http.get(url,{responseType:'json'}).subscribe((res)=>{
-      this.foodDetails=res;
-      console.log(res);
-      
-     
-   },(err)=>{
-     this.toastr.error("food is not available");
-     
-   });
+  getAllMenu(){
+    
+    const url="http://localhost:9000/MenuList/list";
+     fetch(url).then(res=>res.json()).then(res=>{
+      this.values=res;
+     console.log(this.values);
+      });
+      this.toastr.success("Keep updating");
+  }
  
- }
  }
 
 

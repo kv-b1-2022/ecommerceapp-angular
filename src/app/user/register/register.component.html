@@ -25,6 +25,8 @@
       </div>
 
       <div class="invalid-feedback">
+        <p *ngIf="mail?.errors?.['email']">Enter valid email (abcd@gmail.com)</p>
+          <p *ngIf="mail?.errors?.['required']">Email cannot be empty</p>
         <p *ngIf="mail?.errors?.['email']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Enter valid email (kvcet@gmail.com)</p>
           <p *ngIf="mail?.errors?.['required']"><i class="fa-solid fa-face-smile-upside-down" style="color:red"></i> Email cannot be empty</p>
       </div>      

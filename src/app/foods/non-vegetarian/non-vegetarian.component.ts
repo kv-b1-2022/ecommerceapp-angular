@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-non-vegetarian',
@@ -8,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NonVegetarianComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:HttpClient,private toastr:ToastrService,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
   }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-walletsetup',
@@ -10,9 +12,10 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class WalletsetupComponent implements OnInit {
 tpin!:any;
-  constructor(private http:HttpClient,private toastr:ToastrService) { }
+  constructor(private http:HttpClient,private toastr:ToastrService,private authService:AuthService,private router:Router) { }
 
   ngOnInit(): void {
+    this.verifyUserLogin();
   }
   setTransactionPin()
   {
@@ -23,17 +26,30 @@ tpin!:any;
     }
     else
     {
-        let mobile=localStorage.getItem("sessionMobile");
+        let mobile=this.authService.getUser()?.mobile;
         let name="hari";
         let userDetails={"mobile":mobile,"name":name,"transactionPin":this.tpin}
         const url="http://localhost:9000/wallet/user/register";
         this.http.post(url,userDetails).subscribe(res=>
           {
               this.toastr.success("wallet created successfully");
+              this.router.navigate(["addmoneytowallet"]);
           },err=>{
              this.toastr.error(err.error.message);
           });
     }
+  }
+  verifyUserLogin()
+  {
+    let mobile=this.authService.getUser()?.mobile;
+    const url="http://localhost:9000/wallet/verify/user/login?mobile="+mobile;
+    this.http.get(url).subscribe(res=>
+      {
+        this.router.navigate(["addmoneytowallet"]);
+      },err=>{
+         this.toastr.success("welcome "+this.authService.getUser()?.name);
+      });
+
   }
 
 }
