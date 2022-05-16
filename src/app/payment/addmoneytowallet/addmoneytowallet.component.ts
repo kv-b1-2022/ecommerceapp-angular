@@ -30,7 +30,9 @@ balance!:any;
   }
   findWalletBalance()
   {
-    let mobile=localStorage.getItem("sessionMobile");
+    let user=localStorage.getItem("LOGGED_IN_USER");
+   // let userObj=JSON.parse(user);
+    let mobile=1;
     const url="http://localhost:9000/wallet/user/find/balance?mobile="+mobile;
     this.http.get(url).subscribe(res=>{
      this.wallet=res;
