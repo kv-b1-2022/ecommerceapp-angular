@@ -34,6 +34,7 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
 import { DataTablesModule } from 'angular-datatables';
 import { FoodsModule } from './foods/foods.module';
+import { ShippmentModule } from './shippment/shippment.module';
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import { FoodsModule } from './foods/foods.module';
     CouponCodeModule,
     AuthModule,
     DataTablesModule,
-    FoodsModule
+    FoodsModule,
+    ShippmentModule
   ],
   providers: [],
   bootstrap: [AppComponent]
