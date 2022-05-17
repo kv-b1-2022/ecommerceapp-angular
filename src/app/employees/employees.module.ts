@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { EmployeesRoutingModule } from './employees-routing.module';
 import { ListemployeesComponent } from './listemployees/listemployees.component';
 import { TimesheetComponent } from './timesheet/timesheet.component';
-import { FormsModule } from '@angular/forms';
 import { ListEmployeesTimesheetComponent } from './list-employees-timesheet/list-employees-timesheet.component';
 import { FindemployeetimesheetComponent } from './findemployeetimesheet/findemployeetimesheet.component';
 import { FindtimesheetbynameComponent } from './findtimesheetbyname/findtimesheetbyname.component';
@@ -30,7 +29,7 @@ import { SalaryprocessComponent } from './salaryprocess/salaryprocess.component'
     TimesheetComponent,
     ListEmployeesTimesheetComponent,
     FindemployeetimesheetComponent,
-    FindtimesheetbynameComponent
+    FindtimesheetbynameComponent,
     EmployeeloginComponent,
     EmployeedetailsComponent,
     GetEmployeedetailsComponent,
@@ -46,7 +45,6 @@ import { SalaryprocessComponent } from './salaryprocess/salaryprocess.component'
   imports: [
     CommonModule,
     EmployeesRoutingModule,
-    FormsModule
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,

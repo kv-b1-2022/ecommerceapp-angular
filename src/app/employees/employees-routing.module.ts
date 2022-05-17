@@ -5,19 +5,14 @@ import { FindtimesheetbynameComponent } from './findtimesheetbyname/findtimeshee
 import { ListEmployeesTimesheetComponent } from './list-employees-timesheet/list-employees-timesheet.component';
 import{ ListemployeesComponent } from './listemployees/listemployees.component';
 import { TimesheetComponent } from './timesheet/timesheet.component';
-const routes: Routes = [
-  {path:'listemployee',component:ListemployeesComponent},
-  {path:'timesheet',component:TimesheetComponent},
-  {path:'listemployeestimesheet',component:ListEmployeesTimesheetComponent},
-  {path:'findemployeetimesheet/:name',component:FindemployeetimesheetComponent},
-  {path:'findtimesheetbyname',component:FindtimesheetbynameComponent}
+
+  
 
 import { EmployeeProfilepageComponent } from '../employee-profilepage/employee-profilepage.component';
 import { EmployeedetailsComponent } from './employeedetails/employeedetails.component';
 import { EmployeeloginComponent } from './employeelogin/employeelogin.component';
 import { EmployeeregisterComponent } from './employeeregister/employeeregister.component';
 import { GetEmployeedetailsComponent } from './get-employeedetails/get-employeedetails.component';
-import{ ListemployeesComponent } from './listemployees/listemployees.component';
 import { LeavestatusComponent } from './leavestatus/leavestatus.component';
 import { ApplyleaveComponent } from './applyleave/applyleave.component';
 import { LeavelistComponent } from './leavelist/leavelist.component';
@@ -39,7 +34,12 @@ const routes: Routes = [
   
   {path:'listemployees/employeeregister',component:EmployeeregisterComponent},
   {path:'salaryprocess',component:SalaryprocessComponent},
-  {path:'employeeprofile',component:EmployeeProfilepageComponent}
+  {path:'employeeprofile',component:EmployeeProfilepageComponent},
+
+  {path:'timesheet',component:TimesheetComponent},
+  {path:'listemployeestimesheet',component:ListEmployeesTimesheetComponent},
+  {path:'findemployeetimesheet/:name',component:FindemployeetimesheetComponent},
+  {path:'findtimesheetbyname',component:FindtimesheetbynameComponent}
 
 
 ];
