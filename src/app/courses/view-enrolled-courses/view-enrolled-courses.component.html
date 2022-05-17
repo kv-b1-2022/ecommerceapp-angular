@@ -1,1 +1,22 @@
-<p>view-enrolled-courses works!</p>
+<h3>Enrolled Courses</h3>
+<div class="row">
+    <ng-container *ngFor="let item of courseData">
+        <div class="float-container">
+            <div class="float-child">
+<<<<<<< HEAD
+                <iframe class="card-img-bottom" [src]='item.url | safe'> alt="video" width="400px" height="400px"></iframe>
+=======
+                <iframe class="card-img-bottom" src="{{item.url}}" alt="video" width="400px" height="400px"></iframe>
+>>>>>>> 3c2569665a489c2c38a92f8d12e88a99abe8efd3
+            </div>
+            <div class="float-child">
+                <h3 style="color:blue"><strong>{{item.cname}}</strong></h3>
+                <p style="color:darkblue"><i>By {{item.tutor}}</i></p>
+                <p style="color:darkgreen"><b>{{item.duration}}</b></p>
+                <br>
+                <p style="color:darkslategrey">{{item.description}}</p>
+            </div>
+          </div>   
+          <hr>       
+    </ng-container>              
+</div>

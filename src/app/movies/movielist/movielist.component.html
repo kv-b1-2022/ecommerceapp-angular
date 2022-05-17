@@ -12,6 +12,7 @@
         <th>Location</th>
         <th>category</th>
         <th>Action</th>
+        <th>Edit</th>
     </tr>
 </thead>
 <tbody>
@@ -24,9 +25,12 @@
         <td>{{movie.language}}</td>
         <td>{{movie.location}}</td>
         <td>{{movie.category}}</td>
-      <td><button type="button" (click)="deleteMovie(movie.Id)"
+      <td><button type="button" (click)="deleteMovie(movie.id)"
        class="btn btn-danger">Delete</button> 
        </td>
+       <td><button type="button" class="btn btn-primary" routerLink="/update-movie/{{movie.id}}">
+    Update</button> 
+        </td>
     </tr>
 
 
