@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -13,7 +14,9 @@ export class AddProductStockComponent implements OnInit {
   @Input()
   productId!:any;
   quantity!:any;
-  constructor(private http:HttpClient,private toastr:ToastrService) { }
+  constructor(private http:HttpClient,private toastr:ToastrService,private route:ActivatedRoute) {
+    this.productId=this.route.snapshot.queryParams["productId"];
+   }
 
   ngOnInit(): void {
   }

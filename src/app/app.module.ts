@@ -48,13 +48,11 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     AppComponent,
     HomeComponent,
     HeaderComponent,
-   
-
     AdminSidebarComponent,
     HeaderComponent
+
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
