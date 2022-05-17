@@ -13,7 +13,7 @@ const routes: Routes = [
   {path:'coursesbytype/:cid',component:ViewCourseTypeComponent},
   {path:'viewallcourses',component:ListAllCoursesComponent},
   {path:'viewcourse/:id',component:ViewCourseDetailsComponent},
-  {path:'enrolledcourses',component:ViewEnrolledCoursesComponent,canActivate:[AuthGuard]},
+  {path:'enrolledcourses/:uid',component:ViewEnrolledCoursesComponent,canActivate:[AuthGuard]},
   {path:'coursestype',component:CoursesCategoryComponent},
   {path:'list-courses',component:ListcourseComponent},
   {path:'add-courses',component:AddCourseComponent}
