@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-list-all-courses',
@@ -9,8 +10,8 @@ import { ToastrService } from 'ngx-toastr';
   ]
 })
 export class ListAllCoursesComponent implements OnInit {
-
-  constructor(private http: HttpClient,private toastr : ToastrService) { }
+  userId = this.authService.getUser()?.id;
+  constructor(private http: HttpClient,private toastr : ToastrService, private authService:AuthService) { }
 
   ngOnInit(): void {
     this.listCourses()
@@ -30,18 +31,4 @@ export class ListAllCoursesComponent implements OnInit {
   courseDetails!:any;
   name!:any;
   data!:any;
-  // search(){
-  //     const cname=this.name;
-  //     const url = "http://localhost:8000/course/search/"+cname;
-  //     this.http.get(url).subscribe(res=>{
-  //       this.courseDetails=JSON.stringify(res);
-  //       console.log(this.courseDetails);
-  //       this.data = JSON.parse(this.courseDetails);
-  //       window.location.href="/viewcourse/"+this.data.id;
-  //     },err=>{
-  //       console.log(err.error.message);
-  //       this.toastr.error(err.error.message);
-  //     })
-  // }
-
 }
