@@ -22,7 +22,7 @@ export class ViewEnrolledCoursesComponent implements OnInit {
   }
 
   viewEnrolledCourses(){
-    const url="http://localhost:9000/courses/enrolledlist/"+this.id;
+    const url="http://courses-api.herokuapp.com/courses/enrolledlist/"+this.id;
     this.http.get(url).subscribe(res=>{
       console.log(res)
       this.courseData=res;

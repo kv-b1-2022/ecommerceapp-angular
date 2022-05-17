@@ -52,6 +52,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
+import { TransactionModule } from './transaction/transaction.module';
 
 
 
@@ -106,6 +107,8 @@ import { SpinnerComponent } from './spinner/spinner.component';
     FoodsModule,
     DressModule,
     BooksModule,
+    ElectronicsModule,
+    TransactionModule,
     ElectronicsModule
     
 
