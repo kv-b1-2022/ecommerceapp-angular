@@ -1,0 +1,26 @@
+<h1>COURSE LIST </h1>
+<button routerLink="/add-courses">Add Course</button>
+<br>
+<table datatable class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>CATEGORY</th>
+            <th>NAME</th>
+            <th>TUTOR</th>
+            <th>DURATION</th>
+            <th>DESCRIPTION</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let course of courselist">
+            <td>{{course.id}}</td>
+            <td>{{course.category}}</td>
+            <td>{{course.cname}}</td>
+            <td>{{course.tutor}}</td>
+            <td>{{course.duration}}</td>
+            <td>{{course.description}}</td>
+            <td><button type="button" class="btn-danger" (click)="deleteCourse(course)">Remove</button> &nbsp;
+            </tr>
+    </tbody>
+</table>

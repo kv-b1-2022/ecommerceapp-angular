@@ -21,7 +21,7 @@ export class ViewCourseTypeComponent implements OnInit {
   }
 
   CourseByType(){
-    const url="http://localhost:8000/courses/viewbytype?cId="+this.id;
+    const url="https://courses-api.herokuapp.com/courses/viewbytype?cId="+this.id;
     this.http.get(url).subscribe(res=>{
       this.courseData=res;
     },err=>{

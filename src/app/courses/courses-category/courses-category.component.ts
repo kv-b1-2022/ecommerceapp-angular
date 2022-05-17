@@ -18,7 +18,7 @@ export class CoursesCategoryComponent implements OnInit {
   courses!:any;
   showAvailableCourses(){
     
-    const url = "http://localhost:8000/courses/CourseCategory";
+    const url = "https://courses-api.herokuapp.com/courses/CourseCategory";
     this.http.get(url).subscribe(res=>{
       
       this.courses=res;
