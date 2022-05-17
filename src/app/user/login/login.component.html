@@ -61,7 +61,7 @@
     <!-- <div class="input-group"> -->
       <!---<label class="palceholder" for="Consumer Id">Consumer Id</label>--->
       <!-- <input class="form-control" name="ConsumerId" id="Consumer_Id" type="text" placeholder="Consumer Id" size="11" [(ngModel)]="ConsumerId"/> -->
-      <!-- <span class="lighting"></span> -->
+      <span class="lighting"></span>
     <!-- </div> -->
     <div class="input-group">
       <!---<label class="palceholder" for="userName">User Mail Id</label>--->
@@ -97,7 +97,7 @@
       </div>
     </div>
     
-    <button  id="login" type="submit" >Login</button>
+    <button  id="login" type="submit" [disabled]="this.myForm.invalid" >Login</button>
     
   </form>
 </div>
@@ -249,7 +249,7 @@ body {
     margin-top: 0;
   }
   .wrapper {
-    width: 320px;
+    width: 50%;
     background: #fff;
     margin: 20px auto;
     min-height: 200px;

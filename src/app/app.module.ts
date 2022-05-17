@@ -12,6 +12,7 @@ import { MoviesModule } from './movies/movies.module';
 
 import { MedicalModule } from './medical/medical.module';
 import { FoodsModule } from './foods/foods.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { GroceryModule } from './grocery/grocery.module';
@@ -22,7 +23,6 @@ import { CakesModule } from './cakes/cakes.module';
 import { PaymentModule } from './payment/payment.module';
 import { OrderModule } from './order/order.module';
 
-import { NgChartsModule } from 'ng2-charts';
 import { CoursesModule } from './courses/courses.module';
 import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module'; 
@@ -84,7 +84,7 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     PaymentModule,
     PayrollModule,
     ProductpriceModule,
-    NgModule,
+    NgbModule,
     StockModule,
     PayrollModule,
     BusModule,
