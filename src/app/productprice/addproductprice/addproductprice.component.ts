@@ -13,7 +13,7 @@ export class AddproductpriceComponent implements OnInit {
     productId!:number;
     price!:number;
     startDate!:Date;
-    endDate!:Date;
+    End_Date!:Date;
   
 
 
@@ -22,7 +22,7 @@ export class AddproductpriceComponent implements OnInit {
     ngOnInit(): void {
     }
     addProductprice(){
-      const PriceObj={"productid":this.productId,"price":this.price,"startDate":this.startDate,"endDate":this.endDate};
+      const PriceObj={"productid":this.productId,"price":this.price,"startDate":this.startDate,"End_Date":this.End_Date};
       const url="http://localhost:8080/productprice/save";
       this.http.post(url,PriceObj).subscribe((res)=>{
         console.log(res);
