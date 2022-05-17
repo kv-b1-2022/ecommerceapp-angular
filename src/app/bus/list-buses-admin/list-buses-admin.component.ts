@@ -29,7 +29,7 @@ export class ListBusesAdminComponent implements OnInit {
   deleteBus(id:any){
     let clarify = confirm("Do you want to delete");
     if(clarify){
-      const url="https://busticketbooking-api.herokuapp.com/Buses/" + id;
+    const url="https://busticketbooking-api.herokuapp.com/Buses/" + id;
       this.http.delete(url).subscribe((res)=>{
         console.log(res);
         this.toastr.success('successfully deleted');

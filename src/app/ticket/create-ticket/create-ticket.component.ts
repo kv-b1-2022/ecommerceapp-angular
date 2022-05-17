@@ -33,7 +33,7 @@ export class CreateTicketComponent implements OnInit {
   createTicket() {
     const userObj = { "userId": this.userId, "ticketTitle": this.ticketTitle, "description": this.description, "category": this.category };
     console.log(userObj);
-    const url = "http://localhost:9000/ticket/save";
+    const url = "https://supportticket-apii.herokuapp.com/ticket/save";
     this.http.post(url, userObj).subscribe((res) => {
       console.log(res);
       this.toastrService.success('Ticket Created Successfully');

@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import { CartService } from 'src/app/cart.service';
 
 
 
@@ -17,7 +16,7 @@ export class DisplaydressesComponent implements OnInit {
   dress!:any;
   category!:any;
   dresslist:any;
-  constructor(private http:HttpClient,private toastr:ToastrService,private cartService:CartService ) {}
+  constructor(private http:HttpClient,private toastrService:ToastrService ) {}
   ngOnInit(): void {
     this.getAllDresses();
     let items= localStorage.getItem("CART_ITEMS")
@@ -35,11 +34,11 @@ export class DisplaydressesComponent implements OnInit {
   }
 
 cartItems:any;
-  addToCart(dress:any){
+  addToCart(dresslist:any){
     // alert(id);
-    this.cartItems.push(dress);
+    this.cartItems.push(dresslist);
     localStorage.setItem("CART_ITEMS", JSON.stringify(this.cartItems));
-    this.toastr.success("Add item to cart");
+    this.toastrService.success("Add item to cart");
   }
 
 

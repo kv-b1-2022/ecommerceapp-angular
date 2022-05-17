@@ -11,7 +11,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MoviesModule } from './movies/movies.module';
 
 import { MedicalModule } from './medical/medical.module';
+
 import { FoodsModule } from './foods/foods.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { GroceryModule } from './grocery/grocery.module';
@@ -22,10 +24,13 @@ import { CakesModule } from './cakes/cakes.module';
 import { PaymentModule } from './payment/payment.module';
 import { OrderModule } from './order/order.module';
 
-import { NgChartsModule } from 'ng2-charts';
 import { CoursesModule } from './courses/courses.module';
 import { EmployeesModule } from './employees/employees.module';
+<<<<<<< HEAD
+import { MembershipModule } from './membership/membership.module';
+=======
 import { MembershipModule } from './membership/membership.module'; 
+>>>>>>> fb5a1a72ec77e53889f626f02aa0e019abd49877
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
 
@@ -40,10 +45,14 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
 
 import { BooksModule } from './books/books.module';
+<<<<<<< HEAD
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+=======
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
 
 
+>>>>>>> fb5a1a72ec77e53889f626f02aa0e019abd49877
 
 
 @NgModule({
@@ -78,13 +87,12 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     EmployeesModule,
     OrderModule,
     PaymentModule,
-    NgChartsModule,
     CoursesModule,
     MembershipModule,
     PaymentModule,
     PayrollModule,
     ProductpriceModule,
-    NgModule,
+    NgbModule,
     StockModule,
     PayrollModule,
     BusModule,
