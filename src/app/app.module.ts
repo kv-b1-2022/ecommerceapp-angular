@@ -46,7 +46,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
-import { SafePipe } from './safe.pipe';
+
 
 
 
@@ -62,7 +62,7 @@ import { SafePipe } from './safe.pipe';
   
     EmployeeProfilepageComponent,
     HeaderComponent,
-    SafePipe
+    
 
   ],
   imports: [
