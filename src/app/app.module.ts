@@ -78,7 +78,7 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     EmployeesModule,
     OrderModule,
     PaymentModule,
-    NgChartsModule,
+    // NgChartsModule,
     CoursesModule,
     MembershipModule,
     PaymentModule,
