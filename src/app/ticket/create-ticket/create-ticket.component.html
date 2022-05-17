@@ -5,9 +5,7 @@
     }
 </style>
 
-<button type="button"  class="btn btn-info" routerLink="/list-tickets">
-    List Ticket
-</button>
+
 
 <form id="form" (ngSubmit)="createTicket()">
     <h3>Create Ticket</h3>
@@ -32,7 +30,6 @@
         <option value="foods">Foods</option>
         <option value="membership">Membership</option>
         <option value="medical">Medical</option>
-        
       </select>
       </div>
       <br>
@@ -47,6 +44,7 @@
     <input type="textarea" name="description" [(ngModel)]="description" placeholder="Enter Ticket Description" required> 
 </div>
 <br>
+
 
     <button type="submit">
         Submit
