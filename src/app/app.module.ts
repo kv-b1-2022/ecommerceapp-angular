@@ -12,6 +12,7 @@ import { MoviesModule } from './movies/movies.module';
 
 import { MedicalModule } from './medical/medical.module';
 import { FoodsModule } from './foods/foods.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { GroceryModule } from './grocery/grocery.module';
@@ -83,7 +84,7 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     PaymentModule,
     PayrollModule,
     ProductpriceModule,
-    NgModule,
+    NgbModule,
     StockModule,
     PayrollModule,
     BusModule,
