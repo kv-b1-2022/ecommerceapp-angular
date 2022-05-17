@@ -34,4 +34,13 @@ export class ListusersComponent implements OnInit {
       this.toastr.error(err.error.message);
     });
   }
+  makeAsAdmin(id:any){
+    const url = "https://userapp-apii.herokuapp.com/user/makeasadmin/"+id;
+    this.http.get(url).subscribe(res=>{
+      this.toastr.success("Updated Successfully");
+      this.listUsers();
+    },err=>{
+      this.toastr.error(err.error.message);
+    });
+  }
 }
