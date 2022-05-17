@@ -42,7 +42,7 @@ export class AddmembershipComponent implements OnInit {
     if(count==2)
     {
       event?.preventDefault();
-      const url="http://localhost:9050/memberShip/add?rs="+type+"&userId="+userId;
+      const url="https://books-apiii.herokuapp.com/memberShip/add?rs="+type+"&userId="+userId;
       this.http.get(url).subscribe((res:any)=>
       {
         this.toastr.success("success");
