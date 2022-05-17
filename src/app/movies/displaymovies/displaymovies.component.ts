@@ -13,6 +13,7 @@ export class DisplaymoviesComponent implements OnInit {
   ngOnInit(): void {
     this.getAllMovies();
   }
+  searchMovies!:any;
   movies:any;
   getAllMovies()
   {
@@ -24,5 +25,9 @@ export class DisplaymoviesComponent implements OnInit {
       console.log("An error occured");
     }
     )
+}
+searchMovie(){
+  const movie= this.searchMovies;
+  window.location.href="search-movies/"+movie;
 }
 }

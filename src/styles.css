@@ -130,8 +130,8 @@ ngb-carousel .wrapper>img {
     }
      
     .gallery img {
-        width: 500px;
-        height: 300px;
+        width: 400px;
+        height: 225px;
         transition: 1s;
         padding: 5px;
         border-radius: 50px;
