@@ -1,0 +1,33 @@
+<section *ngIf="!value">
+    <h1 id="number1">SEARCH BOOK BY NAME</h1>
+    <form id="number" ngNativeValidate (submit)="Name()">
+        <div>
+            <input type="text" id="name" name="name" [(ngModel)]="name" placeHolder="Enter Book Name" required Autofocus
+                style=" height: 70px;  width: 450px;"><span id="nameinvalid"></span>
+            <br><br><button type="submit" class="btn btn-primary">Serach Book</button> &nbsp;
+
+
+        </div>
+    </form>
+</section>
+<div class="row">
+    <ng-container *ngFor="let item of value" style="width: 18rem;">
+        <div class="col-3">
+            <div class="card">
+                <img class="card-img-top" src="{{item.imageLink}}" alt="Card image cap" width="50px" height="590px">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.id}}</h5>
+                    <h5 class="card-title">{{item.name}}</h5>
+
+                    
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Department - {{item.department}}</li>
+
+                    <li class="list-group-item">Rs - [{{item.rs}}]</li>
+                </ul>
+
+            </div>
+        </div>
+    </ng-container>
+</div>

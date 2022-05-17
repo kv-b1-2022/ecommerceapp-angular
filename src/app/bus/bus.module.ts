@@ -11,6 +11,7 @@ import { ViewUserComponent } from './view-user/view-user.component';
 import { UpdateBusComponent } from './update-bus/update-bus.component';
 import { AddBusComponent } from './add-bus/add-bus.component';
 import { ListBusesAdminComponent } from './list-buses-admin/list-buses-admin.component';
+import { BookTicketComponent } from './book-ticket/book-ticket.component';
 
 
 
@@ -23,6 +24,7 @@ import { ListBusesAdminComponent } from './list-buses-admin/list-buses-admin.com
     UpdateBusComponent,
     AddBusComponent,
     ListBusesAdminComponent,
+    BookTicketComponent
   
   ],
   imports: [
