@@ -14,6 +14,7 @@ import { MedicalModule } from './medical/medical.module';
 
 import { FoodsModule } from './foods/foods.module';
 
+
 import { GroceryModule } from './grocery/grocery.module';
 import { ReviewModule } from './review/review.module';
 import { UserModule } from './user/user.module';
@@ -47,12 +48,6 @@ import { EmployeeProfilepageComponent } from './employee-profilepage/employee-pr
 import { ElectronicsModule } from './Electronics/electronics.module';
 import { SpinnerComponent } from './spinner/spinner.component';
 
-
-import { SafePipe } from './safe.pipe';
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,6 +60,7 @@ import { SafePipe } from './safe.pipe';
     EmployeeProfilepageComponent,
     HeaderComponent,
     SpinnerComponent
+    
 
   ],
   imports: [
