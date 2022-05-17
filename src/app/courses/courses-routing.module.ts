@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-<<<<<<< HEAD
 import { AddCourseComponent } from './add-course/add-course.component';
-=======
 import { AuthGuard } from '../auth.guard';
->>>>>>> d31a8ba92da07851e222c9c3bb67e368effd2862
 import { CoursesCategoryComponent } from './courses-category/courses-category.component';
 import { ListAllCoursesComponent } from './list-all-courses/list-all-courses.component';
 import { ListcourseComponent } from './listcourse/listcourse.component';
