@@ -1,25 +1,22 @@
 
-<button class="btn btn-primary" (click)="tableClick(true)" *ngIf="btn == false">show sellers List</button>
-<button class="btn btn-primary" (click)="tableClick(false)" *ngIf="btn == true">hide sellers list</button><button class="btn btn-primary" *ngIf="account == true" (click)="tableClick2(false)">Show Account details</button><button class="btn btn-primary" *ngIf="account == false" (click)="tableClick2(true)">hide Account details</button>
-<a class="btn btn-primary" routerLink="/employeeregister">Employee Register</a>
-<a class="btn btn-primary" routerLink="/applyleave">Apply Leave</a>
-<a class="btn btn-primary" routerLink="/leavestatus">Leave Status</a>
 <button class="btn btn-primary" (click)="tableClick(true)" *ngIf="btn == false">show employee List</button>
-<button class="btn btn-primary" (click)="tableClick(false)" *ngIf="btn == true">hide employee list</button><button
-    class="btn btn-primary" *ngIf="account == true" (click)="tableClick2(false)">Show Account details</button><button
-    class="btn btn-primary" *ngIf="account == false" (click)="tableClick2(true)">hide Account details</button>
-<a class="btn btn-primary" routerLink="employeeregister">Add Employees</a>
+<button class="btn btn-primary" (click)="tableClick(false)" *ngIf="btn == true">Hide employee list</button><button class="btn btn-primary" *ngIf="account == true" (click)="tableClick2(false)">Show Account details</button><button class="btn btn-primary" *ngIf="account == false" (click)="tableClick2(true)">hide Account details</button>
+<a class="btn btn-primary" routerLink="/employeeregister">Employee Register</a>
+<a class="btn btn-primary" routerLink="/leavestatus">Leave Status</a>
+<button class="btn btn-primary" routerLink="/leavelist" *ngIf="btn == false">Leave form list</button>
+<button class="btn btn-primary" routerLink="/listemployeestimesheet" *ngIf="btn == false">list timesheet status</button>
+
 <router-outlet></router-outlet>
 <div *ngIf="btn == true">
     <h2 style="text-align: center;"> List Employees</h2>
     <table class="table table-light table-hover">
         <thead>
             <tr>
-                <td>d_id</td>
-                <td>empName</td>
-                <td>empEmail</td>
-                <td>mobileNumber</td>
-                <td>role</td>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Email</td>
+                <td>MobileNumber</td>
+                <td>Role</td>
             </tr>
         </thead>
         <tbody>
