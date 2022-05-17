@@ -1,0 +1,50 @@
+<section *ngIf="!value">
+    <h1 id="number1">SEARCH BY BOOK DEPARTMENT</h1>
+    <form id="number"  ngNativeValidate (submit)="Department()">
+        <div>
+            <div>
+                <label>Department</label><br>
+                <select name="Type" [(ngModel)]="department" required style=" height: 70px;  width: 450px;">
+                   <option value="EEE">EEE</option>
+                    <option value="MECH">MECH</option>
+                    <option value="ECE">ECE</option>
+                    <option value="CSE">CSE</option>
+                    <option value="IT">IT</option>
+                    <option value="AI">AI</option>
+                    <option value="MECHATRONICS">MECHATRONICS</option>
+                    <option value="ROBOTIC">ROBOTICS</option>
+                    <option value="AUTOMOBILE">AUTOMOBILE</option>
+                    <option value="EIE">EIE</option>
+                </select>
+            </div>
+            <br>
+                <button type="submit" class="btn btn-primary">Serach Book</button> &nbsp;
+            
+               
+            </div>
+        </form>
+    </section>
+    <section>
+            <div class="row">
+                <ng-container  *ngFor="let item of value" style="width: 18rem;">
+                    <div    class="col-3">
+                    <div class="card">
+                        <img class="card-img-top" src="{{item.imageLink}}" alt="Card image cap" width="50px" height="590px">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item.id}}</h5>
+                            <h5 class="card-title">{{item.name}}</h5>
+                           
+                          
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" >Department - {{item.department}}</li>
+                          
+                            <li class="list-group-item" >RS - [{{item.rs}}]</li>
+                        </ul>
+                       
+                    </div>
+                </div>
+            </ng-container>
+         </div>
+        </section>
+    

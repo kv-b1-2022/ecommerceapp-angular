@@ -9,12 +9,13 @@ import { SearchMoviesComponent } from './search-movies/search-movies.component';
 
 const routes: Routes = [
   {path:'movielist',component:MovielistComponent},
-  {path:'add-movie',component:AddMoviesComponent},
+  {path:'movielist/add-movies',component:AddMoviesComponent},
   {path:'displaymovies',component:DisplaymoviesComponent},
   {path:'displaymovies/booking',component:BookingComponent},
   {path:'update-movie/:id',component:UpdateMovieComponent},
-  {path:'search-movies/:searhMovies',component:SearchMoviesComponent}
-
+  {path:'search-movies/:searchMovies',component:SearchMoviesComponent},
+ 
+  
 ];
 
 @NgModule({
