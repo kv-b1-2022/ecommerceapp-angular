@@ -1,4 +1,4 @@
-<p>list-order works!</p>
+<h3>All Orders</h3>
 
 <table class="table table-bordered">
    
@@ -7,13 +7,15 @@
     <thead>
         <tr>
             <th>Order Id</th>
-            <th>User Id</th>
+            <th>User </th>
+            <th>Description </th>
             <th>Total Price(Rs)</th>
             <th>Ordered Date</th>
             <th>Status</th>
             <th>Modified Date</th>
             <th>Created Date</th>
-            <th>Created By</th>
+            <th>Action</th>
+            <!-- <th>Created By</th> -->
         </tr>
 
     </thead>
@@ -21,14 +23,17 @@
         <tr *ngFor="let order of orders;">
             <td>{{order.orderId}}</td>
             <td>{{order.userId}}</td>
+            <td>{{order.description}}</td>
             <td>{{order.totalPrice}}</td>
             <td>{{order.orderDate}}</td>
             <td>{{order.status}}</td>
             <td>{{order.modifiedDate}}</td>
             <td>{{order.createdDate}}</td>
-            <td>{{order.createdBy}}</td>
+            <!-- <td>{{id}}</td> -->
+            <td><a routerLink="/add-rating" class="btn btn-info">Add Rating</a></td>
+            <td><a routerLink="/support" class="btn btn-info">Support</a></td>
             
         </tr>
     </tbody>
 </table>
-<td><a routerLink="/add-rating" class="btn btn-info">Add Rating</a></td>
+

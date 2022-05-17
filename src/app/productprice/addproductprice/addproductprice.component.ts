@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -17,12 +18,14 @@ export class AddproductpriceComponent implements OnInit {
   
 
 
-    constructor(private http:HttpClient,private toastr:ToastrService) { }
+    constructor(private http:HttpClient,private toastr:ToastrService,private route:ActivatedRoute) { 
+      this.productId=this.route.snapshot.queryParams["productId"];
+    }
   
     ngOnInit(): void {
     }
     addProductprice(){
-      const PriceObj={"productid":this.productId,"price":this.price,"startDate":this.startDate,"EndDate":this.EndDate};
+      const PriceObj={"productId":this.productId,"price":this.price,"startDate":this.startDate,"EndDate":this.EndDate};
       const url="http://localhost:8080/productprice/save";
       this.http.post(url,PriceObj).subscribe((res)=>{
         console.log(res);
