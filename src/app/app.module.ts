@@ -13,6 +13,7 @@ import { MoviesModule } from './movies/movies.module';
 import { MedicalModule } from './medical/medical.module';
 
 import { FoodsModule } from './foods/foods.module';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { GroceryModule } from './grocery/grocery.module';
@@ -44,6 +45,7 @@ import { AuthModule } from './auth/auth.module';
 
 import { BooksModule } from './books/books.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
 import { SpinnerComponent } from './spinner/spinner.component';
@@ -82,6 +84,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
     EmployeesModule,
     OrderModule,
     PaymentModule,
+    // NgChartsModule,
     CoursesModule,
     MembershipModule,
     PaymentModule,
