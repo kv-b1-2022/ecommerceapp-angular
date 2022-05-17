@@ -1,4 +1,4 @@
-<p>myorder works!</p>
+<h3>My Order</h3>
 
 <table class="table table-bordered">
    
@@ -6,27 +6,27 @@
 
     <thead>
         <tr>
-            <th>id</th>
-            <th>productId</th>
+            <th>orderId</th>
+            <th>userId</th>
             <th>totalPrice</th>
             <th>orderDate</th>
             <th>satus</th>
-            <th>modifyDate</th>
-            <th>createDate</th>
+            <th>modifiedDate</th>
+            <th>createdDate</th>
             <th>createdBy</th>
         </tr>
 
     </thead>
     <tbody>
         <tr *ngFor="let order of orders;">
-            <td>{{order.id}}</td>
-            <td>{{order.productId}}</td>
+            <td>{{order.orderId}}</td>
+            <td>{{id}}</td>
             <td>{{order.totalPrice}}</td>
             <td>{{order.orderDate}}</td>
             <td>{{order.status}}</td>
-            <td>{{order.modifyDate}}</td>
-            <td>{{order.createDate}}</td>
-            <td>{{order.createdBy}}</td>
+            <td>{{order.modifiedDate}}</td>
+            <td>{{order.createdDate}}</td>
+            <td>{{id}}</td>
             
         </tr>
     </tbody>

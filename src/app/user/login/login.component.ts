@@ -8,6 +8,8 @@ import { ToastrService } from 'ngx-toastr';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styles: [
+
+   
   ]
 })
 export class LoginComponent implements OnInit {
