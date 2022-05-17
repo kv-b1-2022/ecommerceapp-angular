@@ -15,12 +15,14 @@ export class CreateOrderComponent implements OnInit {
   userId!:number;
   amount!:number;
   applyCoupon!:number;
-  status!:String;
+  status:String="ordered";
   createdBy!:number;
   comments!:String;
   discountPercentage:number =0;
   totalAmount:number =0;
   couponCode!:number;
+  productId!:number;
+  quantity!:number;
 
   constructor(private http:HttpClient,private toastrService: ToastrService,private route:ActivatedRoute,private authService:AuthService
     ) {
@@ -47,9 +49,12 @@ export class CreateOrderComponent implements OnInit {
     const url= "https://order-apii.herokuapp.com/ordersTable/save";
     this.http.post(url,orderobj).subscribe((res)=>{
       console.log(res);
+      this.reduceStock();
       this.toastrService.success('successfully added');
+      let orderId = 1; //res;
+      
      
-      localStorage.removeItem("CART_ITEMS");
+      
     },(err)=>{
       console.log(err);
       this.toastrService.error('invalid credentails')
@@ -72,6 +77,28 @@ export class CreateOrderComponent implements OnInit {
     console.log(err);
     this.toastrService.error(err.error.message);
   });
+}
+
+reduceStock(){
+  let items= localStorage.getItem("CART_ITEMS");
+    let products = items != null ? JSON.parse(items):[];
+  let stockobj=[];
+  for(let product of products){
+    const obj = {"productId": product.id,"quantity":1};
+    stockobj.push(obj);
+    //stockobj = obj;
+  }
+  const url="https://stockapp-apii.herokuapp.com/stock/reduce/bulk";
+  this.http.post(url,stockobj).subscribe((res:any)=>{
+    console.log(res);
+    localStorage.removeItem("CART_ITEMS");
+    let orderId =1;
+    // window.location.href="/cardpayment/" + orderId +"/" + this.amount;
+
+},(err)=>{
+  console.log(err);
+  this.toastrService.error(err.error.message);
+});
 }
 
  discount(){
