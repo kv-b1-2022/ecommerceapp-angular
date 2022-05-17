@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
@@ -27,7 +28,7 @@ export class ViewEnrolledCoursesComponent implements OnInit {
       this.courseData=res;
     },err=>{
       console.log(err.error.message);
-      alert(err.error.message);
+      this.toastr.error(err.error.message);
     })
   }
 
