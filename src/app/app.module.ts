@@ -52,13 +52,10 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     AppComponent,
     HomeComponent,
     HeaderComponent,
-<<<<<<< HEAD
 
    
 
 
-=======
->>>>>>> 609cefe4425df5babff8782c33f24446e994d141
     AdminSidebarComponent,
     HeaderComponent,
     
