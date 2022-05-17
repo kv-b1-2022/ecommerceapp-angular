@@ -23,7 +23,7 @@ export class DisplayMedicalsComponent implements OnInit {
   
   getAllProducts()
   {
-    const url="https://product-apii.herokuapp.com/Product/list";
+    const url="http://localhost:9001/Product/list";
     this.http.get(url).subscribe((res)=>{
       this.products = res;
       console.log(this.products);

@@ -1,6 +1,6 @@
-<form>
+<form (submit)="couponCheck()">
     <div>
         <input type="text" name="coupon" id="coupon" [(ngModel)]="coupon" placeholder="enter code">
-        <button class="btn btn-danger">use coupon</button>
+        <button class="btn btn-danger" type="submit">use coupon</button>
     </div>
 </form>
