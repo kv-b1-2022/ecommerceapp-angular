@@ -48,10 +48,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
-
-
-
-
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +61,7 @@ import { ElectronicsModule } from './Electronics/electronics.module';
   
     EmployeeProfilepageComponent,
     HeaderComponent,
+    SpinnerComponent
     
 
   ],

@@ -10,6 +10,8 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
   
 })
 export class HomeComponent implements OnInit {
+
+
   title = 'ng-carousel-demo';
 
   images = [
