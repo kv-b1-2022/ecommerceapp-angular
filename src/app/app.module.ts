@@ -45,6 +45,7 @@ import { ElectronicsModule } from './Electronics/electronics.module';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +53,7 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     HeaderComponent,
     AdminSidebarComponent,
     HeaderComponent,
+    
   
     EmployeeProfilepageComponent,
     HeaderComponent

@@ -26,12 +26,10 @@ export class ViewFoodsComponent implements OnInit {
   searchFood(){
     const food= this.search;
 
-    const url="http://localhost:9000/DishesByLetter/food_name?food_name="+this.search;
-    this.http.get(url,{responseType:'json'}).subscribe((res)=>{
+    const url="http://localhost:9000/DishesByLetter/food_name?food_name="+food;
+    this.http.get(url).subscribe((res)=>{
       this.foodDetails=res;
-      console.log(res);
-      
-     
+      console.log(res); 
    },(err)=>{
      this.toastr.error("food is not available");
      
