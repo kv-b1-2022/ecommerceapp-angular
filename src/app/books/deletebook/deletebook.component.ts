@@ -3,12 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-displaybook',
-  templateUrl: './displaybook.component.html',
+  selector: 'app-deletebook',
+  templateUrl: './deletebook.component.html',
   styles: [
   ]
 })
-export class DisplaybookComponent implements OnInit {
+export class DeletebookComponent implements OnInit {
 
   constructor(private http:HttpClient,private toastr:ToastrService) { }
 
@@ -36,6 +36,21 @@ export class DisplaybookComponent implements OnInit {
          this.toastr.error(err.error);
        });     
    }
-  
+   buybook(id:any)
+   {
+    const url="https://books-apiii.herokuapp.com/book/deleteById/"+id;
+    this.http.get(url).subscribe((res:any)=>
+    {
 
+      let value=res.message;
+      this.toastr.success(value);
+      window.location.reload();
+    },(err)=>
+    {
+        this.toastr.error(err.error.message);
+        window.location.reload();
+    });
+
+   }
+  
 }
