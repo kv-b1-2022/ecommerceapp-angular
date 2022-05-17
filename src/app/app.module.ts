@@ -52,6 +52,7 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     HeaderComponent,
     AdminSidebarComponent,
     HeaderComponent,
+  
     EmployeeProfilepageComponent,
     HeaderComponent
 
@@ -62,6 +63,7 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    BrowserModule,
     ToastrModule.forRoot(), 
     MoviesModule,
     MedicalModule,
