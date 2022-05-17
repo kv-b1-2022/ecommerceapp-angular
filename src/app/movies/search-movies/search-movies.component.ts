@@ -10,24 +10,28 @@ import { ToastrService } from 'ngx-toastr';
   ]
 })
 export class SearchMoviesComponent implements OnInit {
-searchMovies!:any;
+movieName!:any;
+category!:any;  
 search!:any;
 movies!:any;
+
+
   constructor(private http:HttpClient,private route:ActivatedRoute, private toastr :ToastrService) { }
 
   ngOnInit(): void {
-    this.searchMovies= this.route.snapshot.params['search'];
+    this.search= this.route.snapshot.params['search'];
     this.searchMovie()
   }
+  movieDetails!:any;
   searchMovie(){
-    const movie= this.searchMovies;
+    const movie= this.search;
 
-    const url="http://localhost:9001/movies/findByMovieName";
+    const url="http://localhost:9001/movies/findByMovieName"+this.movieName;
     this.http.get(url).subscribe((res)=>{
-      this.movies=res;
+      this.movieDetails=res;
       console.log(res); 
    },(err)=>{
-     this.toastr.error("movies is not available");
+     this.toastr.error("Movie is not available");
      
    });
  
