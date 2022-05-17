@@ -1,0 +1,96 @@
+<style>
+    body{
+        margin-top: 10px;
+        text-align:center;
+        font-family: 'Courier New';
+    }
+    form{
+        line-height: 25px;
+        margin-top: 70px;
+    }
+    input {
+        display: inline-block;
+    }
+    input[type=text]:focus {
+  background-color: lightblue;
+}
+input[type=number]:focus {
+  background-color: lightblue;
+}
+#submit {
+  background-color: rgb(0, 133, 33); 
+  color: rgb(255, 254, 254); 
+  border: 2px solid #008104;
+}
+
+#submit:hover {
+  background-color: #07ff0f;
+  color: rgb(0, 0, 0);
+}
+#reset {
+  background-color: rgb(134, 0, 0); 
+  color: rgb(255, 254, 254); 
+  border: 2px solid #008104;
+}
+
+#reset:hover {
+  background-color: #ff0707;
+  color: rgb(0, 0, 0);
+}
+
+</style>
+
+<body>
+    <h1>EMPLOYEE TIMESHEET</h1>
+    <form (ngSubmit)="timesheet()" line-space="35px">
+        <div>
+            <label for="employeeId">employee-id:</label>
+            <input type="text" id="employeeId" [(ngModel)]="employeeId" name="employeeId"
+            placeholder="enter employee id" required>
+        </div>
+        <br>
+        <div>
+            <label for="employeeName">employee-name:</label>
+            <input type="text" id="employeeName" [(ngModel)]="employeeName" name="employeeName"
+            placeholder="enter employee name" required>
+        </div>
+        <!-- <div>
+            <label for="date">employee-name:</label>
+            <input type="text" id="employeename" [(ngModel)]="employeeName"
+            placeholder="enter employee name" required>
+        </div> -->
+        <br>
+        <div>
+            <label for="task">Project:</label>
+            <textarea id="task" name="task" [(ngModel)]="task"  placeholder="enter the tasks" required ></textarea>
+        </div>
+        <br>
+        <!-- <div>
+            <label for="project">tasks:</label>
+            <input type="text" id="project" class="project" style="height: 100px;"
+            [(ngModel)]="task"  placeholder="enter the tasks" required >
+        </div> -->
+        <div>
+            <label for="working-hours">working hours:</label>
+            <input type="number" name="working" [(ngModel)]="working" id="working"   placeholder="enter working hours" required />
+            <!-- <select name="time" id="time" >
+                <option value="hours">hrs</option>
+                <option value="minutes">mins</option>
+            </select> -->
+        </div>
+        <br>
+        <div>
+            <label for="leaving-hours">leaving hours:</label>
+            <input type="number" id="leaving" name="leaving" [(ngModel)]="leaving"   placeholder="enter leaving hours" required />
+            <!-- <select name="time" id="time" >
+                <option value="hours">hrs</option>
+                <option value="minutes">mins</option>
+            </select> -->
+        </div>
+        <br>
+        <div>
+            <button type="submit" class="button" id="submit">SUBMIT</button> &nbsp;
+            <button type="reset" id="reset" class="button">RESET</button>
+        </div>
+    </form>
+    </body>
