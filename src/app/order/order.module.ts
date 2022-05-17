@@ -9,12 +9,17 @@ import { CreateOrderComponent } from './create-order/create-order.component';
 import { ListOrderComponent } from './list-order/list-order.component';
 import { MyorderComponent } from './myorder/myorder.component';
 
+import { OrdersummaryComponent } from './ordersummary/ordersummary.component';
+
 
 @NgModule({
   declarations: [
     CreateOrderComponent,
     ListOrderComponent,
-    MyorderComponent
+    MyorderComponent,
+
+   
+    OrdersummaryComponent
    
   ],
   imports: [

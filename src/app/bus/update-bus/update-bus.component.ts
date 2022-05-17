@@ -18,14 +18,16 @@ export class UpdateBusComponent implements OnInit {
     this.findById();
   }
   findById(){
-    const url="http://localhost:9000/Buses/byId?id="+this.id;
+   // const url="http://localhost:9000/Buses/byId?id="+this.id;
+   const url="https://busticketbooking-api.herokuapp.com/Buses/byId?id="+this.id;
     this.http.get(url).subscribe((res)=>{
       this.bus = res;
     })
   }
   updateBus(){
     console.log(this.bus);
-    const url="http://localhost:9000/Buses/id?id="+this.id;
+   // const url="http://localhost:9000/Buses/id?id="+this.id;
+   const url="https://busticketbooking-api.herokuapp.com/Buses/id?id="+this.id;
     this.http.put(url,this.bus).subscribe((res)=>{
       console.log(res);
       this.toastr.success('Updated Successfully');
