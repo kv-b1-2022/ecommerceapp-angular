@@ -36,7 +36,7 @@
                         </div>
                         <hr>
                         <div>
-                            <a href="#"><h6 style="padding-left:10px;color: black;"><i><b>Wallet transactions</b></i></h6></a>
+                            <a href="http://localhost:4200/wallettransactions"><h6 style="padding-left:10px;color: black;"><i><b>Wallet transactions</b></i></h6></a>
 
                         </div>
                     </aside>
@@ -56,7 +56,7 @@
                 </h5>
               </div>
                 <div [id]="'flush-collapse'+i" class="accordion-collapse collapse" [attr.aria-labelledby]="'flush-heading'+i" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body"> {{transaction.amount}} rs successfully {{transaction.operation}} on : purchasedOn</div>
+                    <div class="accordion-body"> {{transaction.amount}} rs successfully {{transaction.operation}} on : {{transaction.purchasedOn}}</div>
                 </div>
             </div> 
           </div>

@@ -27,7 +27,7 @@ tpin!:any;
     else
     {
         let mobile=this.authService.getUser()?.mobile;
-        let name="hari";
+        let name=this.authService.getUser()?.name;
         let userDetails={"mobile":mobile,"name":name,"transactionPin":this.tpin}
         const url="http://localhost:9000/wallet/user/register";
         this.http.post(url,userDetails).subscribe(res=>
