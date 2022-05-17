@@ -20,7 +20,7 @@ export class MyorderComponent implements OnInit {
   getMyOders(){
     this.id = this.authService.getUser()?.id;
      alert(this.id);
-     const url="http://localhost:9000/ordersTable/search?userId=4";
+     const url="https://order-apii.herokuapp.com/ordersTable/search?userId=4";
    
      this.http.get(url).subscribe((res)=>{
       this. orders = res;
