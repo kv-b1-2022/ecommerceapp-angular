@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddBusComponent } from './add-bus/add-bus.component';
+import { BookTicketComponent } from './book-ticket/book-ticket.component';
 import { ListBusComponent } from './list-bus/list-bus.component';
 import { ListBusesAdminComponent } from './list-buses-admin/list-buses-admin.component';
 import { ListBusesComponent } from './list-buses/list-buses.component';
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'users', component: ListUsersComponent},
   {path: 'users/:id', component: ViewUserComponent},
   {path: 'update/:id', component: UpdateBusComponent},
-  {path: 'list-buses-admin',component: ListBusesAdminComponent}
+  {path: 'list-buses-admin',component: ListBusesAdminComponent},
+  {path: 'book-ticket/:id',component: BookTicketComponent},
 
   ];
 
