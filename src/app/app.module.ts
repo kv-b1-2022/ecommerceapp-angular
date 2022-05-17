@@ -78,7 +78,6 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     EmployeesModule,
     OrderModule,
     PaymentModule,
-    NgChartsModule,
     CoursesModule,
     MembershipModule,
     PaymentModule,
