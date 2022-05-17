@@ -27,11 +27,13 @@ import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
+   
 
   ],
   imports: [

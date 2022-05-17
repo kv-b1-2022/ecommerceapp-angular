@@ -6,12 +6,18 @@ import { AddReviewComponent } from './add-review/add-review.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ListReviewComponent } from './list-review/list-review.component';
+import { ViewReviewComponent } from './view-review/view-review.component';
+
+
 
 
 @NgModule({
   declarations: [
     AddReviewComponent,
-    ListReviewComponent
+    ListReviewComponent,
+    ViewReviewComponent,
+  
+    
   ],
   imports: [
     CommonModule,
