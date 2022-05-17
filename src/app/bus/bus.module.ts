@@ -10,6 +10,8 @@ import { ListBusesComponent } from './list-buses/list-buses.component';
 import { ViewUserComponent } from './view-user/view-user.component';
 import { UpdateBusComponent } from './update-bus/update-bus.component';
 import { AddBusComponent } from './add-bus/add-bus.component';
+import { ListBusesAdminComponent } from './list-buses-admin/list-buses-admin.component';
+import { BookTicketComponent } from './book-ticket/book-ticket.component';
 
 
 
@@ -20,8 +22,10 @@ import { AddBusComponent } from './add-bus/add-bus.component';
     ListBusesComponent,
     ViewUserComponent,
     UpdateBusComponent,
-    AddBusComponent
-
+    AddBusComponent,
+    ListBusesAdminComponent,
+    BookTicketComponent
+  
   ],
   imports: [
     CommonModule,

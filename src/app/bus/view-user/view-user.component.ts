@@ -18,7 +18,8 @@ export class ViewUserComponent implements OnInit {
   }
   
    getUserById(){
-    const url="http://localhost:9000/list?id="+this.id;
+   // const url="http://localhost:9000/list?id="+this.id;
+   const url="https://busticketbooking-api.herokuapp.com/list?id="+this.id;
     this.http.get(url).subscribe((res)=>{
       this.user= res;
     },err=>{

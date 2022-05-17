@@ -1,0 +1,70 @@
+<h1>find employee timesheet </h1>
+<style>
+    form{
+        margin-top: 100px;
+        font-family: Courier New;
+        font-size: large;
+        text-align: center;
+        line-height: 35px;
+    }
+    #empId{
+        margin-top: 10px;
+    }
+    #empName{
+        margin-top: 20px;
+    }
+    .button {
+  /* padding: 15px 25px;
+  font-size: 24px; */
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.button:hover {background-color: #10f717}
+.button:active {
+  background-color: #00fd08;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+    #submit{
+        margin-top: 25px;
+        background-color: green;
+    }
+    #reset{
+        margin-top: 25px;
+        background-color: red;
+    }
+
+</style> 
+<table class="table table-borderd">
+    <thead>
+        <tr>
+            <th>employee ID</th>
+            <th>employee name</th>
+            <th>date</th>
+            <th>project</th>
+            <th>working hours</th>
+            <th>leaving hours</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of employees" >
+            <td>{{user.employeeId}}</td>
+            <td>{{user.employeeName}}</td>
+            <td>{{user.date}}</td>
+            <td>{{user.task}}</td>
+            <td>{{user.workingHours}}</td>
+            <td>{{user.leavingHours}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- <div>
+    <label for="getTotalTime"></label>
+    <button type="click" id="button" (ngSubmit)="getTotal()">Total working hours</button>
+</div> -->

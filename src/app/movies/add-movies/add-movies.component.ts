@@ -14,6 +14,7 @@ export class AddMoviesComponent implements OnInit {
   language: any;
   location: any;
   category: any;
+  image:any;
   
 
   constructor(private http:HttpClient,private toastr:ToastrService) { }
