@@ -78,6 +78,7 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     NgbModule,
     StockModule,
     PayrollModule,
+    BusModule,
     CharityModule,
     BusModule,
     TrainModule,
