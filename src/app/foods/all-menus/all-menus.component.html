@@ -1,0 +1,28 @@
+<form onsubmit="getAllMenus()">
+    <button type="submit">Display All Menus</button>
+
+
+
+    <div class="row">
+        <ng-container *ngFor="let value of values" style="width: 18rem;">
+            <div class="col-3" id="c">
+                <div class="card" id="c1">
+                    <img class="card-img-top" src="{{value.foodImages}}" alt="Card image cap" width="50px"
+                        height="200px">
+                    <div class="card-body">
+                        <h5 class="card-title">{{value.id}}</h5>
+                        <h5 class="card-title">{{value.foodName}}</h5>
+
+                        <p class="card-text">price - {{value.price}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">foodType - {{value.foodType}}</li>
+                        <li class="list-group-item">foodStyle - [{{value.foodStyle}}]</li>
+                    </ul>
+
+                </div>
+            </div>
+        </ng-container>
+    </div>
+
+</form>

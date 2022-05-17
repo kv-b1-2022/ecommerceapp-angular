@@ -1,2 +1,46 @@
-<p>listemployees works!</p>
-
+<button type="button" id="Notifications" class="btn btn-primary" (click)="notifiactionClick()">
+    Notifications <span class="badge bg-secondary">{{count}}</span>
+  </button>
+  <div class="notification-div" [style.display]="messageBox">
+      <div id="chat-input"><input type="text" name="chat" [(ngModel)]="chat"><button>sent</button></div>
+  </div>
+  <button class="btn btn-primary" (click)="tableClick('true')" *ngIf="btn == 'false'">show validate Documents list</button>
+  <button class="btn btn-primary" (click)="tableClick('false')" *ngIf="btn == 'true'">hide validate Documents list</button>
+<div class="doc-table" *ngIf="btn == 'true'">
+    <h1 class="head">employees document validation</h1>
+  <table class="table table-light table-hover">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Nobile Number</th>
+        <th>Role</th>
+        <th>Aadhar</th>
+        <th>PAN Number</th>
+        <th>Account Number</th>
+        <th>IFSC code</th>
+        <th>Verification Status</th>
+        <th>Bank Name</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of details " >
+            <td >{{data.empId}}</td>
+            <td >{{data.empName}}</td>
+            <td >{{data.mobileNumber}}</td>
+            <td >{{data.role}}</td>
+            <td >{{data.aadhar}}</td>
+            <td >{{data.pannum}}</td>
+            <td >{{data.accountNo}}</td>
+            <td >{{data.ifscCode}}</td>
+            <td >{{data.status}}</td>
+            <td >{{data.bankName}}</td>
+        </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary" (click)="validate()">analysis</button><button class="btn btn-primary" (click)="verified()">automaticverified</button>
+</div>
+<!-- <div class="spin-wrapper">
+  <div class="spinner">
+  </div>
+</div> -->

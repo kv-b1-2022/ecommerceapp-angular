@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-view-course-type',
@@ -12,7 +13,7 @@ export class ViewCourseTypeComponent implements OnInit {
   id!: any;
   courseData!: any;
 
-  constructor(private route: ActivatedRoute,private http: HttpClient) { }
+  constructor(private route: ActivatedRoute,private http: HttpClient,private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.id = +this.route.snapshot.params['cid'];
@@ -20,11 +21,12 @@ export class ViewCourseTypeComponent implements OnInit {
   }
 
   CourseByType(){
-    const url="http://localhost:9000/courses/viewbytype?cId="+this.id;
+    const url="https://courses-api.herokuapp.com/courses/viewbytype?cId="+this.id;
     this.http.get(url).subscribe(res=>{
       this.courseData=res;
     },err=>{
       console.log(err.error.message);
+      this.toastr.error(err.error.message);
      // alert(err.error.message);
     })
   }

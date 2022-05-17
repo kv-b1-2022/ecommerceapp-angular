@@ -9,10 +9,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { DisplaymoviesComponent } from './displaymovies/displaymovies.component';
 import { BookingComponent } from './booking/booking.component';
 import { UpdateMovieComponent } from './update-movie/update-movie.component';
+import { SearchMoviesComponent } from './search-movies/search-movies.component';
+
+
 
 
 @NgModule({
-  declarations: [MovielistComponent,AddMoviesComponent,DisplaymoviesComponent,BookingComponent,UpdateMovieComponent],
+  declarations: [MovielistComponent,AddMoviesComponent,DisplaymoviesComponent, SearchMoviesComponent,BookingComponent,UpdateMovieComponent],
+
   imports: [
     CommonModule,
     MoviesRoutingModule,

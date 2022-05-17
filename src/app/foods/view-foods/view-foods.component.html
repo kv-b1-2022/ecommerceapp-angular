@@ -1,0 +1,27 @@
+<p>view-foods works!</p>
+<p>view-foods works!</p>
+
+
+    <div class="row" id="card">
+        <ng-container  *ngFor="let foodDetail of foodDetails" style="width: 18rem;">
+            <div    class="col-3"id="card2">
+            <div class="card" width="40px" height="150px" >
+                <img class="card-img-top" src="{{foodDetail.foodImages}}" alt="Card image cap" width="50px" height="200px">
+                <div class="card-body">
+                    <!-- <h5 class="card-title">{{value.id}}</h5> -->
+                    <h5 class="card-title">{{foodDetail.foodName}}</h5>
+
+                    <p class="card-text">price - {{foodDetail.price}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" >foodType - {{foodDetail.foodType}}</li>
+
+                    <li class="list-group-item" >foodStyle - {{foodDetail.foodStyle}}</li>
+                </ul>
+
+            </div>
+        </div>
+    </ng-container>
+ </div>
+
+ 

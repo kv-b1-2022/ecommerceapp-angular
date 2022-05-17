@@ -1,0 +1,13 @@
+<h2>Add New Course</h2>
+<form ngNativeValidate (submit)="addCourse()">
+    Enter id <input type="number" name="id" id="id" [(ngModel)]="id" required> <br>
+    Enter Category <input type="text" name="category" id="category" [(ngModel)]="category"required> <br>
+    Enter Course Name <input type="text" name="name" id="name" [(ngModel)]="name" required> <br>
+    Enter Tutor <input type="text" name="tutor" id="tutor" [(ngModel)]="tutor" required> <br>
+    Enter Duration <input type="text" name="duration" id="duration" [(ngModel)]="duration" required> <br>
+    Enter Description <input type="text" name="description" id="description" [(ngModel)]="description"> <br>
+    Enter image url <input type="text" name="image" id="image"[(ngModel)]="image" > <br>
+    Enter Video url <input type="text" name="video" id="video" [(ngModel)]="video"> <br>
+
+    <button type="submit">Add Course</button>
+</form>

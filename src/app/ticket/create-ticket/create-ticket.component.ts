@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-create-ticket',
@@ -8,9 +10,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateTicketComponent implements OnInit {
 
-  constructor() { }
+  userId!: number;
+  ticketTitle!: string;
+  description!: string;
+  category !: string;
+  empDetails !: any
+
+  constructor(private http: HttpClient, private toastrService: ToastrService) { }
 
   ngOnInit(): void {
+    const url2 = "https://employeeapp-apii.herokuapp.com/employeeinformation/listemployee";
+
+    this.http.get(url2).subscribe((res) => {
+      // console.log(res);
+      // this.toastrService.success('Ticket Created Successfully');
+      this.empDetails = res
+    }, (err) => {
+      console.log(err);
+      this.toastrService.error('Ticket Creation Failed');
+    })
+  }
+  createTicket() {
+    const userObj = { "userId": this.userId, "ticketTitle": this.ticketTitle, "description": this.description, "category": this.category };
+    console.log(userObj);
+    const url = "http://localhost:9000/ticket/save";
+    this.http.post(url, userObj).subscribe((res) => {
+      console.log(res);
+      this.toastrService.success('Ticket Created Successfully');
+
+    }, (err) => {
+      console.log(err);
+      this.toastrService.error('Ticket Creation Failed');
+    });
+
+
   }
 
 }
+
+

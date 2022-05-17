@@ -1,0 +1,25 @@
+<h1>APPLY LEAVE LIST </h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>EMPLOYEE ID</th>
+            <th> EMPLOYEE NAME</th>
+            <th>LEAVE FROM DATE</th>
+            <th>LEAVE TO DATE</th>
+            <th>REASON</th>
+            <th>STATUS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let leave of leavelist;let i= index">
+            <td>{{leave.empId}}</td>
+            <td>{{leave.empName}}</td>
+            <td>{{leave.leaveFromDate}}</td>
+            <td>{{leave.leaveToDate}}</td>
+            <td>{{leave.reason}}</td>
+            <td>{{leave.status}}</td>
+            <td><button type="approve" class="btn-primary" (click)="acceptLeave(leave.empId)">Accept</button>  &nbsp;
+            <button type="reject" class="btn-danger" (click)="rejectLeave(leave.empId)">Reject</button></td>
+            </tr>
+    </tbody>
+</table>

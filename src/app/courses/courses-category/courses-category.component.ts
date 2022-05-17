@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-courses-category',
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoursesCategoryComponent implements OnInit {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.showAvailableCourses()
@@ -17,13 +18,13 @@ export class CoursesCategoryComponent implements OnInit {
   courses!:any;
   showAvailableCourses(){
     
-    const url = "http://localhost:9000/courses/CourseCategory";
+    const url = "https://courses-api.herokuapp.com/courses/CourseCategory";
     this.http.get(url).subscribe(res=>{
       
       this.courses=res;
     },err=>{
       console.log(err.error.message);
-          alert(err.error.message);
+          this.toastr.error(err.error.message);
     })
   }
 
