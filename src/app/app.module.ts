@@ -83,10 +83,6 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     EmployeesModule,
     OrderModule,
     PaymentModule,
-<<<<<<< HEAD
-    // NgChartsModule,
-=======
->>>>>>> f4eb43cf3645b951b6f76c4d9df2718f99e7aab3
     CoursesModule,
     MembershipModule,
     PaymentModule,
