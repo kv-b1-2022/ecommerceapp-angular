@@ -26,4 +26,16 @@ export class ListcourseComponent implements OnInit {
     })
   }
 
+  deleteCourse(course:any){
+    const id=course.id;
+    const url="https://courses-api.herokuapp.com/course/deletecourse/"+id;
+    this.http.delete(url).subscribe(res=>{
+      this.toastr.success("Successfully deleted");
+      window.location.reload();
+    },err=>{
+      console.log(err.error.message);
+      this.toastr.error(err.error.message);
+    })
+  }
+
 }

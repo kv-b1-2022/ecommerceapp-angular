@@ -42,6 +42,7 @@ import { BooksModule } from './books/books.module';
 import { ElectronicsModule } from './Electronics/electronics.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,9 +50,9 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     HeaderComponent,
     AdminSidebarComponent,
     HeaderComponent
+
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
