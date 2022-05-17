@@ -13,11 +13,8 @@ import { MoviesModule } from './movies/movies.module';
 import { MedicalModule } from './medical/medical.module';
 
 import { FoodsModule } from './foods/foods.module';
-<<<<<<< HEAD
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-=======
+
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
->>>>>>> 35525285af10e79934caeb8604745fc195cd7e31
 
 
 import { GroceryModule } from './grocery/grocery.module';
@@ -30,14 +27,11 @@ import { OrderModule } from './order/order.module';
 
 import { CoursesModule } from './courses/courses.module';
 import { EmployeesModule } from './employees/employees.module';
-<<<<<<< HEAD
 import { MembershipModule } from './membership/membership.module'; 
-=======
-import { MembershipModule } from './membership/membership.module';
 
 
 
->>>>>>> 37b837ba4dc06ed05c3d2b2371900c670af01e88
+
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
 
@@ -52,20 +46,14 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
 
 import { BooksModule } from './books/books.module';
-<<<<<<< HEAD
-=======
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
->>>>>>> 35525285af10e79934caeb8604745fc195cd7e31
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
-<<<<<<< HEAD
 
 
 
-=======
 import { SpinnerComponent } from './spinner/spinner.component';
->>>>>>> 37b837ba4dc06ed05c3d2b2371900c670af01e88
 
 @NgModule({
   declarations: [
@@ -81,13 +69,10 @@ import { SpinnerComponent } from './spinner/spinner.component';
     
   
     EmployeeProfilepageComponent,
-<<<<<<< HEAD
-    HeaderComponent
-=======
+    HeaderComponent,
     HeaderComponent,
     SpinnerComponent
     
->>>>>>> 37b837ba4dc06ed05c3d2b2371900c670af01e88
 
   ],
   imports: [
