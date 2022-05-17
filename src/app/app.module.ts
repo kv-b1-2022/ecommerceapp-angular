@@ -13,7 +13,11 @@ import { MoviesModule } from './movies/movies.module';
 import { MedicalModule } from './medical/medical.module';
 
 import { FoodsModule } from './foods/foods.module';
+<<<<<<< HEAD
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+=======
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+>>>>>>> 35525285af10e79934caeb8604745fc195cd7e31
 
 
 import { GroceryModule } from './grocery/grocery.module';
@@ -48,6 +52,11 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
 
 import { BooksModule } from './books/books.module';
+<<<<<<< HEAD
+=======
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+>>>>>>> 35525285af10e79934caeb8604745fc195cd7e31
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
 <<<<<<< HEAD
@@ -100,6 +109,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
     EmployeesModule,
     OrderModule,
     PaymentModule,
+    // NgChartsModule,
     CoursesModule,
     MembershipModule,
     PaymentModule,
