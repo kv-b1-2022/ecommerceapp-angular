@@ -10,12 +10,17 @@ import { ListOrderComponent } from './list-order/list-order.component';
 import { MyorderComponent } from './myorder/myorder.component';
 import { CouponCodeModule } from '../coupon-code/coupon-code.module';
 
+import { OrdersummaryComponent } from './ordersummary/ordersummary.component';
+
 
 @NgModule({
   declarations: [
     CreateOrderComponent,
     ListOrderComponent,
-    MyorderComponent
+    MyorderComponent,
+
+   
+    OrdersummaryComponent
    
   ],
   imports: [

@@ -6,19 +6,30 @@
     </div>
     <br>
     <div>
+        <label for="productName">ProductName</label>
+        <input type="productName" name="productName" [(ngModel)]="productName" placeholder="Enter productName" required  autofocus>
+    </div>
+    <br>
+    <div>
         <label for="userId">UserId</label>
         <input type="userId" name="userId" [(ngModel)]="userId" placeholder="Enter userId" required  >
     </div>
 <br>
 <div>
-    <label for="ratings">Ratings:</label>
+     <label for="ratings">Ratings:</label>
 <select name="ratings" id="ratings" [(ngModel)]="ratings">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
+    <option value="1" > 1-low</option>
+    
+    <option value="2">2-average</option>
+    <option value="3">3-good</option>
+    <option value="4">4-Best</option>
+    <option value="5">5-Excellent</option>
 </select>
+
+
+
+
+
 </div>
 <br>
 <div>
@@ -28,3 +39,5 @@
 <br>
 <button type="submit">Submit</button>
 </form>
+
+

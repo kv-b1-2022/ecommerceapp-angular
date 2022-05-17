@@ -1,0 +1,32 @@
+
+
+
+<form (ngSubmit)="addcakes()">
+    <div>
+        <label for="id">ID:</label>
+    <input type="text" name="id" [(ngModel)]="id" placeholder="Enter id" required autofocus>
+</div>
+    <div>
+        <label for="name">Name:</label>
+    <input type="text" name="name" [(ngModel)]="name" placeholder="Enter name" required autofocus>
+</div> 
+<div>
+    <label for="brand">Brand:</label>
+<input type="text" name="brand" [(ngModel)]="brand" placeholder="Enter brand" required autofocus>
+</div>
+<div>
+    <label for="category">category:</label>
+<input type="text" name="category" [(ngModel)]="category" placeholder="Enter category" required autofocus>
+</div>
+<div>
+    <label for="price">price:</label>
+    <input type="price" name="number" [(ngModel)]="price"  placeholder="Enter price of the cake" required > 
+</div>
+<div>
+    <label for="image">image:</label>
+<input type="text" name="image" [(ngModel)]="image" placeholder="Enter image" required autofocus>
+</div>
+<button type="submit">
+    submit
+</button>
+</form>

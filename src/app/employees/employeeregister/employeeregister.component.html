@@ -1,22 +1,39 @@
-<p>employeeregister works!</p>
-<form (ngSubmit)="empregister()">
-    <section>
+<!-- <p>employeeregister works!</p> -->
 
-       <div><label for="name">EmployeeName </label>
-        <input type="name" name="empname" [(ngModel)]="empname" required placeholder="Enter Name" autofocus><br></div>
-            
-            <div>
-                <label for="email">Email </label>
-            <input type="email" name="empEmail" [(ngModel)]="empEmail" required placeholder="Enter Email" autofocus><br>
-            </div>
-            <div>
-                <label for="password">Password </label>
-            <input type="text" name="empPassword" [(ngModel)]="empPassword" required placeholder="Password">
-            </div>
+    <form (ngSubmit)="empregister()">
+        <section class="box">
+            <table>
+                <h3>
+                    Create Employee Id
+                </h3>
+                <tr>
+                    <td>
+                        <label for="name">EmployeeName </label>
+                    </td>
+                    <td>
+                        <input type="name" name="empname" [(ngModel)]="empname" required placeholder="Enter Name"
+                            autofocus><br>
+                    </td>
+                </tr><br>
+                <tr>
+                    <td>
+                        <label for="email">Email </label>
+                    </td>
+                    <td>
+                        <input type="email" name="empEmail" [(ngModel)]="empEmail" required placeholder="Enter Email"><br>
+                    </td>
+                </tr><br>
+                <tr>
+                    <td>
+                        <label for="password">Password </label>
+                    </td>
+                    <td>
+                        <input type="password" name="empPassword" [(ngModel)]="empPassword" required placeholder="Password">
+                    </td>
+                </tr><br>
+                <button type="submit">Submit</button>
+            </table>
+        </section>
        
-        <button type="submit">Submit</button>
-    
-    </section>
-    
-    
-    </form>
+
+</form>

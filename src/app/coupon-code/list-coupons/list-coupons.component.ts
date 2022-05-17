@@ -12,20 +12,20 @@ export class ListCouponsComponent implements OnInit {
 
   constructor(private http: HttpClient, private ts: ToastrService) { }
 
-
+  coupons!:any;
   ngOnInit(): void {
+    this.listCoupons();
   }
 
   listCoupons() {
     const url = "https://couponapp-apii.herokuapp.com/coupon/list-coupons"
 
     this.http.get(url).subscribe((res) =>{
-      console.log(res);
-      this.ts.success("all coupons");
-    },(err) => {
-      console.log(err);
-      this.ts.error("something went wrong");
-    })
+     console.log(res);
+     this.coupons=res;
+     this.ts.success("all coupons");
+    }
+    )
   }
 }
 
