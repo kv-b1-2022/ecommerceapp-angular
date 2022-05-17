@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { GetEmployeedetailsComponent } from './get-employeedetails/get-employeedetails.component';
 import { EmployeeregisterComponent } from './employeeregister/employeeregister.component';
+import { SalaryprocessComponent } from './salaryprocess/salaryprocess.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { EmployeeregisterComponent } from './employeeregister/employeeregister.c
     EmployeeloginComponent,
     EmployeedetailsComponent,
     GetEmployeedetailsComponent,
-    EmployeeregisterComponent
+    EmployeeregisterComponent,
+    SalaryprocessComponent
   ],
   imports: [
     CommonModule,

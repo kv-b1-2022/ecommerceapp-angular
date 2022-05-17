@@ -5,6 +5,7 @@ import { ViewproductsComponent } from './viewproducts/viewproducts.component';
 
 const routes: Routes = [
   {path:'listelectronicproducts',component:ListproductsComponent},
+  {path:'listelectronics',component:ListproductsComponent},
   {path:'viewproducts/:id',component:ViewproductsComponent}
 ];
 
