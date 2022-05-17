@@ -17,11 +17,8 @@ import { OrdersummaryComponent } from './ordersummary/ordersummary.component';
     CreateOrderComponent,
     ListOrderComponent,
     MyorderComponent,
-<<<<<<< HEAD
 
-=======
    
->>>>>>> 6a31f4cd30f695b67d814ca4c6293100e8b14b8e
     OrdersummaryComponent
    
   ],
