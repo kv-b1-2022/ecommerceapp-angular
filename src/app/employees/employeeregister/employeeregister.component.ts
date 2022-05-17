@@ -5,7 +5,7 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-employeeregister',
   templateUrl: './employeeregister.component.html',
-  styles: [
+  styleUrls: ['./employeeregister.css'
   ]
 })
 export class EmployeeregisterComponent implements OnInit {
@@ -24,7 +24,7 @@ export class EmployeeregisterComponent implements OnInit {
       "empEmail":this.empEmail,
       "empPassword":this.empPassword
     };
-    const url="http://localhost:9000/emplogin/employeelogininfo";
+    const url="https://employeeapp-apii.herokuapp.com/emplogin/employeelogininfo";
     this.http.post(url,userObj).subscribe((res)=>{
       console.log(res);
       this.toastr.success("successfully Saved your details");

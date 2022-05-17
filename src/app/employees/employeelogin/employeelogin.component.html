@@ -1,11 +1,27 @@
-<p>employeelogin works!</p>
+<!-- <p>employeelogin works!</p> -->
 
 <form (ngSubmit)="login()">
-    <div>
-        <label for="name">Email </label>
-        <input type="email" name="email" [(ngModel)]="email" required placeholder="Enter Email" autofocus><br>
-        <label for="password">Password </label>
-        <input type="text" name="password" [(ngModel)]="password" required placeholder="Password">
+    <div class="box">
+        <table>
+            <h3>Employee Login</h3>
+            <tr>
+                <td>
+                    <label for="name">Email </label>
+                </td>
+                <td>
+                    <input type="email" name="email" [(ngModel)]="email" required placeholder="Enter Email"
+                        autofocus><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Password </label>
+                </td>
+                <td>
+                    <input type="password" name="password" [(ngModel)]="password" required placeholder="Password">
+                </td>
+            </tr>
+            <button type="submit">Submit</button>
+        </table>
     </div>
-    <button type="submit">Submit</button>
 </form>

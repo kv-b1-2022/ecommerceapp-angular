@@ -29,7 +29,7 @@ image!:string;
       "image":this.image,
     };
     console.log(productObj);
-    const url ="http://localhost:9001/Product/save";
+    const url ="https://product-apii.herokuapp.com/Product/save";
     this.http.post(url,productObj).subscribe((res)=>{
       console.log(res);
       alert("successufuly updated");

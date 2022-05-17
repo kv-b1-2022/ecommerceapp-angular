@@ -27,11 +27,11 @@ export class ListusersComponent implements OnInit {
   }
   deleteUser(id:any){
     const url = "https://userapp-apii.herokuapp.com/user/deleteuser/"+id;
-    this.http.delete(url).subscribe((res:any)=>{
+    this.http.delete(url).subscribe(res=>{
       this.toastr.success("Deleted successfully");
       this.listUsers();
     },err=>{
       this.toastr.error(err.error.message);
-    })
+    });
   }
 }
