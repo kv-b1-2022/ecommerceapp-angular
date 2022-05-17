@@ -1,5 +1,22 @@
-
+<style>
+    *{
+    box-sizing: border-box;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.column{
+    float: left;
+    width: 25%;
+    padding: 10px;
+    padding-left:20px;   
+}
+</style>
 <h3>Available Courses</h3>
+<button routerLink="/enrolledcourses">Enrolled Courses</button>
+<br>
 <div class="row">
     <ng-container  *ngFor="let item of courses">
         <div class="column">
