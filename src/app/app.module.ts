@@ -38,6 +38,9 @@ import { TrainModule } from './train/train.module';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
 import { DataTablesModule } from 'angular-datatables';
+import { BooksModule } from './books/books.module';
+import { ElectronicsModule } from './Electronics/electronics.module';
+
 
 
 @NgModule({
@@ -45,8 +48,13 @@ import { DataTablesModule } from 'angular-datatables';
     AppComponent,
     HomeComponent,
     HeaderComponent,
+<<<<<<< HEAD
+   
+
+=======
     AdminSidebarComponent,
     HeaderComponent
+>>>>>>> 85030edc2df1470cf2ff72ecbb4f098ed0fd2911
   ],
   imports: [
     BrowserModule,
@@ -82,7 +90,9 @@ import { DataTablesModule } from 'angular-datatables';
     AuthModule,
     DataTablesModule,
     FoodsModule,
-    DressModule
+    DressModule,
+    BooksModule,
+    ElectronicsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

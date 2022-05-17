@@ -1,4 +1,5 @@
 <h1>COURSE LIST </h1>
+<button routerLink="/add-courses">Add Course</button>
 <br>
 <table datatable class="table table-bordered">
     <thead>
@@ -19,7 +20,7 @@
             <td>{{course.tutor}}</td>
             <td>{{course.duration}}</td>
             <td>{{course.description}}</td>
-            <td><button type="reject" class="btn-danger">Remove</button> &nbsp;
+            <td><button type="button" class="btn-danger" (click)="deleteCourse(course)">Remove</button> &nbsp;
             </tr>
     </tbody>
 </table>

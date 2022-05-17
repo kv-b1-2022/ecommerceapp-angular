@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 
@@ -9,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class AddmembershipComponent implements OnInit {
 
-  constructor(private toastr:ToastrService) { }
+  constructor(private toastr:ToastrService,private http:HttpClient) { }
 
   ngOnInit(): void {
   }
@@ -40,10 +41,16 @@ export class AddmembershipComponent implements OnInit {
     }
     if(count==2)
     {
-      this.toastr.success("success");
-    }
-    else{
-      this.toastr.error("Check Validation");
+      event?.preventDefault();
+      const url="http://localhost:9050/memberShip/add?rs="+type+"&userId="+userId;
+      this.http.get(url).subscribe((res:any)=>
+      {
+        this.toastr.success("success");
+      },(err)=>
+      {
+        this.toastr.error("Check Validation");
+      });
+      
     }
   }
 
