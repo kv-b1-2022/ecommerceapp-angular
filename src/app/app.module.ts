@@ -39,6 +39,7 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
 import { DataTablesModule } from 'angular-datatables';
 import { BooksModule } from './books/books.module';
+import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
 
 
@@ -49,6 +50,8 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     HomeComponent,
     HeaderComponent,
     AdminSidebarComponent,
+    HeaderComponent,
+    EmployeeProfilepageComponent,
     HeaderComponent
 
   ],
