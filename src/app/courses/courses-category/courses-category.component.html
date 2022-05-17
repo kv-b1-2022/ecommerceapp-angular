@@ -1,8 +1,31 @@
-<p>Available Categories</p>
-<button routerLink="/viewallcourses">View All Courses</button>
+<style>
+*{
+    box-sizing: border-box;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.column{
+    float: left;
+    width: 33%;
+    padding: 10px;
+    padding-left:20px;   
+}
+.search{
+  text-align: center;
+}
+</style>
+<form ngNativeValidate (submit)="search()" class="search">
+  <input type="text" name="name" id="name" placeholder="type here" [(ngModel)]="name">
+  <button type="submit">search</button>
+</form>
+<h3>Available Categories</h3>
+<button routerLink="/viewallcourses" id="allcourse">View All Courses</button>
 <div class="row">
     <ng-container  *ngFor="let item of courses">
-    <div class="col-4" >
+    <div class="column" >
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="{{item.image}}" alt="Course type" width="287px" height="180px">
         <div class="card-body">

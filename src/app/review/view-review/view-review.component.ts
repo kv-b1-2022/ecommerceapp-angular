@@ -20,7 +20,7 @@ export class ViewReviewComponent implements OnInit {
   }
   getViewReview(){
    
-    const url="http://localhost:9002/ratings/"+this.id;
+    const url=" https://ratingsapp-api.herokuapp.com/ratings/"+this.id;
     this.http.get(url).subscribe((res)=>{
       console.log(res);
       this.getView=res;

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { MedicalRoutingModule } from './medical-routing.module';
 import { DisplayMedicalsComponent } from './display-medicals/display-medicals.component';
-// import { MedicalproductComponent } from './medicalproduct/medicalproduct.component';
+ //import { MedicalproductsComponent } from './medicalproducts/medicalproducts.component';
 // import { UpdatemedicalsComponent } from './updatemedicals/updatemedicals.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -15,7 +15,7 @@ import { UpdatemedicalsComponent } from './updatemedicals/updatemedicals.compone
 @NgModule({
   declarations: [
     DisplayMedicalsComponent,
-    // MedicalproductComponent,
+    // MedicalproductsComponent,
     UpdatemedicalsComponent,
     AddProductComponent,
     UpdatemedicalsComponent

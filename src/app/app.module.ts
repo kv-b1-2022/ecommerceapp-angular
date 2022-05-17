@@ -11,8 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MoviesModule } from './movies/movies.module';
 
 import { MedicalModule } from './medical/medical.module';
+
 import { FoodsModule } from './foods/foods.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { GroceryModule } from './grocery/grocery.module';
@@ -26,6 +26,8 @@ import { OrderModule } from './order/order.module';
 import { CoursesModule } from './courses/courses.module';
 import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module'; 
+
+
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
 
@@ -40,8 +42,11 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
 
 import { BooksModule } from './books/books.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
+import { SafePipe } from './safe.pipe';
 
 
 
@@ -56,7 +61,8 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     
   
     EmployeeProfilepageComponent,
-    HeaderComponent
+    HeaderComponent,
+    SafePipe
 
   ],
   imports: [

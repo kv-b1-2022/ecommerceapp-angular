@@ -28,4 +28,18 @@ export class CoursesCategoryComponent implements OnInit {
     })
   }
 
+  name!: any;
+  data! :any;
+  search(){
+    const name = this.name;
+    const url ="https://courses-api.herokuapp.com/course/search/"+name;
+    this.http.get(url).subscribe(res=>{
+      this.data=res;
+      window.location.href = "/viewcourse/"+this.data.id;       
+    },err=>{
+      console.log(err.error.message);
+      this.toastr.error("Course not available");
+    })
+  }
+
 }
