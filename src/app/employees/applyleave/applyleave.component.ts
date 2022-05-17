@@ -7,13 +7,19 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: []
 })
 export class ApplyleaveComponent implements OnInit {
-  empId!: string;
-  empName!: string;
+  empId!: any
+  empName!: any
+  load !:any;
   leaveFromDate!: any;
   leaveToDate!: any;
   reason!: any;
   constructor(private http:HttpClient,private toastr:ToastrService) {}
   ngOnInit(): void {
+    this.load = localStorage.getItem("employee")
+    this.load = JSON.parse(this.load)
+    this.empId =this.load.empId
+    this.empName = this.load.empName
+    console.log(this.empId ,this.empName);
   }
   applyingleave() {
      const userObj={
