@@ -12,12 +12,14 @@ import { MoviesModule } from './movies/movies.module';
 import { GroceryModule } from './grocery/grocery.module';
 import { EmployeesModule } from './employees/employees.module';
 import { OrderModule } from './order/order.module';
-import {PaymentModule} from './payment/payment.module'
+import {PaymentModule} from './payment/payment.module';
+import { NgChartsModule } from 'ng2-charts';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import {PaymentModule} from './payment/payment.module'
     GroceryModule,
     EmployeesModule,
     OrderModule,
-    PaymentModule
+    PaymentModule,
+    NgChartsModule
 
   ],
   providers: [],
