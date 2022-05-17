@@ -42,13 +42,15 @@ import { BooksModule } from './books/books.module';
 import { ElectronicsModule } from './Electronics/electronics.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
     AdminSidebarComponent,
-    HeaderComponent
+    HeaderComponent,
+  
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,24 @@
+<h1>LEAVE STATUS </h1>
+<br>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>EMPLOYEE ID</th>
+            <th>EMPLOYEE NAME</th>
+            <th>LEAVE FROM DATE</th>
+            <th>LEAVE TO DATE</th>
+            <th>REASON</th>
+            <th>STATUS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let status of leavestatus;let i= index">
+            <td>{{status.empId}}</td>
+            <td>{{status.empName}}</td>
+            <td>{{status.leaveFromDate}}</td>
+            <td>{{status.leaveToDate}}</td>
+            <td>{{status.reason}}</td>
+            <td>{{status.status}}</td>
+            </tr>
+    </tbody>
+</table>
