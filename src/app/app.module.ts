@@ -26,7 +26,11 @@ import { OrderModule } from './order/order.module';
 
 import { CoursesModule } from './courses/courses.module';
 import { EmployeesModule } from './employees/employees.module';
+<<<<<<< HEAD
+import { MembershipModule } from './membership/membership.module';
+=======
 import { MembershipModule } from './membership/membership.module'; 
+>>>>>>> fb5a1a72ec77e53889f626f02aa0e019abd49877
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
 
@@ -41,10 +45,14 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
 
 import { BooksModule } from './books/books.module';
+<<<<<<< HEAD
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+=======
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
 
 
+>>>>>>> fb5a1a72ec77e53889f626f02aa0e019abd49877
 
 
 @NgModule({
