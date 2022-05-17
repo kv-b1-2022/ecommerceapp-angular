@@ -26,7 +26,7 @@ export class DonateComponent implements OnInit {
 
      };
      console.log(userObj);
-     const url="http://localhost:9000/donate/save";
+     const url="https://charityapp-apii.herokuapp.com/donate/save";
      this.http.post(url,userObj).subscribe((res)=>{
        console.log(res);
        alert("You have donated successfully");
