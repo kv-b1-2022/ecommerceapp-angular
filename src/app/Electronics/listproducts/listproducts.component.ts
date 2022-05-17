@@ -16,7 +16,7 @@ export class ListproductsComponent implements OnInit {
   }
   products!:any;
   listproducts(){
-    const url = "http://localhost:8080/listProduct/products";
+    const url = "https://electronis-apii.herokuapp.com/listProduct/products";
     this.http.get(url).subscribe((res: any)=>{
       this.spinner = "none"
       console.log(res);

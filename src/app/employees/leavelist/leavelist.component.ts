@@ -19,7 +19,7 @@ export class LeavelistComponent implements OnInit {
   const userObj ={
     "empId": this.empId
     };
-    const url="http://localhost:9000/applyLeave/list";
+    const url="https://employeeapp-apii.herokuapp.com/applyLeave/list";
     this.http.get(url).subscribe((res)=>{
       this.leavelist = res;
     },err=>{
@@ -28,7 +28,7 @@ export class LeavelistComponent implements OnInit {
   }
   acceptLeave(id:number)
   {
-    const url="http://localhost:9000/applyleave/accept?id="+id;
+    const url="https://employeeapp-apii.herokuapp.com/applyleave/accept?id="+id;
     this.http.get(url).subscribe(res=>{
       this.toastr.success("Approved successfully")
     },err=>{
@@ -37,7 +37,7 @@ export class LeavelistComponent implements OnInit {
   }
   rejectLeave(id:number)
   {
-    const url="http://localhost:9000/applyleave/reject?id="+id;
+    const url="https://employeeapp-apii.herokuapp.com/applyleave/reject?id="+id;
     this.http.get(url).subscribe(res=>{
       this.toastr.success("Rejected successfully")
     },err=>{

@@ -39,6 +39,7 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
 import { DataTablesModule } from 'angular-datatables';
 import { BooksModule } from './books/books.module';
+import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
 
 
@@ -51,14 +52,17 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     AdminSidebarComponent,
     HeaderComponent,
   
+    EmployeeProfilepageComponent,
+    HeaderComponent
+
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    BrowserModule,
     ToastrModule.forRoot(), 
     MoviesModule,
     MedicalModule,
@@ -79,6 +83,7 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     NgbModule,
     StockModule,
     PayrollModule,
+    BusModule,
     CharityModule,
     BusModule,
     TrainModule,

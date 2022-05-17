@@ -13,6 +13,7 @@ export class ListReviewComponent implements OnInit {
   constructor(private http:HttpClient ,private toastrService:ToastrService){}
   ngOnInit(): void {
     this.getAllReview();
+    this.deleteReview;
     
   }
   reviews!:any;
@@ -24,5 +25,20 @@ getAllReview()
   },err=>{
   }
   )
+}
+deleteReview(id:any){
+  let cfm = confirm("Do you want to delete the review ?");
+    if(cfm){
+  const url="http://localhost:9002/ratings/" + id;
+  this.http.delete(url).subscribe((res)=>{
+    console.log(res);
+    this.toastrService.success('successfully deleted');
+// alert("Successfully Deleted");
+    //refresh
+  },err=>{
+    this.toastrService.error('invalid credentails');
+  }
+  )
+}
 }
 }

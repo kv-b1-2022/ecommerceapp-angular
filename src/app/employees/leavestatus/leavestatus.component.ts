@@ -14,7 +14,7 @@ export class LeavestatusComponent implements OnInit {
   leavestatus:any;
   getAllleave()
   {
-    const url="http://localhost:9000/applyLeave/list";
+    const url="https://employeeapp-apii.herokuapp.com/applyLeave/list";
     this.http.get(url).subscribe((res)=>{
       this.leavestatus = res;
     },err=>{

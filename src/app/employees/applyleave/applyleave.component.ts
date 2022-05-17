@@ -23,7 +23,7 @@ export class ApplyleaveComponent implements OnInit {
         "leaveToDate":this.leaveToDate,
         "reason":this.reason,
      };
-     const url="http://localhost:9000/applyleave/insert";
+     const url="https://employeeapp-apii.herokuapp.com/applyleave/insert";
      this.http.post(url,userObj).subscribe((res)=>{
        console.log(res);
        this.toastr.success("Successfully Applyed");

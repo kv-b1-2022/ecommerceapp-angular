@@ -26,7 +26,7 @@ export class UpdatemedicalsComponent implements OnInit {
     this.findById();
   }
 findById(){
-  const url="http://localhost:9001/Product/"+this.id;
+  const url="https://product-apii.herokuapp.com/Product/"+this.id;
     this.http.get(url).subscribe((res)=>{
       this.med = res;
       console.log(res);
