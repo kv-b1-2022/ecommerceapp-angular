@@ -1,6 +1,6 @@
-<!--  <form (ngSubmit)=" addBooking()" *ngIf="bus">
+ <form (ngSubmit)=" addBooking()" *ngIf="bus">
     <div >
-            <h2>{{bus.busName | uppercase}} Details</h2>
+            <h2>{{bus.busName | uppercase}} Booking</h2>
             <br>
             <div>
               <label for="name">Bus Name: </label>
@@ -33,17 +33,24 @@
               
             
             <h1>User Filling</h1>
+            <br>
                 <div>
                 <label for="numberOfTicketsBooked"> Enter Number of Tickets : </label>
-                <input type="number"    name="numberOfTicketsBooked"   [(ngModel)]="numberOfTicketsBooked"  min="1" max="10"  required placeholder="Enter number of Tickets you want"   autofocus>
-                </div> 
+                <input type="number"    name="numberOfTicketsBooked"   [(ngModel)]="numberOfTicketsBooked"  min="1" max="10"   autofocus>
+                <button type="button"  class="btn btn-info"   (click)="getTotalAmount()" >CheckPrice</button>
+                  <br>
+                Total Amount :{{totalTicketPrice}}
+                          </div> 
+
                 <br>
                 <div>
-                <label for=" totalAmount">Total Amount : </label>
-                <input type="number" name=" totalAmount" [(ngModel)]=" totalAmount" required  > 
-                </div>
-                <br>
-               <div>
+                  <label for="dateOfTravelling">Travelling Date : </label>
+                  <input type="date" name="dateOfTravelling" [(ngModel)]="dateOfTravelling" required placeholder="Enter Bus TicketPrice" >
+                  </div>
+                  <br>
+
+
+               <!-- <div>
                     <label for="ticketsAvailable">Bus Tickets Available : </label>
                     <input type="number" name="ticketsAvailable" [(ngModel)]="ticketsAvailable" required placeholder="Enter Bus TicketsAvailable" >
                     </div>
@@ -53,9 +60,7 @@
                         <input type="number" name="ticketPrice" [(ngModel)]="ticketPrice" required placeholder="Enter Bus TicketPrice" >
                         </div>
                         <br>
-                        <button class="btn btn-danger"(click)="addBus()">Submit</button>
-
-
+                        <button class="btn btn-danger"(click)="addBus()">Submit</button> -->
 
 
 
@@ -66,9 +71,9 @@
    
               <br>
               <div>
-              <button type="submit" class="btn btn-danger">Book</button>
+              <button type="submit" class="btn btn-danger" >Book</button>
             </div>
             <br>
           </div> 
     
-        </form> -->
+        </form>

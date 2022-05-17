@@ -55,11 +55,12 @@
 <!-- UserId : {{userId}}
 Amount : Rs. {{amount}} -->
   
-
+<button type="submit">Submit</button>
 
 
 </form>
 <td><a routerLink="/cardpayment/1/{{amount}}" class="btn btn-info">continue</a></td>
+<td><a (click)="reduceStock()" class="btn btn-info">Stock</a></td>
 <h3>Would you like to donate?</h3>
 <td><a routerLink="/list-trust" class="btn btn-info">DONATE US</a></td><br>
 <h3>Would you like to Apply Coupon?</h3>

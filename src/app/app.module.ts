@@ -13,7 +13,6 @@ import { MoviesModule } from './movies/movies.module';
 import { MedicalModule } from './medical/medical.module';
 
 import { FoodsModule } from './foods/foods.module';
-
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -53,6 +52,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
+import { TransactionModule } from './transaction/transaction.module';
 
 
 
@@ -63,17 +63,8 @@ import { SpinnerComponent } from './spinner/spinner.component';
     AppComponent,
     HomeComponent,
     HeaderComponent,
-
-   
-
-
     AdminSidebarComponent,
-    HeaderComponent,
-    
-  
     EmployeeProfilepageComponent,
-    HeaderComponent,
-    HeaderComponent,
     SpinnerComponent
     
 
@@ -93,22 +84,22 @@ import { SpinnerComponent } from './spinner/spinner.component';
     CakesModule,
     GroceryModule,
     TicketModule,
-    GroceryModule,
+   
     EmployeesModule,
     OrderModule,
-    PaymentModule,
+    
     // NgChartsModule,
     CoursesModule,
     MembershipModule,
     PaymentModule,
-    PayrollModule,
+    
     ProductpriceModule,
     NgbModule,
     StockModule,
     PayrollModule,
     BusModule,
     CharityModule,
-    BusModule,
+    
     TrainModule,
     CouponCodeModule,
     AuthModule,
@@ -116,7 +107,11 @@ import { SpinnerComponent } from './spinner/spinner.component';
     FoodsModule,
     DressModule,
     BooksModule,
+    ElectronicsModule,
+    TransactionModule,
     ElectronicsModule
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
