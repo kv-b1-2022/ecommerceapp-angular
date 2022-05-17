@@ -13,7 +13,6 @@ import { MoviesModule } from './movies/movies.module';
 import { MedicalModule } from './medical/medical.module';
 
 import { FoodsModule } from './foods/foods.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -46,7 +45,7 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
 
 import { BooksModule } from './books/books.module';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
@@ -60,17 +59,8 @@ import { SpinnerComponent } from './spinner/spinner.component';
     AppComponent,
     HomeComponent,
     HeaderComponent,
-
-   
-
-
     AdminSidebarComponent,
-    HeaderComponent,
-    
-  
     EmployeeProfilepageComponent,
-    
-    HeaderComponent,
     SpinnerComponent
     
 
@@ -90,22 +80,22 @@ import { SpinnerComponent } from './spinner/spinner.component';
     CakesModule,
     GroceryModule,
     TicketModule,
-    GroceryModule,
+   
     EmployeesModule,
     OrderModule,
-    PaymentModule,
+    
     // NgChartsModule,
     CoursesModule,
     MembershipModule,
     PaymentModule,
-    PayrollModule,
+    
     ProductpriceModule,
     NgbModule,
     StockModule,
     PayrollModule,
     BusModule,
     CharityModule,
-    BusModule,
+    
     TrainModule,
     CouponCodeModule,
     AuthModule,
