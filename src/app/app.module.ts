@@ -47,8 +47,7 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    AdminSidebarComponent,
-    HeaderComponent
+    AdminSidebarComponent
   ],
   imports: [
     BrowserModule,

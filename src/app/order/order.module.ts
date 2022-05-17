@@ -8,6 +8,7 @@ import { OrderRoutingModule } from './order-routing.module';
 import { CreateOrderComponent } from './create-order/create-order.component';
 import { ListOrderComponent } from './list-order/list-order.component';
 import { MyorderComponent } from './myorder/myorder.component';
+import { CouponCodeModule } from '../coupon-code/coupon-code.module';
 
 
 @NgModule({
@@ -22,7 +23,9 @@ import { MyorderComponent } from './myorder/myorder.component';
     OrderRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CouponCodeModule
   ]
+ 
 })
 export class OrderModule { }
