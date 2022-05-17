@@ -23,7 +23,7 @@ export class ListdressComponent implements OnInit {
   dress:any;
   getAllDresslist()
   {
-    const url="http://localhost:9000/dress/list";
+    const url="https://product-apii.herokuapp.com/dress/list";
     this.http.get(url).subscribe((res)=>{
       this.dresslist = res;
     },err=>{
