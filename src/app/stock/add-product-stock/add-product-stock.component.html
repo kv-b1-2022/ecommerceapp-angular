@@ -1,13 +1,22 @@
-
+<style>
+.div{
+    padding: 10px;
+    font-style:normal;
+    font-size: larger;
+    color:black;
+}
+</style>
 <h5>Add Product Stock</h5>
 <form (ngSubmit)="addProductStock()">
-    <div>
+    <div class="div">
         <label for="productId">Product Id:</label>
-        <input type="number" name="productId" [(ngModel)]="productId" placeholder="Enter the product Id" autofocus required>
+        <input type="number" name="productId" [(ngModel)]="productId" placeholder="Enter the product Id" autofocus required readonly>
     </div>
-    <div>
+    <div class="div">
         <label for="quantity">Quantity:</label>
-        <input type="number" name="quantity" [(ngModel)]="quantity" placeholder="Enter Quantity" required>
+        <input type="number" name="quantity" [(ngModel)]="quantity" placeholder="Enter Quantity" required min="1" >
     </div>
+    <div class="div">
     <button type="submit">Submit</button>
+    </div>
 </form>
