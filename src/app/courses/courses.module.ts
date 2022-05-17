@@ -6,6 +6,11 @@ import { ViewCourseTypeComponent } from './view-course-type/view-course-type.com
 import { ListAllCoursesComponent } from './list-all-courses/list-all-courses.component';
 import { ViewCourseDetailsComponent } from './view-course-details/view-course-details.component';
 import { ViewEnrolledCoursesComponent } from './view-enrolled-courses/view-enrolled-courses.component';
+import { CoursesCategoryComponent } from './courses-category/courses-category.component';
+import { ListcourseComponent } from './listcourse/listcourse.component';
+import { DataTablesModule } from 'angular-datatables';
+import { AddCourseComponent } from './add-course/add-course.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,11 +18,16 @@ import { ViewEnrolledCoursesComponent } from './view-enrolled-courses/view-enrol
     ViewCourseTypeComponent,
     ListAllCoursesComponent,
     ViewCourseDetailsComponent,
-    ViewEnrolledCoursesComponent
+    ViewEnrolledCoursesComponent,
+    CoursesCategoryComponent,
+    ListcourseComponent,
+    AddCourseComponent
   ],
   imports: [
     CommonModule,
-    CoursesRoutingModule
+    DataTablesModule,
+    CoursesRoutingModule,
+    FormsModule
   ]
 })
 export class CoursesModule { }

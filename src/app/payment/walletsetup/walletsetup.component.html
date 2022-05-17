@@ -1,0 +1,23 @@
+
+<section style="margin-left:530px;margin-top:150px;">
+    <div class="card" style="width:40%">
+        <div class="shadow p-3 mb-0 bg-body rounded">
+       <form (submit)="setTransactionPin()">
+            <div id="title">
+                <h5><i><b>Wallet created successfully</b></i></h5>
+                <h5><i>please set transaction pin</i></h5>
+            </div>
+            <hr>
+            <div>
+                <input type="number" name="pin" id="tpin" style="width:100%" placeholder="Enter transaction pin" required [(ngModel)]="tpin">
+            </div>
+            <hr>
+            <div style="text-align:center;">
+                <button type="submit" class="btn btn-secondary" name="submit" id="submit">Set</button>
+            </div>
+       </form>
+    </div>
+    </div>
+</section>
+
+

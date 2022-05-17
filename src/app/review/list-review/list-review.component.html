@@ -1,0 +1,27 @@
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>productId</th>
+           
+            <th>ratings</th>
+            <th>review</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let review of reviews;">
+            <td>{{review.id}}</td>
+            <td>{{review.productId}}</td>
+            <td>{{review.productName}}</td>
+           
+            <td>{{review.ratings}}</td>
+            <td>{{review.review}}</td>
+            <td><button type="button" (click)="deleteReview(review.id)" class="btn btn-danger">Delete</button></td>
+           <td> <button type="view" routerLink="/view-review/{{review.id}}">view-review</button></td>
+        </tr>
+           
+        
+    </tbody>
+</table>

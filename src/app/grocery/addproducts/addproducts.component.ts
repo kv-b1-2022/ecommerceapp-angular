@@ -11,8 +11,8 @@ export class AddproductsComponent implements OnInit {
   name!: String;
   brand!: String;
   category!: String;
-  price!: String;
-  image!:String
+  
+  image!:String;
 
 
   constructor(private http:HttpClient,private toastrService: ToastrService) { }
@@ -25,8 +25,8 @@ export class AddproductsComponent implements OnInit {
   products!:any;
   getAddProducts()
   {
-    const userObj={"name":this.name,"brand":this.brand,"category":this.category,"price":this.price,"image":this.image};
-    const url="http://localhost:8080/product/save";
+    const userObj={"name":this.name,"brand":this.brand,"category":this.category,"image":this.image};
+    const url="https://product-apii.herokuapp.com/product/save";
     this.http.post(url,userObj).subscribe((res)=>{
       console.log(res);
       this.toastrService.success('successfully added');

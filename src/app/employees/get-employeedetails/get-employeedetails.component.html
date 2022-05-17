@@ -1,0 +1,83 @@
+<!-- <p>get-employeedetails works!</p> -->
+<form (ngSubmit)="getempdetails()">
+    <section class="box">
+        <table>
+            <h3>
+                Employee Details
+            </h3>
+            <tr>
+                <td> <label for="name">EmployeeName </label> </td>
+                <td>
+                    <input type="name" name="empname" [(ngModel)]="empname" required placeholder="Enter Name"
+                        autofocus><br>
+                </td>
+            </tr>
+            <tr>
+                <td> <label for="empemail">Email </label> </td>
+                <td>
+                    <input type="empemail" name="empemail" [(ngModel)]="empemail" required
+                        placeholder="Enter Email"><br>
+                </td>
+            </tr>
+            <tr>
+                <td> <label for="mobilenumber">MobileNumber</label> </td>
+                <td>
+                    <input type="phone" name="mobilenumber" [(ngModel)]="mobilenumber" required
+                        placeholder="Enter MobileNumber"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="role">Role</label>
+                </td>
+                <td>
+                    <input type="String" name="role" [(ngModel)]="role" required placeholder="Enter your Role"><br>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="aadharnumber">AadharNumber</label> </td>
+                <td>
+                    <input type="number" name="aadhar" [(ngModel)]="aadhar" required
+                        placeholder="Enter your aadharnumber"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="PAN-number">PAN-number</label>
+                </td>
+                <td>
+                    <input type="String" name="pannumber" [(ngModel)]="pannumber" required
+                        placeholder="Enter your PAN-number"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="accountnumber">AccountNumber</label>
+                </td>
+                <td>
+                    <input type="number" name="accountNo" [(ngModel)]="accountNo" required
+                        placeholder="Enter your accountnumber"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="ifsccode">IFSCcode</label>
+                </td>
+                <td>
+                    <input type="String" name="ifsccode" [(ngModel)]="ifsccode" required
+                        placeholder="Enter your ifsccode"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="bankName">bankName</label>
+                </td>
+                <td>
+                    <input type="String" name="bankName" [(ngModel)]="bankName" required
+                        placeholder="Enter your bankName"><br>
+                </td>
+            </tr>
+        </table>
+        <button type="submit">Submit</button>
+    </section>
+</form>

@@ -15,10 +15,17 @@ export class AddtocartComponent implements OnInit {
 
 
   ngOnInit(): void { 
-    this.toastrService.success('completed..');
+  
     // this.getAllProducts();
     let items= localStorage.getItem("CART_ITEMS")
     this.products = items != null ? JSON.parse(items):[];
+  }
+  getTotalAmount(){
+    let amount = 0;
+    for(let product of this.products){
+      amount = amount + product.price * 1;//product.quantity;
+    }
+    return amount;
   }
   products!:any;
   placeOrder()
@@ -37,5 +44,10 @@ export class AddtocartComponent implements OnInit {
   }
   localStorage.removeItem("CART_ITEMS");
   this.products = [];
+  }
+
+  removeItem(index:number){
+    this.products.splice(index,1);
+    localStorage.setItem("CART_ITEMS",JSON.stringify(this.products));
   }
 }

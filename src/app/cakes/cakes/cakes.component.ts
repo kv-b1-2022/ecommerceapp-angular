@@ -17,7 +17,7 @@ export class CakesComponent implements OnInit {
   }
   cakes:any;
   getAllCakes() {
-    const url="http://localhost:8080/cake/list"
+    const url="https://product-apii.herokuapp.com/cakes/list"
     this.http.get(url).subscribe((res)=>{
       this.cakes= res;
     },err=>{
@@ -28,7 +28,7 @@ export class CakesComponent implements OnInit {
     deletecake(id:any){;
       let cfm = confirm("Do you want to Delete this cake ?");
       if(cfm){
-      const url="http://localhost:8080/cake/" + id;
+      const url="http://localhost:9000/cake/" + id;
       this.http.delete(url).subscribe((res)=>{
         console.log(res);
         this.toastrservice.success("cake deleted successfully");

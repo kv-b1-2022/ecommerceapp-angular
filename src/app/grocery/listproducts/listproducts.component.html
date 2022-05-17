@@ -2,7 +2,8 @@
 <form class="d-flex">
 <a class="btn btn-outline-success" routerLink="/addproducts">Add product</a>
 </form>
- 
+<br>
+ <br>
 <table class="table table-bordered">
    
     
@@ -15,7 +16,7 @@
             <th>category</th>
             <th>price</th>
             <th>image</th>
-            
+            <th>Actions</th>
         </tr>
 
     </thead>
@@ -27,8 +28,14 @@
             <td>{{product.category}}</td>
             <td>{{product.price}}</td>
             <td>{{product.image}}</td>
-            <td><a routerLink="/updateproducts/{{product.id}}" class="btn btn-info">Edit</a></td>
-            <td><button type="button" (click)="deleteProduct(product.id)" class="btn btn-danger">Delete</button></td>
+            <td><a routerLink="/updateproducts/{{product.id}}" class="btn btn-info">Edit</a>
+            &nbsp;<button type="button" (click)="deleteProduct(product.id)" class="btn btn-danger">Delete</button>
+           
+           &nbsp; <a href="/add-product-stock?productId={{product.id}}" class="btn btn-info">Add Stock</a>
+           &nbsp; <a href="/addproductprice?productId={{product.id}}" class="btn btn-info">Add Price</a>
+           
+        
+        </td>
            
         </tr>
     </tbody>

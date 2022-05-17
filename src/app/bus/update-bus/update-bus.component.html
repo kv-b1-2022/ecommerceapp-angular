@@ -1,0 +1,47 @@
+<form (ngSubmit)="updateBus()" *ngIf="bus">
+<div >
+        <h2>{{bus.busName | uppercase}} Details</h2>
+        <br>
+        <div>
+          <label for="name">Bus Name: </label>
+          <input type="text" name="name" [(ngModel)]="bus.busName" placeholder="Enter Bus Name">
+        </div>
+        <br>
+        <div>
+            <label for="from">Bus From: </label>
+            <input type="text" name="from" [(ngModel)]="bus.busFrom" placeholder="Enter Bus From">
+          </div>
+          <br>
+          <div>
+            <label for="to">Bus To: </label>
+            <input type="text" name="to" [(ngModel)]="bus.busTo" placeholder="Enter Bus To">
+          </div>
+          <br>
+          <div>
+            <label for="timing">Bus Timing: </label>
+            <input type="time" name="timing" [(ngModel)]="bus.busTiming" placeholder="Enter Bus Timing">
+          </div>
+          <br>
+          <div>
+            <label for="ticketsAvailable">Bus Tickets Available: </label>
+            <input type="number" name="ticketsAvailable" [(ngModel)]="bus.busTicketsAvailable" placeholder="Enter Bus Tickets Available">
+          </div>
+          <br>
+          <div>
+            <label for="ticketPrice">Bus Ticket Price: </label>
+            <input type="number" name="ticketPrice" [(ngModel)]="bus.busTicketPrice" placeholder="Enter Bus Ticket Price">
+          </div>
+          <br>
+          <div>
+            <label for="stopping">Bus Timing: </label>
+            <input type="text" name="stopping" [(ngModel)]="bus.busStop" placeholder="Enter Bus Stops">
+          </div>
+
+          <br>
+          <div>
+          <button type="submit" class="btn btn-danger">Submit</button>
+        </div>
+        <br>
+      </div> 
+
+    </form>
