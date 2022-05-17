@@ -42,6 +42,7 @@ import { AuthModule } from './auth/auth.module';
 import { BooksModule } from './books/books.module';
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
+import { UpdateTicketComponent } from './update-ticket/update-ticket.component';
 
 
 
@@ -56,7 +57,8 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     
   
     EmployeeProfilepageComponent,
-    HeaderComponent
+    HeaderComponent,
+    UpdateTicketComponent
 
   ],
   imports: [
@@ -78,7 +80,7 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     EmployeesModule,
     OrderModule,
     PaymentModule,
-    NgChartsModule,
+    //NgChartsModule,
     CoursesModule,
     MembershipModule,
     PaymentModule,
