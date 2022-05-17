@@ -93,7 +93,7 @@ reduceStock(){
     console.log(res);
     localStorage.removeItem("CART_ITEMS");
     let orderId =1;
-    // window.location.href="/cardpayment/" + orderId +"/" + this.amount;
+    window.location.href="/cardpayment/" + orderId +"/" + this.amount;
 
 },(err)=>{
   console.log(err);
