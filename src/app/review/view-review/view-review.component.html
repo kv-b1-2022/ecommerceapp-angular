@@ -1,0 +1,23 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>productId</th>
+            <th>productName</th>
+            <th>userId</th>
+            <th>ratings</th>
+            <th>review</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngIf="getView">
+        <td>{{getView.id}}</td>
+        <td>{{getView.productId}}</td>
+        <td>{{getView.productName}}</td>
+        <td>{{getView.userId}}</td>
+        <td>{{getView.ratings}}</td>
+        <td>{{getView.review}}</td>  
+        </tr>
+    </tbody>
+    </table>

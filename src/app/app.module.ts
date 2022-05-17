@@ -40,6 +40,8 @@ import { AuthModule } from './auth/auth.module';
 import { DataTablesModule } from 'angular-datatables';
 import { BooksModule } from './books/books.module';
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
+import { ElectronicsModule } from './Electronics/electronics.module';
+
 
 
 @NgModule({
@@ -49,10 +51,11 @@ import { EmployeeProfilepageComponent } from './employee-profilepage/employee-pr
     HeaderComponent,
     AdminSidebarComponent,
     HeaderComponent,
-    EmployeeProfilepageComponent
+    EmployeeProfilepageComponent,
+    HeaderComponent
+
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -78,6 +81,7 @@ import { EmployeeProfilepageComponent } from './employee-profilepage/employee-pr
     NgbModule,
     StockModule,
     PayrollModule,
+    BusModule,
     CharityModule,
     BusModule,
     TrainModule,
@@ -86,7 +90,8 @@ import { EmployeeProfilepageComponent } from './employee-profilepage/employee-pr
     DataTablesModule,
     FoodsModule,
     DressModule,
-    BooksModule
+    BooksModule,
+    ElectronicsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
