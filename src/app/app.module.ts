@@ -36,13 +36,15 @@ import { DataTablesModule } from 'angular-datatables';
 import { FoodsModule } from './foods/foods.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
     AdminSidebarComponent,
-    HeaderComponent
+    HeaderComponent,
+    
   ],
   imports: [
     BrowserModule,
