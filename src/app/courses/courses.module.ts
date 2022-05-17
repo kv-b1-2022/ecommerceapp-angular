@@ -13,6 +13,7 @@ import { AddCourseComponent } from './add-course/add-course.component';
 import { FormsModule } from '@angular/forms';
 
 
+
 @NgModule({
   declarations: [
     ViewCourseTypeComponent,
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     ViewEnrolledCoursesComponent,
     CoursesCategoryComponent,
     ListcourseComponent,
-    AddCourseComponent
+    AddCourseComponent,
+    
   ],
   imports: [
     CommonModule,
