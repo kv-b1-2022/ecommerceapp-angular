@@ -25,6 +25,9 @@ import { OrderModule } from './order/order.module';
 import { CoursesModule } from './courses/courses.module';
 import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module';
+
+
+
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
 
@@ -43,6 +46,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
 import { SpinnerComponent } from './spinner/spinner.component';
+
+
+import { SafePipe } from './safe.pipe';
 
 
 
