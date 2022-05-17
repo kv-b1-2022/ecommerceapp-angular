@@ -1,0 +1,19 @@
+.box{
+    background:rgb(235, 241, 242);
+    color:black;
+    top:52%;
+    left:50%;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+    padding:65px 30px;
+    border-radius:15px;
+    border: 1px solid;
+}
+
+button{
+    
+    width:50%;
+    margin-left:70%;
+    margin-right:25%;
+}

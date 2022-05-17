@@ -20,6 +20,7 @@ export class ListproductsComponent implements OnInit {
     this.http.get(url).subscribe((res: any)=>{
       this.spinner = "none"
       console.log(res);
+      this.spinner = "hide";
       this.products=res;
     },(err)=>{
       console.log(err.error.message);
