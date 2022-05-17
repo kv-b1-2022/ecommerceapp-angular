@@ -7,10 +7,11 @@ import { AddMoviesComponent } from './add-movies/add-movies.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DisplaymoviesComponent } from './displaymovies/displaymovies.component';
+import { SearchMoviesComponent } from './search-movies/search-movies.component';
 
 
 @NgModule({
-  declarations: [MovielistComponent,AddMoviesComponent,DisplaymoviesComponent],
+  declarations: [MovielistComponent,AddMoviesComponent,DisplaymoviesComponent, SearchMoviesComponent],
   imports: [
     CommonModule,
     MoviesRoutingModule,
