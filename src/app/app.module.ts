@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MoviesModule } from './movies/movies.module';
 
 import { MedicalModule } from './medical/medical.module';
+
 import { FoodsModule } from './foods/foods.module';
 
 
@@ -41,6 +42,7 @@ import { DataTablesModule } from 'angular-datatables';
 import { BooksModule } from './books/books.module';
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
+
 
 
 
