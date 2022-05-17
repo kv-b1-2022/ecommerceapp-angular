@@ -10,6 +10,7 @@ export class EmployeedetailsComponent implements OnInit {
 
   constructor() { }
   details!:any
+  account=true
   ngOnInit(): void {
    const url = "https://employeeapp-apii.herokuapp.com/employeeinformation/listemployee"
     fetch(url).then(res=>res.json()).then(res=>{
@@ -19,10 +20,15 @@ export class EmployeedetailsComponent implements OnInit {
     });
     // this.details = JSON.parse(this.details)
   }
-  btn='false'
+  btn=false
   docTable:any
-  tableClick(item:string){
+  tableClick(item:any){
     this.docTable = "block"
+    this.btn=item
+  }
+  tableClick2(item:any){
+    this.docTable = "block"
+    this.account=item
     this.btn=item
   }
 }

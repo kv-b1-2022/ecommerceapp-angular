@@ -5,7 +5,7 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-get-employeedetails',
   templateUrl: './get-employeedetails.component.html',
-  styles: [
+  styleUrls: ['./get-employeedetails.css'
   ]
 })
 export class GetEmployeedetailsComponent implements OnInit {
@@ -13,13 +13,14 @@ export class GetEmployeedetailsComponent implements OnInit {
   empemail!: string;
   mobilenumber!: string;
   role!: string;
-  aadhar!: string;
+  aadhar!: number;
   pannumber!:string;
+  accountNo!:number;
   ifsccode !: string;
+  bankName!: string;
   status!: string;
-  joiningdate!: Date;
-  leavingdate!: Date;
-  joineddate!: Date;
+  employeeStatus!: string;
+
 
   constructor(private http:HttpClient,private toastr: ToastrService) { }
 
@@ -29,18 +30,17 @@ export class GetEmployeedetailsComponent implements OnInit {
   getempdetails()
   {
     const userObj={
-      "empName":"rama",
-    "empEmail":"rama@gmail.com",
-    "mobileNumber":"7766231212",
-    "role":"watereee",
-    "aadhar":"112333121234",
-    "pannum":"1134777pow",
-    "accountNo":"1334455867823456",
-    "ifscCode":"16643338779",
-    "status":"pending",
-    "joiningdate":"2000-09-08",
-    "leavingdate":"2000-07-05",
-    "joineddate":"2000-02-04"
+      "empName":this.empname,
+    "empEmail":this.empemail,
+    "mobileNumber":this.mobilenumber,
+    "role":this.role,
+    "aadhar":this.aadhar,
+    "pannum":this.pannumber,
+    "accountNo":this.accountNo,
+    "ifscCode":this.ifsccode,
+    "bankName":this.bankName,
+    "status":"Pending",
+    "employeeStatus":"Active"
     };
     const url="http://localhost:9000/details/employeeinfo";
     this.http.post(url,userObj).subscribe((res)=>{

@@ -39,6 +39,7 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
 import { DataTablesModule } from 'angular-datatables';
 import { BooksModule } from './books/books.module';
+import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { BooksModule } from './books/books.module';
     HomeComponent,
     HeaderComponent,
     AdminSidebarComponent,
-    HeaderComponent
+    HeaderComponent,
+    EmployeeProfilepageComponent
   ],
   imports: [
     BrowserModule,
