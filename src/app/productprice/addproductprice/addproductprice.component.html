@@ -1,0 +1,28 @@
+<p>addproductprice works!</p>
+
+
+
+
+
+<form (ngSubmit)="addProductprice()">
+    
+<div>
+    <label for="productid">Product ID:</label>
+    <input type="number" name="productId" [(ngModel)]="productId" placeholder="Enter productid" required > 
+</div>
+<div>
+    <label for="price">price:</label>
+    <input type="number" name="price" [(ngModel)]="price" placeholder="Enter price" required> 
+</div>
+<div>
+    <label for="startDate">start_date:</label>
+    <input type="Date" name="startDate" [(ngModel)]="startDate"   placeholder="Enter startdate" required > 
+</div>
+<div>
+    <label for="endDate">end_date:</label>
+    <input type="Date" name="endDate" [(ngModel)]="endDate"  placeholder="Enter EndDate" required > 
+</div>
+    <button type="submit">
+        submit
+    </button>
+</form>

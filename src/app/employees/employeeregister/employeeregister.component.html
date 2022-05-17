@@ -1,0 +1,22 @@
+<p>employeeregister works!</p>
+<form (ngSubmit)="empregister()">
+    <section>
+
+       <div><label for="name">EmployeeName </label>
+        <input type="name" name="empname" [(ngModel)]="empname" required placeholder="Enter Name" autofocus><br></div>
+            
+            <div>
+                <label for="email">Email </label>
+            <input type="email" name="empEmail" [(ngModel)]="empEmail" required placeholder="Enter Email" autofocus><br>
+            </div>
+            <div>
+                <label for="password">Password </label>
+            <input type="text" name="empPassword" [(ngModel)]="empPassword" required placeholder="Password">
+            </div>
+       
+        <button type="submit">Submit</button>
+    
+    </section>
+    
+    
+    </form>

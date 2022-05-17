@@ -1,0 +1,32 @@
+<h1 style="text-align: center;">Sellers List</h1>
+<table class="table table-light table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+            <th>Role</th>
+            <th>Aadhar</th>
+            <th>PAN number</th>
+            <th>Account number</th>
+            <th>IFSC Code</th>
+         
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of details">
+
+            <td>{{data.empId}}</td>
+            <td>{{data.empName}}</td>
+            <td>{{data.empEmail}}</td>
+            <td>{{data.mobileNumber}}</td>
+            <td>{{data.role}}</td>
+            <td>{{data.aadhar}}</td>
+            <td>{{data.pannum}}</td>
+            <td>{{data.accountNo}}</td>
+            <td>{{data.ifscCode}}</td>
+            
+        </tr>
+    </tbody>
+  </table>
