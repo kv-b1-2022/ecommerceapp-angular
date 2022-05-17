@@ -24,7 +24,6 @@ import { OrderModule } from './order/order.module';
 import { CoursesModule } from './courses/courses.module';
 import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module';
- import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
 
@@ -39,6 +38,7 @@ import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
 import { DataTablesModule } from 'angular-datatables';
 import { BooksModule } from './books/books.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
