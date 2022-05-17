@@ -25,7 +25,8 @@ import { OrderModule } from './order/order.module';
 
 import { CoursesModule } from './courses/courses.module';
 import { EmployeesModule } from './employees/employees.module';
-import { MembershipModule } from './membership/membership.module'; 
+import { MembershipModule } from './membership/membership.module';
+
 
 
 import { StockModule } from './stock/stock.module';
@@ -43,12 +44,9 @@ import { AuthModule } from './auth/auth.module';
 
 import { BooksModule } from './books/books.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
-
-
-
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +58,9 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     
   
     EmployeeProfilepageComponent,
-    HeaderComponent
+    HeaderComponent,
+    SpinnerComponent
+    
 
   ],
   imports: [
