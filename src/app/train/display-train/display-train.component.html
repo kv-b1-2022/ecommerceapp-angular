@@ -1,0 +1,27 @@
+<p>display-train works!</p>
+
+
+<h3>TRAIN AVAILABLE</h3>
+<table class="table" style="width:1000px" >
+    <thead>
+      <tr>
+        <th scope="col" >S.No</th>
+        <th scope="col">Train Name</th>
+        <th scope="col">Train From</th>
+        <th scope="col">Train To</th>
+        <th scope="col">Timing</th>
+        <th scope="col">Ticket Rate</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let train of trains;">
+        <td>{{train.id}}</td>
+          <td>{{train.name}}</td>
+          <td>{{train.from}}</td>
+          <td>{{train.to}}</td>
+          <td>{{train.timing}}</td>
+         <td>{{train.rate}}</td>
+          
+       </tr>
+    </tbody>
+  </table>

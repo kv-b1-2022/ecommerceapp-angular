@@ -1,4 +1,5 @@
 <p>cakes</p>
+<span class="badge bg-success"><a routerLink="/add-cakes">Add-Cakes</a></span>
 
 <table class="table table-bordered">
 
@@ -22,8 +23,8 @@
            <td>{{cake.category}}</td>
            <td>{{cake.price}}</td>
            <td>{{cake.image}}</td>
-           <!-- <td><button type="button" (click)="deletecake(cake.id)"class="btn-danger"> DELETE</button></td>
-           <td><a routerLink="/update-cakes/{{cake.id}}" class="btn btn-info">Edit</a></td> -->
+           <td><button type="button" (click)="deletecake(cake.id)"class="btn-danger"> DELETE</button></td>
+           <!-- <td><a routerLink="/update-cakes/{{cake.id}}" class="btn btn-info">Edit</a></td> -->
 
 
         </tr>

@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.myForm = new FormGroup({
-      mail:new FormControl('',[Validators.required]),
+      mail:new FormControl('',[Validators.required, Validators.email]),
       password:new FormControl('',[Validators.required])
     });
   }
@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
         "mail":this.mail?.value,
         "password":this.password?.value
       };
-      const url = " https://userapp-apii.herokuapp.com/user/login";
+      const url = "https://userapp-apii.herokuapp.com/user/login";
       this.http.post(url,user).subscribe((res:any)=>{
         let output = res;
         console.log(res);
@@ -65,7 +65,6 @@ export class LoginComponent implements OnInit {
       },(err)=>{
         console.log(err.error);
         this.toastr.error(err.error.message);
-        window.location.reload();
       });
     }
   }

@@ -1,0 +1,27 @@
+<h1>Users List </h1>
+<br>
+<button type="submit" class="btn btn-primary" style="float:right;">Add User</button>
+<table datatable class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of userslist">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.mail}}</td>
+            <td>{{user.mobile}}</td>
+            <td>{{user.role}}</td>
+            <td>{{user.status}}</td>
+            <td><button type="submit" class="btn btn-danger">Block</button></td>
+        </tr>
+    </tbody>
+</table>

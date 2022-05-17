@@ -17,7 +17,8 @@ export class CreateOrderComponent implements OnInit {
   createdBy!:number;
   comments!:String;
 
-  constructor(private http:HttpClient,private toastrService: ToastrService,private route:ActivatedRoute) {
+  constructor(private http:HttpClient,private toastrService: ToastrService,private route:ActivatedRoute
+    ) {
     this.amount = this.route.snapshot.queryParams["amount"];
    }
 
@@ -38,7 +39,7 @@ export class CreateOrderComponent implements OnInit {
 
   createOrder(){
     const orderobj={"userId":this.userId,"amount":this.amount,"status":this.status,"createdBy":this.createdBy,"comments":this.comments};
-    const url= "https://order-apii.herokuapp.com/ordersTable/save";
+    const url= "http://localhost:9000/ordersTable/save";
     this.http.post(url,orderobj).subscribe((res)=>{
       console.log(res);
       this.toastrService.success('successfully added');

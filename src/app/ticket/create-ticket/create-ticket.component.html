@@ -4,6 +4,11 @@
         text-align: center;
     }
 </style>
+
+<button type="button"  class="btn btn-info" routerLink="/list-tickets">
+    List Ticket
+</button>
+
 <form id="form" (ngSubmit)="createTicket()">
     <h3>Create Ticket</h3>
     <div>
@@ -14,12 +19,20 @@
      <br>
      <div>
         <label for="category">Category</label>
-        <select name="category" id="category">
+        <select name="category" id="category" [(ngModel)]="category">
         <option value=disabled>--Select--</option>
         <option value="cakes">Cakes</option>
         <option value="courses">Courses</option>
         <option value="grocery">Grocery</option>
         <option value="movies">Movies</option>
+        <option value="order">Order</option>
+        <option value="dress">Dress </option>
+        <option value="charity">Charity</option>
+        <option value="coupon-code">Coupon Code</option>
+        <option value="foods">Foods</option>
+        <option value="membership">Membership</option>
+        <option value="medical">Medical</option>
+        
       </select>
       </div>
       <br>
@@ -38,6 +51,8 @@
     <button type="submit">
         Submit
     </button>
+
+   
 </form>
 
 
