@@ -21,6 +21,7 @@ export class TransactiondetailsComponent implements OnInit {
             const userObj = {
         "cardNumber": this.cardnumber
       };
+      
       const url = "https://payment-apii.herokuapp.com/transaction/details";
       this.http.post(url,userObj,{responseType:"json"}).subscribe((res)=>{
         this.users=res;
