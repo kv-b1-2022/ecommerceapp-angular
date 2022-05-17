@@ -63,15 +63,12 @@ import { SpinnerComponent } from './spinner/spinner.component';
     AppComponent,
     HomeComponent,
     HeaderComponent,
-<<<<<<< HEAD
-    AdminSidebarComponent
-=======
     AdminSidebarComponent,
+   
     EmployeeProfilepageComponent,
     SpinnerComponent
     
 
->>>>>>> 84abd206bbc666bcf400f8a09a594ca6f2d1e41c
   ],
   imports: [
     AppRoutingModule,
