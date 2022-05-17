@@ -13,6 +13,7 @@ import { MoviesModule } from './movies/movies.module';
 import { MedicalModule } from './medical/medical.module';
 
 import { FoodsModule } from './foods/foods.module';
+
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -27,6 +28,11 @@ import { OrderModule } from './order/order.module';
 import { CoursesModule } from './courses/courses.module';
 import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module';
+
+
+
+
+
 
 
 import { StockModule } from './stock/stock.module';
@@ -51,19 +57,25 @@ import { TransactionModule } from './transaction/transaction.module';
 
 
 
-
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
+
+   
+
+
     AdminSidebarComponent,
     HeaderComponent,
     
   
     EmployeeProfilepageComponent,
     HeaderComponent,
+    HeaderComponent,
+    SpinnerComponent
     
 
   ],

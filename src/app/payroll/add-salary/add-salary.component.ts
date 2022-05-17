@@ -8,30 +8,34 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./add-salary.component.css']
 })
 export class AddSalaryComponent implements OnInit {
-  salaryId!:number;
+  empId!:number;
   designation!:string;
+  workingDays!:number;
+  month!:number;
   salary!:number;
+  salaryStatus!:string;
 
   constructor(private http:HttpClient,private toastr:ToastrService) { }
 
   ngOnInit(): void {
+    
   }
   addSalary(){
     const salaryObj={
-      "salaryId":this.salaryId,
+      "empId":this.empId,
       "designation":this.designation,
-      "salary":this.salary
+      "workingDays":this.workingDays,
+      "month":this.month,
+      "salary":this.salary,
+      "salaryStatus":this.salaryStatus
     };
-    const url="http://localhost:8080/totalSalary/save";
+    const url="http://localhost:9000/salary/save";
     this.http.post(url,salaryObj).subscribe((res:any)=>{
       console.log(res);
-     
         this.toastr.success('successfully added');
-      
-      
     },(err:any)=>{
       console.log(err);
-     this.toastr.error('please re-enter your details');
+     this.toastr.error('please enter correct details');
     })
 
   }
