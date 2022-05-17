@@ -103,6 +103,8 @@ import { SafePipe } from './safe.pipe';
     DressModule,
     BooksModule,
     ElectronicsModule
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
