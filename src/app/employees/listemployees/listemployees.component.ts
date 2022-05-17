@@ -63,7 +63,7 @@ export class ListemployeesComponent implements OnInit {
       this.result = res
       this.ts.success("successfull update")
     },err=>{
-    
+      this.ts.error("some details not update")
     });
   }
 }

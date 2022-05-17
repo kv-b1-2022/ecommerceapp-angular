@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MoviesModule } from './movies/movies.module';
 
 import { MedicalModule } from './medical/medical.module';
+
 import { FoodsModule } from './foods/foods.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -23,7 +24,6 @@ import { CakesModule } from './cakes/cakes.module';
 import { PaymentModule } from './payment/payment.module';
 import { OrderModule } from './order/order.module';
 
-import { NgChartsModule } from 'ng2-charts';
 import { CoursesModule } from './courses/courses.module';
 import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module'; 
@@ -52,6 +52,13 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     AppComponent,
     HomeComponent,
     HeaderComponent,
+<<<<<<< HEAD
+
+   
+
+
+=======
+>>>>>>> 609cefe4425df5babff8782c33f24446e994d141
     AdminSidebarComponent,
     HeaderComponent,
     
@@ -79,7 +86,6 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     EmployeesModule,
     OrderModule,
     PaymentModule,
-    NgChartsModule,
     CoursesModule,
     MembershipModule,
     PaymentModule,

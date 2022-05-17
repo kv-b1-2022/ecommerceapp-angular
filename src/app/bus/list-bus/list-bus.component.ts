@@ -22,7 +22,9 @@ export class ListBusComponent implements OnInit {
 
   {
     //alert(this.id);
-    const url="http://localhost:9000/Buses/byId?id="+this.id;
+  //  const url="http://localhost:9000/Buses/byId?id="+this.id;
+  const url="https://busticketbooking-api.herokuapp.com/Buses/byId?id="+this.id;
+
     this.http.get(url).subscribe((res)=>{
       this.bus= res;
     },err=>{

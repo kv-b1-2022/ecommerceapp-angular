@@ -10,7 +10,10 @@ import { ToastrService } from 'ngx-toastr';
   ]
 })
 export class ListTicketsComponent implements OnInit {
-  empDetails !: any
+  empDetails !: any;
+  assignedTo !: string;
+  status !: string;
+  priority !: string;
 
   constructor(private http:HttpClient,private route:ActivatedRoute,private toastrService: ToastrService) { 
   
