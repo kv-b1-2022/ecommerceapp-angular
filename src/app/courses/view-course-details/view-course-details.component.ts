@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-view-course-details',
@@ -12,8 +13,8 @@ import { ToastrService } from 'ngx-toastr';
 export class ViewCourseDetailsComponent implements OnInit {
   id: any;
   courseData: any;
-
-  constructor(private http: HttpClient,private toastr:ToastrService,private route: ActivatedRoute) { }
+  loggedUserId = this.authService.getUser()?.id;
+  constructor(private http: HttpClient,private toastr:ToastrService,private route: ActivatedRoute,private authService:AuthService) { }
   params!:any;
   courseId!:any;
   ngOnInit(): void {
@@ -30,5 +31,28 @@ export class ViewCourseDetailsComponent implements OnInit {
       alert(err.error.message);
     })
   }
+
+  isLoggedIn(){
+    let user = this.authService.getUser();
+    if(user == null){
+      return false;
+    }
+    return true;
+  }
+
+  enroll(){
+
+    let cId=this.id;
+    let uId=this.loggedUserId;
+    const url="http://courses-api.herokuapp.com/course/enroll/"+cId+"/"+uId;
+    this.http.get(url).subscribe(res=>{
+      this.toastr.success("Successfully Enrolled");
+    },err=>{
+      console.log(err.error.message);
+      this.toastr.error("Already Enrolled");
+    })
+  }
+
+
 
 }

@@ -82,12 +82,13 @@ ngb-carousel .wrapper>img {
 }
 
 .wrapper {
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 .sidebar {
   background: #110527;
   /* color: #fff; */
+ 
 }
 
 .sidebar {
@@ -101,7 +102,7 @@ ngb-carousel .wrapper>img {
 .sidebar .nav-link {
   color: #b4bcc8;
   font-weight: 600;
-  padding: 14px 20px 14px 25px;
+  padding: 4px 20px 14px 25px;
   cursor: pointer; 
 }
 
@@ -130,8 +131,8 @@ ngb-carousel .wrapper>img {
     }
      
     .gallery img {
-        width: 500px;
-        height: 300px;
+        width: 400px;
+        height: 225px;
         transition: 1s;
         padding: 5px;
         border-radius: 50px;

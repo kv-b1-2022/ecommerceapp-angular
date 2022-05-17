@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CharityRoutingModule } from './charity-routing.module';
 import { ListTrustComponent } from './list-trust/list-trust.component';
 import { DonateComponent } from './donate/donate.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { DonateComponent } from './donate/donate.component';
   ],
   imports: [
     CommonModule,
-    CharityRoutingModule
+    CharityRoutingModule,
+    FormsModule
   ]
 })
 export class CharityModule { }

@@ -50,7 +50,7 @@
 <body>
 
 <div class="logo text-center">
-<h1>Login</h1>
+<h1 style="color:blueviolet">Login</h1>
 </div>
 <div class="wrapper">
 <div class="inner-warpper text-center">
@@ -61,11 +61,11 @@
     <!-- <div class="input-group"> -->
       <!---<label class="palceholder" for="Consumer Id">Consumer Id</label>--->
       <!-- <input class="form-control" name="ConsumerId" id="Consumer_Id" type="text" placeholder="Consumer Id" size="11" [(ngModel)]="ConsumerId"/> -->
-      <!-- <span class="lighting"></span> -->
+      <span class="lighting"></span>
     <!-- </div> -->
     <div class="input-group">
       <!---<label class="palceholder" for="userName">User Mail Id</label>--->
-      <input class="form-control" name="userMail" id="userMail" type="email" [ngClass]="isValid('mail')" formControlName="mail" id="validationServer02" placeholder="User Mail Id" /> 
+      <input class="form-control" name="userMail" id="userMail" type="email" [ngClass]="isValid('mail')" formControlName="mail" id="validationServer02" placeholder="User Mail Id" autofocus /> 
       <!-- <input type="text" style="width:100%; text-align:center" class="form-control " [ngClass]="isValid('mail')" formControlName="mail" id="validationServer02" placeholder="Enter your Email Id" autofocus> -->
 
        <div class="valid-feedback">
@@ -97,22 +97,22 @@
       </div>
     </div>
     
-    <button  id="login" type="submit" >Login</button>
+    <button  id="login" class="btn btn-secondary" type="submit" [disabled]="this.myForm.invalid" >Login</button>
     
   </form>
 </div>
 <div class="signup-wrapper text-center">
-  <a routerLink="register">Don't have an accout? <span class="text-primary">Create One</span></a>
+  <a routerLink='/register'>Don't have an account? <span class="text-primary">Create One</span></a>
 </div>
 </div>
-<p>Admin Credentials: Email:admin@gmail.com, Password:admin123</p>
+
 
 <style>
 
 
 body {
     background: #f2f2f2;
-    padding-top: 200px;
+    padding-top: px;
   }
   .animate {
     -webkit-transition: all 0.3s linear;
@@ -170,8 +170,9 @@ body {
   }
   button {
     cursor: pointer;
-    background: #00A885;
-    width: 100%;
+    background:blueviolet;
+    width: 50%;
+    margin-left:120px;
     border: 0;
     padding: 10px 15px;
     color: #fff;
@@ -249,9 +250,10 @@ body {
     margin-top: 0;
   }
   .wrapper {
-    width: 320px;
+    width: 35%;
     background: #fff;
-    margin: 20px auto;
+    margin: 20px auto; 
+    margin-top: 50px !important;
     min-height: 200px;
     border: 1px solid #f3f3f3;
 

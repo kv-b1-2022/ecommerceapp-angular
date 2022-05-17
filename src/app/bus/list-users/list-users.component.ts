@@ -14,7 +14,8 @@ export class ListUsersComponent implements OnInit {
   users:any;
   getAllUsers()
   {
-    const url="http://localhost:9000/User/list";
+    //const url="http://localhost:9000/User/list";
+    const url="https://busticketbooking-api.herokuapp.com/User/list";
     this.http.get(url).subscribe((res)=>{
       this.users = res;
     },err=>{

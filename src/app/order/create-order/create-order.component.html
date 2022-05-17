@@ -1,15 +1,67 @@
 
 <h3>Place Order </h3>
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 5px;
+      text-align: left;
+    }
+    </style>
+
+<form  (ngSubmit)="createOrder()">
+    
+    <table style="width:100%">
+        <tr>
+          <th>User Id</th>
+          <td>{{userId}}</td>
+        </tr>
+        <tr>
+          <th>Amount(Rs)</th>
+          <td> {{amount}}</td>
+        </tr>
+        <tr>
+          <th>Coupon Code</th>
+          <td> 
+            <input type="text" id="couponCode" name="couponCode"[(ngModel)]="couponCode"  
+            /> <button type="button" (click)="applyCouponCode()">Apply</button> </td>
+            
+          </tr>
+        <tr>
+          <th>Discount(%)</th>
+          <td> 
+            <input type="text" id="discount" name="discount"[(ngModel)]="discountPercentage" readonly/> 
+            
+           </td>
+            
+          </tr>
+
+      <tr>
+        <th>Discount Amount </th>
+        <td>{{discount()}}</td>
+      </tr>
+
+          <tr>
+              <td>Total Amount</td>
+              <td>{{getTotalAmount()}}</td>
+            </tr>
+     
+      </table>
+      
+      
+
+<!-- UserId : {{userId}}
+Amount : Rs. {{amount}} -->
+  
+<button type="submit">Submit</button>
 
 
-<form (ngSubmit)="createOrder()">
-
-UserId : 1
-Amount : Rs. {{amount}}
-<button type="submit">Submit </button>
-<br/>
 </form>
-<td><a routerLink="/cardpayment?orderId=1&amount={{amount}}" class="btn btn-info">continue</a></td>
+<td><a routerLink="/cardpayment/1/{{amount}}" class="btn btn-info">continue</a></td>
+<td><a (click)="reduceStock()" class="btn btn-info">Stock</a></td>
 <h3>Would you like to donate?</h3>
-<td><a routerLink="/list-trust" class="btn btn-info">DONATE US</a></td>
+<td><a routerLink="/list-trust" class="btn btn-info">DONATE US</a></td><br>
+<h3>Would you like to Apply Coupon?</h3>
 <td><a routerLink="/apply-coupon" class="btn btn-info">Apply Coupon</a></td>
