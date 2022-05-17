@@ -12,6 +12,12 @@ import { ToastrModule } from 'ngx-toastr';
 import { GetEmployeedetailsComponent } from './get-employeedetails/get-employeedetails.component';
 import { EmployeeregisterComponent } from './employeeregister/employeeregister.component';
 
+import { ApplyleaveComponent } from './applyleave/applyleave.component';
+import { LeavelistComponent } from './leavelist/leavelist.component';
+import { LeavestatusComponent } from './leavestatus/leavestatus.component';
+import { SalaryprocessComponent } from './salaryprocess/salaryprocess.component';
+
+
 
 @NgModule({
   declarations: [
@@ -19,7 +25,14 @@ import { EmployeeregisterComponent } from './employeeregister/employeeregister.c
     EmployeeloginComponent,
     EmployeedetailsComponent,
     GetEmployeedetailsComponent,
-    EmployeeregisterComponent
+    EmployeeregisterComponent,
+
+    ApplyleaveComponent,
+    LeavelistComponent,
+    LeavestatusComponent,
+
+    SalaryprocessComponent
+
   ],
   imports: [
     CommonModule,
