@@ -17,21 +17,23 @@ export class VegetarianComponent implements OnInit {
   foodImages!:any;
   vegetarian!:any;
   
+  
   constructor(private http:HttpClient,private route:ActivatedRoute,private toastr:ToastrService) { }
 
   ngOnInit(): void {
+    this.vegFood();
   }
   foodDetails!:any;
   vegFood(){
     // const food= this.vegetarian;
-
-    const url="http://localhost:9000/findBycategory/veg";
-    this.http.get(url,{responseType:'json'}).subscribe((res)=>{
+let  type="veg";
+    const url="http://localhost:9000/findBycategory?foodType="+type;
+    this.http.get(url).subscribe(res=>{
       this.foodDetails=res;
       console.log(res);
       
      
-   },(err)=>{
+   },err=>{
      this.toastr.error("food is not available");
      
    });
