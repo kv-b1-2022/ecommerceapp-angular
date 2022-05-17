@@ -32,7 +32,7 @@ export class AddReviewComponent implements OnInit {
       
       const addreviewObj={"productId":productId,"productName":productName,"userId":userId,"ratings":ratings,"review":review};
   
-      const url="http://localhost:9002/ratings/save";
+      const url=" https://ratingsapp-api.herokuapp.com/ratings/save";
       this.http.post(url,addreviewObj).subscribe((res)=>{
         console.log(res);
         this.toastrService.success("thank you !");

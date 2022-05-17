@@ -12,7 +12,11 @@ import { MoviesModule } from './movies/movies.module';
 
 import { MedicalModule } from './medical/medical.module';
 
+<<<<<<< HEAD
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+=======
+import { FoodsModule } from './foods/foods.module';
+>>>>>>> ef61ff544a09d8064c55ee016bd1511db3987363
 
 
 import { GroceryModule } from './grocery/grocery.module';
@@ -26,6 +30,8 @@ import { OrderModule } from './order/order.module';
 import { CoursesModule } from './courses/courses.module';
 import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module'; 
+
+
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
 
@@ -43,6 +49,8 @@ import { FoodsModule } from './foods/foods.module';
 import { ShippmentModule } from './shippment/shippment.module';
 
 import { BooksModule } from './books/books.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
 
@@ -81,7 +89,10 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     EmployeesModule,
     OrderModule,
     PaymentModule,
+<<<<<<< HEAD
    
+=======
+>>>>>>> ef61ff544a09d8064c55ee016bd1511db3987363
     CoursesModule,
     MembershipModule,
     PaymentModule,
