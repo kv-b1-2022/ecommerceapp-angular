@@ -11,7 +11,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MoviesModule } from './movies/movies.module';
 
 import { MedicalModule } from './medical/medical.module';
+
 import { FoodsModule } from './foods/foods.module';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { GroceryModule } from './grocery/grocery.module';
@@ -21,10 +23,17 @@ import { TicketModule } from './ticket/ticket.module';
 import { CakesModule } from './cakes/cakes.module';
 import { PaymentModule } from './payment/payment.module';
 import { OrderModule } from './order/order.module';
+
 import { CoursesModule } from './courses/courses.module';
 import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module';
- import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
+
+
+
+
+
+
+
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
 
@@ -37,10 +46,16 @@ import { BusModule } from './bus/bus.module';
 import { TrainModule } from './train/train.module';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
-import { DataTablesModule } from 'angular-datatables';
+
 import { BooksModule } from './books/books.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
 
+
+
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -48,15 +63,18 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     HomeComponent,
     HeaderComponent,
     AdminSidebarComponent,
-    HeaderComponent
+    EmployeeProfilepageComponent,
+    SpinnerComponent
+    
+
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    BrowserModule,
     ToastrModule.forRoot(), 
     MoviesModule,
     MedicalModule,
@@ -65,28 +83,32 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     CakesModule,
     GroceryModule,
     TicketModule,
-    GroceryModule,
+   
     EmployeesModule,
     OrderModule,
-    PaymentModule,
+    
+    // NgChartsModule,
     CoursesModule,
     MembershipModule,
     PaymentModule,
-    PayrollModule,
+    
     ProductpriceModule,
     NgbModule,
     StockModule,
     PayrollModule,
-    CharityModule,
     BusModule,
+    CharityModule,
+    
     TrainModule,
     CouponCodeModule,
     AuthModule,
-    DataTablesModule,
+  
     FoodsModule,
     DressModule,
     BooksModule,
     ElectronicsModule
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

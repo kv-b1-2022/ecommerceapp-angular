@@ -51,7 +51,7 @@ export class ForgottransactionpinComponent implements OnInit {
     {
       let userMobile = this.authService.getUser()?.mobile;
       let walletCredentials={"mobile":userMobile,"transactionPin":this.tpin}
-      const url="http://localhost:9000/wallet/user/update/tpin";
+      const url="https://payment-apii.herokuapp.com/wallet/user/update/tpin";
       this.http.post(url,walletCredentials).subscribe(res=>{
       this.toastr.success("transaction pin updated succsessfully")
       },err=>{
@@ -66,7 +66,7 @@ export class ForgottransactionpinComponent implements OnInit {
   {
   
     let mobile = this.authService.getUser()?.mobile;
-      const url="http://localhost:9000/wallet/user/find/balance?mobile="+mobile;
+      const url="https://payment-apii.herokuapp.com/wallet/user/find/balance?mobile="+mobile;
       this.http.get(url).subscribe(res=>{
       this.wallet=res;
       this.balance=this.wallet.balance;
@@ -77,7 +77,7 @@ export class ForgottransactionpinComponent implements OnInit {
   verifyUserLogin()
   {
     let mobile=this.authService.getUser()?.mobile;
-    const url="http://localhost:9000/wallet/verify/user/login?mobile="+mobile;
+    const url="https://payment-apii.herokuapp.com/wallet/verify/user/login?mobile="+mobile;
     this.http.get(url).subscribe(res=>
       {
         //this.toastr.success("welcome"+this.authService.getUser()?.name);

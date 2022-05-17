@@ -6,11 +6,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CakesComponent } from './cakes/cakes.component';
 import { DisplaycakesComponent } from './displaycakes/displaycakes.component';
+import { AddCakesComponent } from './add-cakes/add-cakes.component';
 
 
 
 @NgModule({
-  declarations: [CakesComponent, DisplaycakesComponent],
+  declarations: [CakesComponent, DisplaycakesComponent, AddCakesComponent],
   imports: [
     CommonModule,
     CakesRoutingModule,
