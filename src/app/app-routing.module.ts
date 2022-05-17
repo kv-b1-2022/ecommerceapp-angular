@@ -4,11 +4,13 @@ import { DisplaybookComponent } from './books/displaybook/displaybook.component'
 import { HomeComponent } from './home/home.component';
 import { TransactiondetailsComponent } from './transaction/transactiondetails/transactiondetails.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'home', component: HomeComponent},
   {path: 'spinner',component:SpinnerComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {path: 'transaction',component:TransactiondetailsComponent,canActivate:[AuthGuard]},
 ];
 
 @NgModule({
