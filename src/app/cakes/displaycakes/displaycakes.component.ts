@@ -31,7 +31,7 @@ export class DisplaycakesComponent implements OnInit {
 
   cartItems:any;
   addToCart(cake:any){
-    this.cartItems.push(this.cakes);
+    this.cartItems.push(cake);
     localStorage.setItem("CART_ITEMS", JSON.stringify(this.cartItems));
     this.toastrService.success("Added item to cart");
   }

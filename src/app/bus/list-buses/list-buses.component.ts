@@ -17,7 +17,8 @@ buses!:any;
   
   getAllBuses()
   {
-    const url="http://localhost:9000/Buses/list";
+   // const url="http://localhost:9000/Buses/list";
+   const url="https://busticketbooking-api.herokuapp.com/Buses/list";
     this.http.get(url).subscribe((res)=>{
       this.buses = res;  
     },err=>{
@@ -27,8 +28,9 @@ buses!:any;
   deleteBus(id:any){
     let clarify = confirm("Do you want to delete");
     if(clarify){
-      const url="http://localhost:9000/Buses/" + id;
-      this.http.delete(url).subscribe((res)=>{
+     // const url="http://localhost:9000/Buses/" + id;
+     const url="https://busticketbooking-api.herokuapp.com/Buses/" + id;
+     this.http.delete(url).subscribe((res)=>{
         console.log(res);
         this.toastr.success('successfully deleted');
        // alert("Successfully Deleted");
