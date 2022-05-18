@@ -21,7 +21,7 @@ export class ListproductsComponent implements OnInit {
   products!:any;
   getAllProducts()
   {
-    const url="http://localhost:9001/product/productlist";
+    const url="http://localhost:9000/product/productlist";
     this.http.get(url).subscribe((res)=>{
       this.products = res;
     },err=>{
@@ -32,7 +32,7 @@ export class ListproductsComponent implements OnInit {
   deleteProduct(id:any){
     let cfm = confirm("Do you want to delete ?");
     if(cfm){
-      const url="http://localhost:9001/product/" + id;
+      const url="http://localhost:9000/product/" + id;
       this.http.delete(url).subscribe((res)=>{
         console.log(res);
         this.toastrService.success('successfully deleted');
