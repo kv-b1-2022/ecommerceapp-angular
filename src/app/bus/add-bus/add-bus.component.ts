@@ -30,7 +30,9 @@ ticketPrice!:number;
         "busTicketPrice": this.ticketPrice
    
     };
-    const url="http://localhost:9000/Buses/save";
+  //  const url="http://localhost:9000/Buses/save";
+  const url="https://busticketbooking-api.herokuapp.com/Buses/save";
+
     this.http.post(url,busObj).subscribe((res)=>{
       console.log(res);
       this.toastr.success("bus added successfully");

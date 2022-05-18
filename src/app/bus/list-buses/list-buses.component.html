@@ -11,9 +11,9 @@
         <th scope="col" >Tickets Available</th>
         <th scope="col">Ticket Price</th>
         <th scope="col">View</th>
-        <th scope="col">Delete</th>
+        <!-- <th scope="col">Delete</th>
         <th scope="col">Update</th>
-        
+         -->
       </tr>
     </thead>
     <tbody>
@@ -26,8 +26,10 @@
           <td>{{bus.busTicketsAvailable}}</td>
           <td>{{bus.busTicketPrice}}</td>
           <td><button type="button" class="btn btn-info" routerLink="/buses/{{bus.busId}}">View</button></td>
-          <td><button type="button" (click)="deleteBus(bus.busId)" class="btn btn-danger">Delete</button></td>
-          <td><button type="button" class="btn btn-info" routerLink="/update/{{bus.busId}}">Update</button></td>
+          <!-- <td><button type="button" class="btn btn-danger" routerLink="/book-ticket/{{bus.busId}}">Book</button></td> --> 
+          <!-- 
+           <td><button type="button" (click)="deleteBus(bus.busId)" class="btn btn-danger">Delete</button></td>
+          <td><button type="button" class="btn btn-info" routerLink="/update/{{bus.busId}}">Update</button></td> --> 
 
        </tr>
     </tbody>

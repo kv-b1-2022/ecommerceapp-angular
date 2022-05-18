@@ -26,7 +26,7 @@ export class AddproductsComponent implements OnInit {
   getAddProducts()
   {
     const userObj={"name":this.name,"brand":this.brand,"category":this.category,"image":this.image};
-    const url="https://product-apii.herokuapp.com/product/save";
+    const url="http://localhost:9000/product/save";
     this.http.post(url,userObj).subscribe((res)=>{
       console.log(res);
       this.toastrService.success('successfully added');

@@ -1,5 +1,6 @@
 <header>
 
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #110527;">
 
   
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #110527;">
@@ -16,55 +17,47 @@
   <li class="nav-item">
   <a class="nav-link active" aria-current="page" routerLink="home">Home</a>
   </li>
-  <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" routerLink="#" id="navbarDropdown" role="button"
-  data-bs-toggle="dropdown" aria-expanded="false">
-  Movies
-  </a>
-  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-  <li><a class="dropdown-item" routerLink="movielist"><i class="fa-solid fa-list"></i> Movieslist</a></li>
-  <li><a class="dropdown-item" routerLink="add-movie"><i class="fa-solid fa-plus"></i> Add movies</a></li>
-  <li><a class="dropdown-item" routerLink="displaymovies"><i class="fa-solid fa-film"></i>  Movies</a></li>
-  </ul>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" aria-current="page" routerLink="menus">Foods</a>
+  
+  
+<li class="nav-item">
+  <a class="nav-link" aria-current="page" routerLink="displayMedicals">Pharmacy</a>
 </li>
 
-<li class="nav-item">
+<!-- <li class="nav-item">
   <a class="nav-link" aria-current="page" routerLink="displaydresses">Dress</a>
 </li>
-  <!-- <li class="nav-item">
-  <a class="nav-link active" aria-current="page" routerLink="cakes">Cakes</a>
-  </li> -->
+ -->
+
+
+   <!-- <li class="nav-item">
+  <a class="nav-link" routerLink="displaycakes">Cakes</a>
+  </li> 
+  -->
  
  
- 
-  <li class="nav-item dropdown">
+   <!-- <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" routerLink="#" id="navbarDropdown" role="button"
   data-bs-toggle="dropdown" aria-expanded="false">
   Cakes
   </a>
   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-  <li><a class="dropdown-item" routerLink="cakes"><i class="fa-solid fa-cake-candles"></i> Cakes</a></li>
-  <li><a class="dropdown-item" routerLink="displaycakes"><i class="fa-solid fa-eye"></i> View Cakes</a></li>
-  <!-- <li><a class="dropdown-item" routerLink="cakescart">Cart</a></li> -->
- 
- 
- 
+  <li><a class="dropdown-item" routerLink="cakes"><i class="fa-solid fa-eye"></i>View Cakes</a></li>
+  <li><a class="dropdown-item" routerLink="displaycakes"><i class="fa-solid fa-cake-candles"></i>Cakes</a></li>
   </ul>
+ </li> -->
+  
  
- 
- 
-  </li>
-  <li class="nav-item">
+ <li class="nav-item">
   <a class="nav-link" aria-current="page" routerLink="coursestype">Courses</a>
   </li>
+
   
+
+
   
  
  
-  <li class="nav-item dropdown">
+  <!-- <li class="nav-item dropdown">
  
   <a class="nav-link dropdown-toggle" routerLink="#" id="navbarDropdown" role="button"
   data-bs-toggle="dropdown" aria-expanded="false">
@@ -75,10 +68,31 @@
   <li><a class="dropdown-item" routerLink="displayproducts">All Products</a></li>
   </ul>
  
-  </li>
+  </li> -->
 
   
   
+  <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" routerLink="#" id="navbarDropdown" role="button"
+  data-bs-toggle="dropdown" aria-expanded="false">
+  Products
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+  
+ 
+    <li><a class="dropdown-item" routerLink="listelectronics"><i class="fa-solid fa-laptop"></i> Electronics  </a></li>
+    <li><a class="dropdown-item" routerLink="displaycakes"><i class="fa-solid fa-cake-candles"></i> Cakes</a></li>
+    <li><a class="dropdown-item" routerLink="displayproducts"><i class="fa-solid fa-bag-shopping"></i> Groceries</a></li>
+    <li><a class="dropdown-item" routerLink="displaydresses"><i class="fa-solid fa-shirt"></i> Dress</a></li>
+
+    <li><a class="dropdown-item" routerLink="menus"><i class="fa-solid fa-bowl-food"></i> Foods</a></li>
+    <li><a class="dropdown-item" routerLink="displaybook"><i class="fa-solid fa-book-bookmark"></i> Book</a></li>
+    
+  </ul>
+
+
+
+
   
  
   <li class="nav-item dropdown">
@@ -89,11 +103,11 @@
   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
   
  
- 
-  <li><a class="dropdown-item" routerLink="list-tickets"><i class="fa-solid fa-bus"></i> Bus Tickets</a>
+    <li><a class="dropdown-item" routerLink="displaymovies"><i class="fa-solid fa-film"></i>  Movies</a></li>
+  <li><a class="dropdown-item" routerLink="buses"><i class="fa-solid fa-bus"></i> Bus Tickets</a>
   </li>
-  <li><a class="dropdown-item" routerLink="display-train"><i class="fa-solid fa-train-subway"></i> Train
-  Tickets</a></li>
+  <!-- <li><a class="dropdown-item" routerLink="display-train"><i class="fa-solid fa-train-subway"></i> Train
+  Tickets</a></li> -->
   </ul>
   </li>
  
@@ -104,7 +118,7 @@
   </a>
   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
   <li>
-  <a class="dropdown-item" routerLink="list-tickets" routerLink="add-salary">payroll</a>
+  <a class="dropdown-item" routerLink="list-tickets" routerLink="add-salary">   </a>
  
   </li>
  
@@ -129,15 +143,17 @@
                             <li><img src="https://halspan.com/wp-content/uploads/2021/10/istockphoto-1214428300-170667a.jpg" alt="" width="50" height="50"></li>
                           <li><hr class="dropdown-divider"></li>
                           <li><a class="dropdown-item" href="#">Profile</a></li>
-                          <li><a class="dropdown-item" href="#"><i class="fa-solid fa-badge-percent"></i>Coupens</a></li>
-                          <li><a class="dropdown-item" href="#">Addresses</a></li>
-                          <li><a class="dropdown-item" routerLink="displaybook">book</a></li>
+                          <li><a class="dropdown-item" href="list-coupens"><i class="fa-solid fa-badge-percent"></i>Coupens</a></li>
+                          
+                          
+                          
+                        
                           <li><a class="dropdown-item" routerLink="addmembership"><i class="fa-solid fa-crown"></i> Member Ship</a></li>
-                          <li><a class="dropdown-item" href="#"><i class="fa-solid fa-cart-shopping"></i> My orders</a></li>
-                          <li><a class="dropdown-item" href="#"><i class="fa-solid fa-receipt"></i> My transactions</a></li>
-                          <li><a class="dropdown-item" href="#"><i class="fa-solid fa-wallet"></i> My Wallet</a></li>
-                          <li><a class="dropdown-item" href="#"><i class="fa-solid fa-shield-halved"></i> Manage security</a></li>
-                          <li><a class="dropdown-item" href="#"><i class="fa-solid fa-handshake-angle"></i> Help</a></li>
+                          <li><a class="dropdown-item" routerLink="my-order"><i class="fa-solid fa-cart-shopping"></i> My orders</a></li>
+                          <li><a class="dropdown-item" routerLink="transaction"><i class="fa-solid fa-receipt"></i> My transactions</a></li>
+                          <li><a class="dropdown-item" routerLink="walletsetup"><i class="fa-solid fa-wallet"></i> My Wallet</a></li>
+                          <!-- <li><a class="dropdown-item" routerLink="#"><i class="fa-solid fa-shield-halved"></i> Manage security</a></li> -->
+                          <li><a class="dropdown-item" routerLink="create-ticket"><i class="fa-solid fa-handshake-angle"></i> Help & Support</a></li>
                         </ul>
                         <li class="nav-item" *ngIf="!isLoggedIn()">
                           <a class="nav-link " routerLink='register'><i class="fa-solid fa-user"></i>Register</a>
@@ -149,7 +165,7 @@
                           <a class = "nav-link active">Welcome {{getUser()?.name}}</a>
                          </li>
                         <li class="nav-item" *ngIf="isLoggedIn()">
-                            <a class="nav-link active">Logout <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                            <a class="nav-link active" (click)="logout()">Logout <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
                           </li>
                         
   <li class="nav-item">
@@ -168,7 +184,7 @@
   <li><i class="bi bi-cart3"></i></li>
  
  
-  <li class="nav-item dropdown">
+  <!-- <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
   data-bs-toggle="dropdown" aria-expanded="false">
   MENU
@@ -192,8 +208,8 @@
   <li><a class="dropdown-item" href="#"><i class="fa-solid fa-shield-halved"></i> Manage security</a></li>
   <li><a class="dropdown-item" href="create-ticket"><i class="fa-solid fa-handshake-angle"></i> Help & Support</a>
   </li>
-  </ul>
-  </li> 
+  </ul> -->
+  <!-- </li>  -->
   </ul>
   <!-- <form class="d-flex">
   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -204,5 +220,5 @@
  
   </div>
   </nav>
- </header>
+
 

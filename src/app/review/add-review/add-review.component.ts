@@ -10,6 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class AddReviewComponent implements OnInit {
   productId!:any;
+  productName!:any;
   userId!:any;
   ratings!:any;
   review!:any;
@@ -17,26 +18,27 @@ export class AddReviewComponent implements OnInit {
   
   }
     ngOnInit(): void {
-      
+    
     }
     
     addReview(){
       let productId=this.productId;
+      let productName=this.productName;
       let userId=this.userId;
       let ratings=this.ratings;
       let review=this.review;
       console.log(ratings)
 
       
-      const addreviewObj={"productId":productId,"userId":userId,"ratings":ratings,"review":review};
+      const addreviewObj={"productId":productId,"productName":productName,"userId":userId,"ratings":ratings,"review":review};
   
-      const url="http://localhost:9002/ratings/save";
+      const url=" https://ratingsapp-api.herokuapp.com/ratings/save";
       this.http.post(url,addreviewObj).subscribe((res)=>{
         console.log(res);
-        this.toastrService.success("reviews and ratings were added by user");
+        this.toastrService.success("thank you !");
       },(err)=>{
         console.log(err);
-        this.toastrService.error("user didn't added any ratings");
+        this.toastrService.error("please give us ratings");
   
         
       })

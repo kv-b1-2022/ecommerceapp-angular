@@ -1,0 +1,35 @@
+<h1>Booking Details</h1>
+<form>
+    <section class="box">
+        <div>
+            <label for="Tickets">Enter No Of Tickets : </label>
+            
+            <input type="number" name="tickets" placeholder="Enter No Of Tickets"  [(ngModel)]="ticketsno"required autofocus>
+            <button type="button"  class="btn btn-primary" (click)="getTicketAmount()">Check Price</button>
+        </div>
+<div>
+        Total Price: {{amount}}
+        
+    </div>
+    <br>
+        <div>
+            <label for="ShowDate">Select Show Date : </label>
+            <input type="date" name="date">
+        </div>
+        <br>
+        <div>
+            <label for="Timing">Select Show Timing :</label>
+            <select name="Timing" id="timing">
+                <option Value="morning">11:30 AM</option>
+                <option Value="afternoon">02:30 PM</option>
+                <option Value="night">06:30 PM</option>
+            </select>
+        </div>
+        <br>
+        <div class="button">
+            <a href="/create-order?amount={{amount}}" class="btn btn-info">Pay Now</a>
+            
+        </div>
+    </section>
+
+</form>

@@ -19,8 +19,9 @@ export class ViewProductStockComponent implements OnInit {
   }
   getStockById(){
     //const url="http://localhost:9001/stock/"+this.id;
-    const url="https://stockapp-apii.herokuapp.com/"+this.id;
+    const url="https://stockapp-apii.herokuapp.com/stock/"+this.id;
     this.http.get(url).subscribe((res)=>{
+      console.log(res);
       this.stock=res;
     },err=>{
     }

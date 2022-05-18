@@ -1,0 +1,36 @@
+<style>
+.leave{
+   text-align: center;
+}
+
+</style>
+<div class="leave">
+<h1>APPLY LEAVE</h1>
+
+<form ngNativeValidate (submit)="applyingleave()">
+<div>
+        <label for="leaveFromDate">Leave From Date:</label>
+        <input type="date" name="leaveFromDate" [(ngModel)]="leaveFromDate" id="leaveFromDate"
+        placeholder="Leave From Date"  required>
+    </div>
+    <br>
+<div>
+        <label for="leaveToDate">Leave To Date:</label>
+        <input type="date" name="LeaveToDate" [(ngModel)]="leaveToDate" id="leaveToDate"
+        placeholder="Leave To Date"  required>
+    </div>
+    <br>
+    <div>
+        <label for="reason">Reason:</label>
+        <input type="text" name="name" [(ngModel)]="reason"  id="reason"
+         placeholder="Enter Your Reason" required autofocus>
+    </div>
+    <br>
+    <div>
+        <form (ngSubmit)="applyingleave()"></form>
+        <button type="submit"class="btn btn-success">SUBMIT</button>   &nbsp;
+        <button type="reset"class="btn btn-danger">RESET</button>
+    </div>
+    
+    
+

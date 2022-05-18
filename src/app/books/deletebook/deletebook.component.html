@@ -1,0 +1,76 @@
+<div> 
+ <button><a routerLink='/addbook'>ADD BOOK</a></button>
+</div>
+
+
+<section style="padding-top:10px ;">
+    <div class="row">
+        <div class="col-3">
+            <h6 id="number1">SERACH BY BOOK DEPARTMENT</h6>
+            <form id="number" ngNativeValidate (submit)="Department()">
+                <div>
+                    <div>
+                        <label>Department</label><br>
+                        <select name="Type" [(ngModel)]="department" required style=" height: 70px;  width: 450px;">
+                            <option value="EEE">EEE</option>
+                            <option value="MECH">MECH</option>
+                            <option value="ECE">ECE</option>
+                            <option value="CSE">CSE</option>
+                            <option value="IT">IT</option>
+                            <option value="AI">AI</option>
+                            <option value="MECHATRONICS">MECHATRONICS</option>
+                            <option value="ROBOTIC">ROBOTICS</option>
+                            <option value="AUTOMOBILE">AUTOMOBILE</option>
+                            <option value="EIE">EIE</option>
+                        </select>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Serach Book</button> &nbsp;
+
+
+                </div>
+            </form>
+            <h6 id="number1">SERACH BOOK BY NAME</h6>
+            <form id="number" ngNativeValidate (submit)="Name()">
+                <div>
+                    <input type="text" id="name" name="name" [(ngModel)]="name" placeHolder="Enter Book Name" required
+                        Autofocus style=" height: 70px;  width: 450px;"><span id="nameinvalid"></span>
+                    <br><br><button type="submit" class="btn btn-primary">Serach Book</button> &nbsp;
+
+
+                </div>
+            </form>
+
+
+        </div>
+        <div class="col-9">
+            <section>
+                <h1 style="text-align:center">ALL BOOKS</h1>
+                <div class="row">
+                    <ng-container style="width: 18rem;" *ngFor="let item of value">
+                        <div class="col-3" style="padding:50px;">
+                            <div class="card">
+                                <img class="card-img-top" src="{{item.imageLink}}" alt="Card image cap" width="50px" height="290px">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{item.id}}</h5>
+                                    <h5 class="card-title">{{item.name}}</h5>
+            
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Department - {{item.department}}</li>
+            
+                                    <li class="list-group-item"> RS - [{{item.rs}}]</li>
+                                    <li class="list-group-item" > <button type="button" (click)="buybook(item.id)">Delete - Book </button></li>
+
+            
+                                </ul>
+            
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </section>
+           
+        </div>
+    </div>
+</section>

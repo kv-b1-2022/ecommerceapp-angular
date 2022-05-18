@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute } from '@angular/router';
+import { AuthService } from 'src/app/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-walletcardpayment',
@@ -16,9 +18,10 @@ export class WalletcardpaymentComponent implements OnInit {
  year!:any;
  name!:any;
  cvv!:any;
-  constructor(private http:HttpClient,private toastr:ToastrService,private route:ActivatedRoute) { }
+  constructor(private http:HttpClient,private toastr:ToastrService,private route:ActivatedRoute,private authService:AuthService,private router:Router) { }
 
   ngOnInit(): void {
+   this.verifyUserLogin();
   }
   verifyCardDetails()
   {
@@ -60,11 +63,11 @@ export class WalletcardpaymentComponent implements OnInit {
          // const totalAmount = urlParams.get('totalAmount');
         //  let orderId=this.route.snapshot.params['orderId'];
         let totalAmount=this.route.snapshot.params['amount'];
-         let mobile=localStorage.getItem("sessionMobile");
+         let mobile=this.authService.getUser()?.mobile;
          let cardDetails={"cardNumber":this.cardNumber,"cvv":this.cvv,"month":this.month,"year":this.year,"amount":totalAmount}; 
-         const url="http://localhost:9000/payment/verifycards";
+         const url="https://payment-apii.herokuapp.com/payment/verifycards";
          this.http.post(url,cardDetails).subscribe(res=>{
-            const url1="http://localhost:9000/wallet/user/balance/updation/add?mobile="+mobile+"&amount="+totalAmount;
+            const url1="https://payment-apii.herokuapp.com/wallet/user/balance/updation/add?mobile="+mobile+"&amount="+totalAmount;
             this.http.get(url1).subscribe(res=>{
                this.toastr.success("successfully added to wallet");
             },err=>{
@@ -75,5 +78,17 @@ export class WalletcardpaymentComponent implements OnInit {
          });
      }
     }
+    verifyUserLogin()
+  {
+   let mobile=this.authService.getUser()?.mobile;
+   const url="https://payment-apii.herokuapp.com/wallet/verify/user/login?mobile="+mobile;
+   this.http.get(url).subscribe(res=>
+     {
+      // this.toastr.success("welcome"+this.authService.getUser()?.name);
+     },err=>{
+       this.router.navigate(["walletsetup"]);
+     });
+
+  }
 
 }

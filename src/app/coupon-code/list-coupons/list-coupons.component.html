@@ -1,0 +1,22 @@
+<p>coupons</p>
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>Coupon code</th>
+            <th>Start date</th>
+            <th>End date</th>
+            <th>Discount</th>
+        </tr>
+    <tbody>
+        <tr *ngFor="let coupon of coupons;">
+
+            <td>{{coupon.couponCode}}</td>
+            <td>{{coupon.startDate}}</td>
+            <td>{{coupon.endDate}}</td>
+            <td>{{coupon.discountInPercentage}}</td>
+        </tr>
+    </tbody>
+
+</table>

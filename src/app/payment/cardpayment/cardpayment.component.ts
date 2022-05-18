@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute } from '@angular/router';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-cardpayment',
@@ -15,7 +16,8 @@ export class CardpaymentComponent implements OnInit {
  year!:any;
  name!:any;
  cvv!:any;
-  constructor(private http:HttpClient,private toastr:ToastrService,private route:ActivatedRoute) { }
+ money=this.route.snapshot.params['amount'];;
+  constructor(private http:HttpClient,private toastr:ToastrService,private route:ActivatedRoute,private authService:AuthService) { }
  
 
   ngOnInit(): void {
@@ -60,19 +62,19 @@ export class CardpaymentComponent implements OnInit {
          const urlParams = new URLSearchParams(queryString);
          let totalAmount=this.route.snapshot.params['amount'];
          let orderId=this.route.snapshot.params['orderId'];
-         let userId=localStorage.getItem("sessionId");
+         let userId=this.authService.getUser()?.id;
          let transactionDetails={"userId":userId,"orderId":orderId,"totalAmount":totalAmount,"paymentMode":"card"}
          let cardDetails={"cardNumber":this.cardNumber,"cvv":this.cvv,"month":this.month,"year":this.year,"amount":totalAmount}; 
-         const url="http://localhost:9000/payment/verifycards";
+         const url="https://payment-apii.herokuapp.com/payment/verifycards";
          this.http.post(url,cardDetails).subscribe(res=>{
-            const url1="http://localhost:9000/payment/service/failed";
+            const url1="https://payment-apii.herokuapp.com/payment/service/success";
             this.http.post(url1,transactionDetails).subscribe(res=>{
-               this.toastr.success("success");
+               this.toastr.success("Payment successfull");
             },err1=>{
               this.toastr.error(err1.error.message);
             });
          },err=>{
-               const url12="http://localhost:9000/payment/service/failed";
+               const url12="https://payment-apii.herokuapp.com/payment/service/failed";
                this.http.post(url,transactionDetails).subscribe(res=>{
                },err2=>{
                this.toastr.error(err2.error.message);

@@ -21,7 +21,8 @@
             <td>{{user.mobile}}</td>
             <td>{{user.role}}</td>
             <td>{{user.status}}</td>
-            <td><button type="submit" class="btn btn-danger">Block</button></td>
+            <td><button type="submit" class="btn btn-primary" (click)="makeAsAdmin(user.id)">Make as admin</button></td>
+            <td><button type="submit" class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button></td>
         </tr>
     </tbody>
 </table>

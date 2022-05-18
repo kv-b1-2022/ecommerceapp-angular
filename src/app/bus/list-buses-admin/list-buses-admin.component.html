@@ -1,0 +1,39 @@
+
+<div>
+ <label> Add Bus : </label>
+<button type="button" class="badge bg-success" routerLink="/add-bus">Click here</button>
+</div>
+<br>
+<h3>BUS AVAILABLE</h3>
+<table class="table" style="width:1000px" >
+    <thead>
+      <tr>
+        <th scope="col" >S.No</th>
+        <th scope="col">Bus Name</th>
+        <th scope="col">Bus From</th>
+        <th scope="col">Bus To</th>
+        <th scope="col">Timing</th>
+        <th scope="col" >Tickets Available</th>
+        <th scope="col">Ticket Price</th>
+        <th scope="col">View</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Update</th>       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bus of buses;">
+        <td>{{bus.busId}}</td>
+          <td>{{bus.busName}}</td>
+          <td>{{bus.busFrom}}</td>
+          <td>{{bus.busTo}}</td>
+          <td>{{bus.busTiming}}</td>
+          <td>{{bus.busTicketsAvailable}}</td>
+          <td>{{bus.busTicketPrice}}</td>
+          <td><button type="button" class="btn btn-info" routerLink="/buses/{{bus.busId}}">View</button></td>
+          <td><button type="button" (click)="deleteBus(bus.busId)" class="btn btn-danger">Delete</button></td>
+          <td><button type="button" class="btn btn-info" routerLink="/update/{{bus.busId}}">Update</button></td>
+          
+
+       </tr>
+    </tbody>
+  </table>

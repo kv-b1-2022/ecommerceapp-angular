@@ -12,6 +12,7 @@ import { AddmoneytowalletComponent } from './addmoneytowallet/addmoneytowallet.c
 import { WalletcardpaymentComponent } from './walletcardpayment/walletcardpayment.component';
 import { BuyusingwalletComponent } from './buyusingwallet/buyusingwallet.component';
 import { ForgottransactionpinComponent } from './forgottransactionpin/forgottransactionpin.component';
+import { WallettransactionsComponent } from './wallettransactions/wallettransactions.component';
 
 
 
@@ -22,7 +23,8 @@ import { ForgottransactionpinComponent } from './forgottransactionpin/forgottran
     AddmoneytowalletComponent,
     WalletcardpaymentComponent,
     BuyusingwalletComponent,
-    ForgottransactionpinComponent
+    ForgottransactionpinComponent,
+    WallettransactionsComponent
    
   ],
   imports: [
