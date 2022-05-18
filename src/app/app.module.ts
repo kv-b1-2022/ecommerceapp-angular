@@ -9,11 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MoviesModule } from './movies/movies.module';
-
 import { MedicalModule } from './medical/medical.module';
 import { FoodsModule } from './foods/foods.module';
-
-
 import { GroceryModule } from './grocery/grocery.module';
 import { ReviewModule } from './review/review.module';
 import { UserModule } from './user/user.module';
@@ -38,8 +35,7 @@ import { TrainModule } from './train/train.module';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
 import { DataTablesModule } from 'angular-datatables';
-import { BooksModule } from './books/books.module';
-import { ElectronicsModule } from './Electronics/electronics.module';
+import { PointsModule } from './points/points.module';
 
 
 @NgModule({
@@ -85,8 +81,7 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     DataTablesModule,
     FoodsModule,
     DressModule,
-    BooksModule,
-    ElectronicsModule
+    PointsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
