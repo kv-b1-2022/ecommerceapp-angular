@@ -28,6 +28,15 @@ import { CoursesModule } from './courses/courses.module';
 import { EmployeesModule } from './employees/employees.module';
 import { MembershipModule } from './membership/membership.module';
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+>>>>>>> 0ece00c06771f0e020b0349bec860dcb78928bf0
 import { StockModule } from './stock/stock.module';
 import { PayrollModule } from './payroll/payroll.module';
 
@@ -43,11 +52,22 @@ import { AuthModule } from './auth/auth.module';
 
 import { BooksModule } from './books/books.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+<<<<<<< HEAD
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
 
 
 
+=======
+
+import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
+import { ElectronicsModule } from './Electronics/electronics.module';
+import { TransactionModule } from './transaction/transaction.module';
+
+
+
+import { SpinnerComponent } from './spinner/spinner.component';
+>>>>>>> 0ece00c06771f0e020b0349bec860dcb78928bf0
 
 @NgModule({
   declarations: [
@@ -55,11 +75,13 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     HomeComponent,
     HeaderComponent,
     AdminSidebarComponent,
-    HeaderComponent,
-    
-  
     EmployeeProfilepageComponent,
+<<<<<<< HEAD
     HeaderComponent
+=======
+    SpinnerComponent
+    
+>>>>>>> 0ece00c06771f0e020b0349bec860dcb78928bf0
 
   ],
   imports: [
@@ -77,21 +99,26 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     CakesModule,
     GroceryModule,
     TicketModule,
-    GroceryModule,
+   
     EmployeesModule,
     OrderModule,
+<<<<<<< HEAD
     PaymentModule,
+=======
+    
+    // NgChartsModule,
+>>>>>>> 0ece00c06771f0e020b0349bec860dcb78928bf0
     CoursesModule,
     MembershipModule,
     PaymentModule,
-    PayrollModule,
+    
     ProductpriceModule,
     NgbModule,
     StockModule,
     PayrollModule,
     BusModule,
     CharityModule,
-    BusModule,
+    
     TrainModule,
     CouponCodeModule,
     AuthModule,
@@ -99,7 +126,11 @@ import { ElectronicsModule } from './Electronics/electronics.module';
     FoodsModule,
     DressModule,
     BooksModule,
+    ElectronicsModule,
+    TransactionModule,
     ElectronicsModule
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

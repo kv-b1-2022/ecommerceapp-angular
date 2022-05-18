@@ -25,7 +25,7 @@ export class DisplaydressesComponent implements OnInit {
  
   getAllDresses()
   {
-    const url="https://product-apii.herokuapp.com/dress/list";
+    const url="http://localhost:9001/dress/list";
     this.http.get(url).subscribe((res)=>{
       this.dresslist = res;
     },err=>{
