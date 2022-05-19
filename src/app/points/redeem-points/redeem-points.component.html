@@ -1,0 +1,20 @@
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>S.no</th>
+            <th>MobileNumber</th>
+            <th>BalancePoints</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let point of points;let i= index">
+            <td>{{i+1}}</td>
+            <td>{{point.mobileNumber}}</td>
+            <td>{{point.BalancePoints}</td>
+            
+            </tr>
+    </tbody>
+</table>
