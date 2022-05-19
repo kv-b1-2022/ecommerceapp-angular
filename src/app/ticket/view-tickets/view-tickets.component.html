@@ -1,16 +1,16 @@
 
-<h2>List Tickets</h2>
+<h2>View Ticket</h2>
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th>id</th>
-            <th>userId</th>
-            <th>ticketTitle</th>
-            <th>description</th>
-            <th>category</th>
-            <th>assignedTo</th>
-            <th>priority</th>
-            <th>status</th>
+            <th>Id</th>
+            <th>User Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Assigned To</th>
+            <th>Priority</th>
+            <th>Update</th>
         </tr>
     </thead>
     <tbody>
@@ -21,7 +21,7 @@
             <td>{{ticketsUser.description}}</td>
             <td>{{ticketsUser.status}}</td>
             <td></td>
-
+            <td><button type="submit" routerLink="/update-ticket/{{ticketsUser.id}}" class="btn btn-primary">update</button></td>
         </tr>
     </tbody>
 </table>

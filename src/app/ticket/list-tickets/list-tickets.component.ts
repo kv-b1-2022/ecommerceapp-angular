@@ -16,6 +16,7 @@ export class ListTicketsComponent implements OnInit {
   priority !: string;
 
   constructor(private http:HttpClient,private route:ActivatedRoute,private toastrService: ToastrService) { 
+    
   
   }
 

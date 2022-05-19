@@ -24,20 +24,20 @@
             <td>{{ticket.ticketTitle}}</td>
             <td>{{ticket.description}}</td>
             <td>{{ticket.category}}</td>
-            <td> <select name="'assignedTo'+i" id="assignedTo" [(ngModel)]="assignedTo">
-                <option value="kiruthiga">admin</option>
-                <option value="gopi"> 102 admin</option>
-                <option value="tamil">103 admin</option></select></td>
+            <td> <select name="'assignedTo'+i" id="assignedTo">
+                <option [(ngModel)]="assignedTo" value="kiruthiga">admin</option>
+                <option [(ngModel)]="assignedTo" value="gopi"> 102 admin</option>
+                <option [(ngModel)]="assignedTo" value="tamil">103 admin</option></select></td>
             <td> <select name="priority" id="priority" [(ngModel)]="priority">
-                <option value="high">High</option>
-                <option value="low">Low</option>
+                <option [(ngModel)]="assignedTo" value="high">High</option>
+                <option [(ngModel)]="assignedTo" value="low">Low</option>
                 </select></td>
             <td> <select name="status" id="status" [(ngModel)]="status">
-                <option value="open">Open</option>
-                <option value="resolved">Resolved</option>
-                <option value="closed">Closed</option></select></td>
+                <option [(ngModel)]="assignedTo" value="open">Open</option>
+                <option [(ngModel)]="assignedTo" value="resolved">Resolved</option>
+                <option [(ngModel)]="assignedTo" value="closed">Closed</option></select></td>
             <td><button type="submit" routerLink="/view-tickets/{{ticket.id}}" class="btn btn-primary">view</button></td>
-            <td><button type="submit" routerLink="/update-tickets/{{ticket.id}}" class="btn btn-primary">update</button></td>
+            <td><button type="submit" routerLink="/update-ticket/{{ticket.id}}" class="btn btn-primary">update</button></td>
         </tr>
     </tbody>
 </table>
