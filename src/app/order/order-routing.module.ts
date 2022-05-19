@@ -11,7 +11,6 @@ const routes: Routes = [
   {path:'list-order',component:ListOrderComponent},
   {path:'my-order',component:MyorderComponent},
   {path:'apply',component:ApplyCouponComponent},
-
   {path:'ordersummary',component:OrdersummaryComponent}
 ];
 

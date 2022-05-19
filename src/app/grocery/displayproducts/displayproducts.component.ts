@@ -25,7 +25,7 @@ export class DisplayproductsComponent implements OnInit {
   products!:any;
   getAllProducts()
   {
-    const url="https://product-apii.herokuapp.com/product/productlist";
+    const url="http://localhost:9001/product/productlist";
     this.http.get(url).subscribe((res)=>{
       this.products = res;
     },err=>{
