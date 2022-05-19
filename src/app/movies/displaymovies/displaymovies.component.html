@@ -1,9 +1,9 @@
+<br>
 <div >
-  <form class="d-flex" style="width: 400px; margin:auto;float: right;">
+  <form class="d-flex" style="width: 400px; margin:auto;float: right;" (submit)="searchMovie()">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searchMovies" [(ngModel)]="searchMovies">
-      <button class="btn btn-outline-success" type="submit" (click)="searchMovie()">Search</button>
+      <button class="btn btn-outline-success" type="submit" >Search</button>
     </form>
-    
 </div>
 <br>
 <br>
@@ -20,6 +20,7 @@
     </div>
   </div>
 </div>
+<br>
 <br>
 
 <div class="row row-cols-1 row-cols-md-4 g-4">

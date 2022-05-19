@@ -12,6 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 export class AddproductpriceComponent implements OnInit {
  
     productId!:number;
+    productname!:string;
     price!:number;
     startDate!:Date;
     EndDate!:Date;
@@ -25,7 +26,7 @@ export class AddproductpriceComponent implements OnInit {
     ngOnInit(): void {
     }
     addProductprice(){
-      const PriceObj={"productId":this.productId,"price":this.price,"startDate":this.startDate,"EndDate":this.EndDate};
+      const PriceObj={"productId":this.productId,"productname":this.productname,"price":this.price,"startDate":this.startDate,"EndDate":this.EndDate};
       const url="http://localhost:8080/productprice/save";
       this.http.post(url,PriceObj).subscribe((res)=>{
         console.log(res);

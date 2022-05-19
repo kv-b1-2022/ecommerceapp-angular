@@ -18,7 +18,7 @@ export class ListemployeesComponent implements OnInit {
   chat!: any
   btn = 'false'
   idB = false
-
+  spinner=false
   ngOnInit(): void {
 
     if (this.details == undefined) {
@@ -46,6 +46,7 @@ export class ListemployeesComponent implements OnInit {
   tableClick(item: string) {
     this.docTable = "block"
     this.btn = item
+    this.spinner = true
   }
   validate() {
     const url = "https://employeeapp-apii.herokuapp.com/employees/document/verificationlist"
@@ -53,6 +54,12 @@ export class ListemployeesComponent implements OnInit {
       this.result = res
     });
     console.log(this.result);
+    const url2 = "https://employeeapp-apii.herokuapp.com/employees/document/verification"
+    // const url = "https://employeeapp-apii.herokuapp.com/employeeinformation/listemployee"
+    this.hp.get(url2, { responseType: 'json' }).subscribe(res => {
+      this.details = res
+      
+    });
   }
   analysis(){
     this.idB =true

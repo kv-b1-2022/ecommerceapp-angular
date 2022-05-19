@@ -5,15 +5,15 @@
 <title>Donate us</title>
 </head>
 <body>
-<form>
+    <form (ngSubmit)="donate()">
 	
 <p>
     <label for="amount"><b>Donation amount</b></label>
-    <input type="price" placeholder="Enter the donation amount" name="amount" id="amount" required>
+    <input type="price" placeholder="Enter the donation amount" name="amount" [(ngModel)]="donationamount" id="amount" required>
 </p>
 <p>
     <label for="categories"><b>Donation categories</b></label>
-    <select>  
+    <select [(ngModel)]="donationcategories" name="donationcategories">  
         <option value = "Elder care"> Elder care   
         </option>  
         <option value = "Mobile healthcare"> Mobile healthcare

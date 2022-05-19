@@ -10,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class UpdateMovieComponent implements OnInit {
   id: any;
-  movies:any;
+ movies:any; 
 
   constructor(private http:HttpClient,private toastr:ToastrService,private route:ActivatedRoute ) { this.id=this.route.snapshot.params["id"];}
   
