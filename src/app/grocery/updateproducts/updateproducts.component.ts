@@ -31,7 +31,7 @@ export class UpdateproductsComponent implements OnInit {
     updateProducts()
     {
       // const userObj={"id":this.id,"name":this.name,"brand":this.brand,"category":this.category,"price":this.price};
-      const url="https://product-apii.herokuapp.com/product/"+this.id;
+      const url="http://localhost:9000/product/"+this.id;
       this.http.put(url,this.product).subscribe((res)=>{
         console.log(res);
         this.toastrService.success('successfully updated');
@@ -44,7 +44,7 @@ export class UpdateproductsComponent implements OnInit {
 
       getProduct()
       {
-        const url="https://product-apii.herokuapp.com/product/"+this.id;
+        const url="http://localhost:9000/product/"+this.id;
         this.http.get(url).subscribe((res)=>{
           this.product = res;
         
