@@ -47,6 +47,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { SellersModule } from './sellers/sellers.module';
 
 @NgModule({
   declarations: [
@@ -96,11 +97,12 @@ import { SpinnerComponent } from './spinner/spinner.component';
     TrainModule,
     CouponCodeModule,
     AuthModule,
-  
+    
     FoodsModule,
     DressModule,
     BooksModule,
-    ElectronicsModule
+    ElectronicsModule,
+    SellersModule
   ],
   providers: [],
   bootstrap: [AppComponent]
