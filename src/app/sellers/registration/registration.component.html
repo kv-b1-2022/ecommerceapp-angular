@@ -1,0 +1,39 @@
+<div>
+<h3>Registration</h3>
+<form [formGroup]="sellersForm">
+<table class="table">
+    <tr><td>Mobile number</td><td><input type="phone"name="mobileNumber" formControlName="mobileNumber" ></td></tr>
+    <tr> <td>Gendre</td><td>
+        <span><label for="">male :</label></span>
+        <span><input type="radio" name="gender" value="male" formControlName="gender" required=""></span>
+        <span><label for=""> &nbsp;&nbsp; female :</label></span>
+        <span><input type="radio" name="gender" value="female" formControlName="gender" required="collegeName"></span>
+        <span><label for=""> &nbsp;&nbsp;others :</label></span>
+        <span><input type="radio" name="gender" value="others" formControlName="gender" required=""></span>
+        <p class="error" id="genderError"></p>
+    </td></tr>
+
+    <tr><td>Categorie</td><td>
+        <select name="categorie" formControlName="categorie">
+            <option value="movie">Movies</option>
+            <option value="bus">Bus</option>
+            <option value="cake shop">Cakes</option>
+            <option value="">Food</option>
+            <option value="">Books</option>
+            <option value="">Groceries</option>
+            <option value="">Dress</option>
+            <option value="">Order</option>
+            <option value="">Medicines</option> 
+            <option value="">Courses</option>
+        </select>
+    </td></tr>
+    <tr><td>Branch name</td><td><input type="text" name="branchName" formControlName="branchName"></td></tr>
+    <tr><td>Address</td><td><input type="text" name="address" formControlName="address"></td></tr>
+    <tr><td>City</td><td><input type="text" name="city" formControlName="city"></td></tr>
+    <tr><td>Pincode</td><td><input type="number" name="pincode" formControlName="pincode"></td></tr>
+   
+
+</table>
+<button class="btn btn-primary" (click)="submit()">submit</button>
+</form>
+</div>
