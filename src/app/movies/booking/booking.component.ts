@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-booking',
@@ -10,7 +11,8 @@ export class BookingComponent implements OnInit {
   ticketsno!:any;
   amount!:any;
   noOftickets!:any;
-  constructor(private http:HttpClient) { }
+  id=this.authservice.getUser()?.id;
+  constructor(private http:HttpClient,private authservice:AuthService) { }
 
   ngOnInit(): void {
   }

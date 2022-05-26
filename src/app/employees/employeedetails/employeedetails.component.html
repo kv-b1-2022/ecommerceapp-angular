@@ -1,57 +1,61 @@
 
-<button class="btn btn-primary" (click)="tableClick(true)" *ngIf="btn == false">show sellers List</button>
-<button class="btn btn-primary" (click)="tableClick(false)" *ngIf="btn == true">hide sellers list</button><button class="btn btn-primary" *ngIf="account == true" (click)="tableClick2(false)">Show Account details</button><button class="btn btn-primary" *ngIf="account == false" (click)="tableClick2(true)">hide Account details</button>
-<a class="btn btn-primary" routerLink="employeeregister">Add Employees</a>
+<button class="btn btn-primary" (click)="tableClick(true)" *ngIf="btn == false">show employee List</button>
+<button class="btn btn-primary" (click)="tableClick(false)" *ngIf="btn == true">Hide employee list</button><button class="btn btn-primary" *ngIf="account == true" (click)="tableClick2(false)">Show Account details</button><button class="btn btn-primary" *ngIf="account == false" (click)="tableClick2(true)">hide Account details</button>
+<a class="btn btn-primary" routerLink="/employeeregister">Employee Register</a>
+<a class="btn btn-primary" routerLink="/leavestatus">Leave Status</a>
+<button class="btn btn-primary" routerLink="/leavelist" *ngIf="btn == false">Leave form list</button>
+<button class="btn btn-primary" routerLink="/listemployeestimesheet" *ngIf="btn == false">list timesheet status</button>
+
 <router-outlet></router-outlet>
 <div *ngIf="btn == true">
-<h2 style="text-align: center;" > List Employees</h2>
-<table class="table table-light table-hover">
-    <thead>
-        <tr>
-            <td>d_id</td>
-            <td>empName</td>
-            <td>empEmail</td>
-            <td>mobileNumber</td>
-            <td>role</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let data of details">
-            <td>{{data.empId}}</td>
-            <td>{{data.empName}}</td>
-            <td>{{data.empEmail}}</td>
-            <td>{{data.mobileNumber}}</td>
-            <td>{{data.role}}</td>
-        </tr>
-    </tbody>
-  </table>
+    <h2 style="text-align: center;"> List Employees</h2>
+    <table class="table table-light table-hover">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Email</td>
+                <td>MobileNumber</td>
+                <td>Role</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of details">
+                <td>{{data.empId}}</td>
+                <td>{{data.empName}}</td>
+                <td>{{data.empEmail}}</td>
+                <td>{{data.mobileNumber}}</td>
+                <td>{{data.role}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 <div *ngIf="account == false ">
-    <h2 style="text-align: center;" > Account Details</h2>
-<table class="table table-light table-hover">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Aadhar</th>
-            <th>PAN Number</th>
-            <th>Account Number</th>
-            <th>ifscCode</th>
-            <th>Bank Name</th>
-         
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let data of details">
+    <h2 style="text-align: center;"> Account Details</h2>
+    <table class="table table-light table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Aadhar</th>
+                <th>PAN Number</th>
+                <th>Account Number</th>
+                <th>ifscCode</th>
+                <th>Bank Name</th>
 
-            <td>{{data.empId}}</td>
-            <td>{{data.empName}}</td>
-            <td>{{data.aadhar}}</td>
-            <td>{{data.pannum}}</td>
-            <td>{{data.accountNo}}</td>
-            <td>{{data.ifscCode}}</td>
-            <td>{{data.bankName}}</td>
-        </tr>
-    </tbody>
-  </table>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of details">
+
+                <td>{{data.empId}}</td>
+                <td>{{data.empName}}</td>
+                <td>{{data.aadhar}}</td>
+                <td>{{data.pannum}}</td>
+                <td>{{data.accountNo}}</td>
+                <td>{{data.ifscCode}}</td>
+                <td>{{data.bankName}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

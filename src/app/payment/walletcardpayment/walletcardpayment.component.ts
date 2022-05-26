@@ -65,9 +65,9 @@ export class WalletcardpaymentComponent implements OnInit {
         let totalAmount=this.route.snapshot.params['amount'];
          let mobile=this.authService.getUser()?.mobile;
          let cardDetails={"cardNumber":this.cardNumber,"cvv":this.cvv,"month":this.month,"year":this.year,"amount":totalAmount}; 
-         const url="http://localhost:9000/payment/verifycards";
+         const url="https://payment-apii.herokuapp.com/payment/verifycards";
          this.http.post(url,cardDetails).subscribe(res=>{
-            const url1="http://localhost:9000/wallet/user/balance/updation/add?mobile="+mobile+"&amount="+totalAmount;
+            const url1="https://payment-apii.herokuapp.com/wallet/user/balance/updation/add?mobile="+mobile+"&amount="+totalAmount;
             this.http.get(url1).subscribe(res=>{
                this.toastr.success("successfully added to wallet");
             },err=>{
@@ -81,7 +81,7 @@ export class WalletcardpaymentComponent implements OnInit {
     verifyUserLogin()
   {
    let mobile=this.authService.getUser()?.mobile;
-   const url="http://localhost:9000/wallet/verify/user/login?mobile="+mobile;
+   const url="https://payment-apii.herokuapp.com/wallet/verify/user/login?mobile="+mobile;
    this.http.get(url).subscribe(res=>
      {
       // this.toastr.success("welcome"+this.authService.getUser()?.name);

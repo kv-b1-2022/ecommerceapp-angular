@@ -49,13 +49,13 @@
 
 <body>
 
-<div class="logo text-center">
-<h1>Login</h1>
-</div>
+<!-- <div class="logo text-center">
+<h1 style="color:blueviolet">Login</h1>
+</div> -->
 <div class="wrapper">
 <div class="inner-warpper text-center">
   <img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvdjkzMi1uaW5nLTUxLXguanBn.jpg" width="50px" height="50px"/>
-  <h2 class="title"  >Ecommerce app</h2>
+  <h2 class="title" style="color:blueviolet"  >Login</h2>
    
   <form [formGroup]="myForm" (ngSubmit)="logIn()" class="row g-3" >
     <!-- <div class="input-group"> -->
@@ -65,7 +65,7 @@
     <!-- </div> -->
     <div class="input-group">
       <!---<label class="palceholder" for="userName">User Mail Id</label>--->
-      <input class="form-control" name="userMail" id="userMail" type="email" [ngClass]="isValid('mail')" formControlName="mail" id="validationServer02" placeholder="User Mail Id" /> 
+      <input class="form-control" name="userMail" id="userMail" type="email" [ngClass]="isValid('mail')" formControlName="mail" id="validationServer02" placeholder="User Mail Id" autofocus /> 
       <!-- <input type="text" style="width:100%; text-align:center" class="form-control " [ngClass]="isValid('mail')" formControlName="mail" id="validationServer02" placeholder="Enter your Email Id" autofocus> -->
 
        <div class="valid-feedback">
@@ -102,10 +102,10 @@
   </form>
 </div>
 <div class="signup-wrapper text-center">
-  <a routerLink='/register'>Don't have an accout? <span class="text-primary">Create One</span></a>
+  <a routerLink='/register'>Don't have an account? <span class="text-primary">Create One</span></a>
 </div>
 </div>
-<p>Admin Credentials: Email:admin@gmail.com, Password:admin123</p>
+
 
 <style>
 
@@ -170,8 +170,9 @@ body {
   }
   button {
     cursor: pointer;
-    background: #00A885;
-    width: 100%;
+    background:blueviolet;
+    width: 50%;
+    margin-left:120px;
     border: 0;
     padding: 10px 15px;
     color: #fff;
