@@ -88,13 +88,14 @@ ngb-carousel .wrapper>img {
 .sidebar {
   background: #110527;
   /* color: #fff; */
- 
+  max-height: 700px;
 }
 
 .sidebar {
   float: left;
   width: 260px;
-  height: 100%;  
+  /* height: 100%; */
+   overflow-y: scroll;
   position: fixed;
   margin-top: 0;
 }
@@ -105,8 +106,6 @@ ngb-carousel .wrapper>img {
   padding: 4px 20px 14px 25px;
   cursor: pointer; 
 }
-
-
 
 .page.sidebar-open {
   margin-left: 260px!important;

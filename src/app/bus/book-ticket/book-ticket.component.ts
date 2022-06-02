@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-book-ticket',
@@ -15,14 +16,14 @@ export class BookTicketComponent implements OnInit {
   id!:number;
 
 	busId!:number;
-	userId!:number; 
-  bookingDate!:string;
+	userId!:number;
   dateOfTravelling!:string;
 	numberOfTicketsBooked!:number;
 	totalAmount!:number;
   status!:string;
+  totalTicketPrice!:any;
 
-  constructor(private http:HttpClient,private toastr:ToastrService,private route:ActivatedRoute) {
+  constructor(private http:HttpClient,private toastr:ToastrService,private route:ActivatedRoute,private authService:AuthService) {
     this.id=this.route.snapshot.params["id"];
    }
   ngOnInit(): void {
@@ -37,6 +38,7 @@ export class BookTicketComponent implements OnInit {
   
       this.http.get(url).subscribe((res)=>{
         this.bus = res;
+
       })
     }
     
@@ -44,16 +46,16 @@ export class BookTicketComponent implements OnInit {
   addBooking() {
     const bookingObj={
         
-      "busId":this.busId, 
-      "userId":this.userId, 
-      "bookingDate":this.bookingDate,
+      "busId":this.id, 
+      "userId":this.authService.getUser()?.id,
       "dateOfTravelling":this.dateOfTravelling, 
       "numberOfTicketsBooked":this.numberOfTicketsBooked, 
-      "totalAmount":this.totalAmount,
-      "status":this.status
+      "totalAmount":this.totalTicketPrice,
+      "status":"booked"
    
     };
- 
+
+
   const url="https://busticketbooking-api.herokuapp.com/Booking/save";
     this.http.post(url,bookingObj).subscribe((res)=>{
       console.log(res);
@@ -62,6 +64,9 @@ export class BookTicketComponent implements OnInit {
       console.log(err);
       this.toastr.error("Booking unsuccessfull");
     })
+  }
+  getTotalAmount(){
+   this.totalTicketPrice=this.numberOfTicketsBooked*this.bus.busTicketPrice;
   }
     
   }

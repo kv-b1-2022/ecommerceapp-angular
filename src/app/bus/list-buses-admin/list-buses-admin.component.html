@@ -1,4 +1,9 @@
 
+<div>
+ <label> Add Bus : </label>
+<button type="button" class="badge bg-success" routerLink="/add-bus">Click here</button>
+</div>
+<br>
 <h3>BUS AVAILABLE</h3>
 <table class="table" style="width:1000px" >
     <thead>
@@ -27,9 +32,8 @@
           <td><button type="button" class="btn btn-info" routerLink="/buses/{{bus.busId}}">View</button></td>
           <td><button type="button" (click)="deleteBus(bus.busId)" class="btn btn-danger">Delete</button></td>
           <td><button type="button" class="btn btn-info" routerLink="/update/{{bus.busId}}">Update</button></td>
+          
 
        </tr>
     </tbody>
   </table>
-     
-     

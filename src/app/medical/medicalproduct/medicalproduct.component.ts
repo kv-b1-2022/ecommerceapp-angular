@@ -22,7 +22,7 @@ export class MedicalproductComponent implements OnInit {
   getAllProducts()
   {
 
-    const url="https://product-apii.herokuapp.com/Product/list"
+    const url="http://localhost:9001/Product/list"
     this.http.get(url).subscribe((res)=>{
       this.products = res;
     }, err=>{
@@ -35,7 +35,7 @@ export class MedicalproductComponent implements OnInit {
   {
     let cfm = confirm("Do you want to delete ?");
     if(cfm){
-      const url="https://product-apii.herokuapp.com/Product/delete/" + id;
+      const url="http://localhost:9001/Product/delete/" + id;
       this.http.delete(url).subscribe(res=>{
         console.log(res);
         this.toastrService.success('successfully deleted');

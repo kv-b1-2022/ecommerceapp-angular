@@ -15,10 +15,10 @@ export class ListemployeesComponent implements OnInit {
   docTable: any
   count!: any
   messageBox!: any
-  chat!: any
+  chat!: string
   btn = 'false'
   idB = false
-
+  spinner=false
   ngOnInit(): void {
 
     if (this.details == undefined) {
@@ -42,10 +42,17 @@ export class ListemployeesComponent implements OnInit {
       this.messageBox = "none";
     }
   }
+  message : string[] = []
+  sendMessage(){
+    let chat = this.chat;
+    this.message.push(chat);
+    window.scrollTo(0,document.body.scrollHeight);
+  }
   val = 1
   tableClick(item: string) {
     this.docTable = "block"
     this.btn = item
+    this.spinner = true
   }
   validate() {
     const url = "https://employeeapp-apii.herokuapp.com/employees/document/verificationlist"
@@ -53,6 +60,12 @@ export class ListemployeesComponent implements OnInit {
       this.result = res
     });
     console.log(this.result);
+    const url2 = "https://employeeapp-apii.herokuapp.com/employees/document/verification"
+    // const url = "https://employeeapp-apii.herokuapp.com/employeeinformation/listemployee"
+    this.hp.get(url2, { responseType: 'json' }).subscribe(res => {
+      this.details = res
+      
+    });
   }
   analysis(){
     this.idB =true
@@ -65,5 +78,15 @@ export class ListemployeesComponent implements OnInit {
     },err=>{
       this.ts.error("some details not update")
     });
+  }
+  status(index:any){
+    if(index%2==0){
+      return true;
+    }else{
+      return false
+    }
+    
+ 
+
   }
 }
