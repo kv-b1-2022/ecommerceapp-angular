@@ -11,7 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MoviesModule } from './movies/movies.module';
 import { MedicalModule } from './medical/medical.module';
 import { FoodsModule } from './foods/foods.module';
-// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GroceryModule } from './grocery/grocery.module';
 import { ReviewModule } from './review/review.module';
 import { UserModule } from './user/user.module';
@@ -39,9 +38,20 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 //import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
-import { UpdateTicketComponent } from './update-ticket/update-ticket.component';
+
 import { SpinnerComponent } from './spinner/spinner.component';
+import { SellersModule } from './sellers/sellers.module';
+
+import { UpdateTicketComponent } from './update-ticket/update-ticket.component';
+
+
+
+
+
+
 import { TransactionModule } from './transaction/transaction.module';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -86,13 +96,18 @@ import { TransactionModule } from './transaction/transaction.module';
     TrainModule,
     CouponCodeModule,
     AuthModule,
+    
     FoodsModule,
     DressModule,
     PointsModule,
     BooksModule,
     ElectronicsModule,
+
+    SellersModule,
+
     TransactionModule,
     ElectronicsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
