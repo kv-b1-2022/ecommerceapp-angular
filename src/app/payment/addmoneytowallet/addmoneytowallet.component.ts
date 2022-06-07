@@ -15,6 +15,7 @@ export class AddmoneytowalletComponent implements OnInit {
  amount!:any;
  wallet!:any;
 balance!:any;
+spinner=true;
 
   constructor(private http:HttpClient,private toastr:ToastrService,private authService:AuthService,private route:ActivatedRoute,private router:Router) { }
 
@@ -49,7 +50,8 @@ balance!:any;
     const url="https://payment-apii.herokuapp.com/wallet/verify/user/login?mobile="+mobile;
     this.http.get(url).subscribe(res=>
       {
-        this.toastr.success("welcome  S"+this.authService.getUser()?.name);
+        this.spinner=false;
+        this.toastr.success("welcome  "+this.authService.getUser()?.name);
       },err=>{
         this.router.navigate(["walletsetup"]);
       });

@@ -19,11 +19,11 @@ export class CalculatePointsComponent implements OnInit {
   findCalculatePoints(){
   let totalAmount=this.route.snapshot.params['amount'];
   let mobile = this.authService.getUser()?.mobile;
-  const url="";
+  const url="http//localhost:9000/user/points?mobile="+mobile+"&amount="+totalAmount;
   this.http.get(url).subscribe(res=>{
        this.userPoints=res;
   },err=>{
-
+     
   })
   
   }

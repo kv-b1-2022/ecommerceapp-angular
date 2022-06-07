@@ -32,7 +32,7 @@ tpin!:any;
         const url="https://payment-apii.herokuapp.com/wallet/user/register";
         this.http.post(url,userDetails).subscribe(res=>
           {
-              this.toastr.success("wallet created successfully");
+              
               this.router.navigate(["addmoneytowallet"]);
           },err=>{
              this.toastr.error(err.error.message);
