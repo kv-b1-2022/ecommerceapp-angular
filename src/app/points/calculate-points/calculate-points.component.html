@@ -8,6 +8,11 @@
             <hr>
             <div>
                 <h5>{{points}} Points</h5>
+                <h5 style="text-align:center;"><i>You Got</i></h5>
+            </div>
+            <hr>
+            <div>
+                <h5 *NgIf="userPoints">{{userPoints}} Points</h5>
             </div>
             <hr>
             <div style="text-align:center;">
@@ -17,3 +22,4 @@
     </div>
     </div>
 </section>
+

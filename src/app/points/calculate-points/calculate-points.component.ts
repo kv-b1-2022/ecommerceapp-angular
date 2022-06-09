@@ -22,7 +22,9 @@ export class CalculatePointsComponent implements OnInit {
   let totalAmount=this.route.snapshot.params['amount'];
   console.log(totalAmount);
   let mobile = this.authService.getUser()?.mobile;
+
   const url="http://localhost:9000/user/exsisting/points?mobile="+8248565548+"&amount="+1100;
+ // const url="http//localhost:9000/user/points?mobile="+mobile+"&amount="+totalAmount;
   this.http.get(url).subscribe(res=>{
        this.userPoints=res;
        this.points=this.userPoints.points;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-create-ticket',
@@ -16,7 +17,9 @@ export class CreateTicketComponent implements OnInit {
   category !: string;
   empDetails !: any
 
-  constructor(private http: HttpClient, private toastrService: ToastrService) { }
+  constructor(private http: HttpClient, private toastrService: ToastrService,private authService:AuthService) { 
+    this.userId=this.authService.getUser()?.id;
+  }
 
   ngOnInit(): void {
     const url2 = "https://employeeapp-apii.herokuapp.com/employeeinformation/listemployee";

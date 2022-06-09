@@ -15,7 +15,7 @@ export class ListemployeesComponent implements OnInit {
   docTable: any
   count!: any
   messageBox!: any
-  chat!: any
+  chat!: string
   btn = 'false'
   idB = false
   spinner=false
@@ -41,6 +41,12 @@ export class ListemployeesComponent implements OnInit {
     } else {
       this.messageBox = "none";
     }
+  }
+  message : string[] = []
+  sendMessage(){
+    let chat = this.chat;
+    this.message.push(chat);
+    window.scrollTo(0,document.body.scrollHeight);
   }
   val = 1
   tableClick(item: string) {
@@ -72,5 +78,15 @@ export class ListemployeesComponent implements OnInit {
     },err=>{
       this.ts.error("some details not update")
     });
+  }
+  status(index:any){
+    if(index%2==0){
+      return true;
+    }else{
+      return false
+    }
+    
+ 
+
   }
 }

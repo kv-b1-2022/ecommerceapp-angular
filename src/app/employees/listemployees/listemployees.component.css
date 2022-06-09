@@ -11,6 +11,7 @@
     left: 1220px;
     width: 300px;
     height: 400px;
+    overflow-y: scroll;
     border: 4px solid black;
     box-sizing: border-box;
     box-shadow: 5px 10px 5px 5px;
@@ -90,7 +91,6 @@ body * {
 img {
   width: 100%;
 }
-
 #no-freeze-spinner {
   position: fixed;
   top: 0;
@@ -182,4 +182,16 @@ img {
 
 .no-freeze-spinner #no-freeze-spinner i:nth-of-type(3) {
   animation: loadicons 3s 2s infinite ease-in-out;
+}
+
+.you{
+  float:right;
+}
+
+.grean{
+color: green;
+}
+
+.red{
+color: red;
 }

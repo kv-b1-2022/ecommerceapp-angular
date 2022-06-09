@@ -2,7 +2,10 @@
     Notifications <span class="badge bg-secondary">{{count}}</span>
   </button>
   <div class="notification-div" [style.display]="messageBox">
-      <div id="chat-input"><input type="text" name="chat" [(ngModel)]="chat"><button>sent</button></div>
+    <ul *ngFor="let mess of message" style="list-style: none;">
+      <li class="you" autofocus>{{mess}}</li><br>
+    </ul>
+      <div id="chat-input"><input type="text" name="chat" [(ngModel)]="chat"><button (click)="sendMessage()">sent</button></div>
   </div>
   <button class="btn btn-primary" (click)="tableClick('true')" *ngIf="btn == 'false'">show validate Documents list</button>
   <button class="btn btn-primary" (click)="tableClick('false')" *ngIf="btn == 'true'">hide validate Documents list</button>
@@ -30,7 +33,7 @@
   
   </div>
 <div class="doc-table" *ngIf="btn == 'true'">
-    <h1 class="head">employees document validation</h1>
+    <h1 class="head">Employees Document Validation</h1>
   <table class="table table-light table-hover">
     <thead>
       <tr>
@@ -47,8 +50,8 @@
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let data of details " >
-            <td >{{data.empId}}</td>
+        <tr *ngFor="let data of details;let i= index " >
+            <td ><div [ngClass]="status(i+1)? 'red' : 'grean'"> {{data.empId}}</div></td>
             <td >{{data.empName}}</td>
             <td >{{data.mobileNumber}}</td>
             <td >{{data.role}}</td>
