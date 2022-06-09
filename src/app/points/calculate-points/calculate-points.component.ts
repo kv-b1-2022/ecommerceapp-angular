@@ -12,18 +12,22 @@ import { AuthService } from 'src/app/auth/auth.service';
 })
 export class CalculatePointsComponent implements OnInit {
   userPoints!:any;
+  points!:any;
   constructor(private http:HttpClient,private route:ActivatedRoute,private authService:AuthService) { }
 
   ngOnInit(): void {
+    this.findCalculatePoints();
   }
   findCalculatePoints(){
   let totalAmount=this.route.snapshot.params['amount'];
+  console.log(totalAmount);
   let mobile = this.authService.getUser()?.mobile;
-  const url="";
+  const url="http://localhost:9000/user/exsisting/points?mobile="+8248565548+"&amount="+1100;
   this.http.get(url).subscribe(res=>{
        this.userPoints=res;
+       this.points=this.userPoints.points;
   },err=>{
-
+     
   })
   
   }
