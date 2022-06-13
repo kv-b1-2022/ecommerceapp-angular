@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MoviesModule } from './movies/movies.module';
 import { MedicalModule } from './medical/medical.module';
 import { FoodsModule } from './foods/foods.module';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GroceryModule } from './grocery/grocery.module';
 import { ReviewModule } from './review/review.module';
 import { UserModule } from './user/user.module';
@@ -31,25 +32,29 @@ import { BusModule } from './bus/bus.module';
 import { TrainModule } from './train/train.module';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AuthModule } from './auth/auth.module';
-import { DataTablesModule } from 'angular-datatables';
 import { PointsModule } from './points/points.module';
-import { BooksModule } from './books/books.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 //import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
+
 import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
 import { ElectronicsModule } from './Electronics/electronics.module';
-
 import { SpinnerComponent } from './spinner/spinner.component';
-import { SellersModule } from './sellers/sellers.module';
-
-import { UpdateTicketComponent } from './update-ticket/update-ticket.component';
-
-
-
-
-
-
+import { BooksModule } from './books/books.module';
 import { TransactionModule } from './transaction/transaction.module';
+//import { ExsistingPointsComponent } from './exsisting-points/exsisting-points.component';
+
+//import { DataTablesModule } from 'angular-datatables';
+// import { PointsModule } from './points/points.module';
+// import { BooksModule } from './books/books.module';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// //import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
+// import { EmployeeProfilepageComponent } from './employee-profilepage/employee-profilepage.component';
+// import { ElectronicsModule } from './Electronics/electronics.module';
+// import { SpinnerComponent } from './spinner/spinner.component';
+import { SellersModule } from './sellers/sellers.module';
+import { UpdateTicketComponent } from './update-ticket/update-ticket.component';
+//import { TransactionModule } from './transaction/transaction.module';
 
 
 @NgModule({
@@ -60,6 +65,8 @@ import { TransactionModule } from './transaction/transaction.module';
     AdminSidebarComponent,
     AdminSidebarComponent,
     EmployeeProfilepageComponent,
+    SpinnerComponent,
+    //ExsistingPointsComponent
     HeaderComponent,
 
     UpdateTicketComponent,
@@ -84,6 +91,8 @@ import { TransactionModule } from './transaction/transaction.module';
     EmployeesModule,
     OrderModule,
     PaymentModule,
+    
+    // NgChartsModule,
     CoursesModule,
     MembershipModule,
     PaymentModule,
@@ -107,8 +116,8 @@ import { TransactionModule } from './transaction/transaction.module';
 
     TransactionModule,
     ElectronicsModule
-
-  ],
+    ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-redeem-points',
@@ -9,21 +10,24 @@ import { ActivatedRoute } from '@angular/router';
   ]
 })
 export class RedeemPointsComponent implements OnInit {
-
-  
-  constructor(private http:HttpClient,private route:ActivatedRoute) { }
+  userPoints!:any;
+  points!:any;
+  constructor(private http:HttpClient,private route:ActivatedRoute,private authService:AuthService) { }
 
   ngOnInit(): void {
-    this.getpoints();
+    this.findCalculatePoints();
   }
- points:any;
- getpoints(){
-   const url="http://localhost:9000/user/points";
-   let totalAmount=this.route.snapshot.params['amount'];
-   this.http.get(url).subscribe((res)=>{
-     this.points=res;
-   },err=>{
-
-   })
- }
+  findCalculatePoints(){
+  let totalAmount=this.route.snapshot.params['amount'];
+  console.log(totalAmount);
+  let mobile = this.authService.getUser()?.mobile;
+  const url="http://localhost:9000/user/validate/points?mobile="+8248565548+"&amount="+1100;
+  this.http.get(url).subscribe(res=>{
+       this.userPoints=res;
+       this.points=this.userPoints.points;
+  },err=>{
+     
+  })
+  
+  }
 }
