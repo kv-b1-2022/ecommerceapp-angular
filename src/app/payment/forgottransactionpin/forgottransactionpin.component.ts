@@ -18,6 +18,7 @@ export class ForgottransactionpinComponent implements OnInit {
   getTpin="none";
   balance!:any;
   wallet!:any;
+  loading="none";
   constructor(private http:HttpClient,private toastr:ToastrService,private authService:AuthService,private router:Router) { }
 
   ngOnInit(): void {
@@ -46,6 +47,7 @@ export class ForgottransactionpinComponent implements OnInit {
   }
   updateTransactionPin()
   {
+    this.loading="block";
     let pin=""+this.tpin;
     if(pin.length>=4 && this.tpin>0)
     {
@@ -53,12 +55,15 @@ export class ForgottransactionpinComponent implements OnInit {
       let walletCredentials={"mobile":userMobile,"transactionPin":this.tpin}
       const url="https://payment-apii.herokuapp.com/wallet/user/update/tpin";
       this.http.post(url,walletCredentials).subscribe(res=>{
+      this.loading="none";
       this.toastr.success("transaction pin updated succsessfully")
       },err=>{
+        this.loading="none";
        this.toastr.error(err.error.message);
       });
     }
     else{
+      this.loading="none";
       this.toastr.error("please enter a valid pin number");
     }
   }

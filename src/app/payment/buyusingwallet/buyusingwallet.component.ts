@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 })
 export class BuyusingwalletComponent implements OnInit {
 tpin!:any;
+loading="none";
   constructor(private http:HttpClient,private toastr:ToastrService,private route:ActivatedRoute,private authService:AuthService,private router:Router) { }
 
   ngOnInit(): void {
@@ -20,9 +21,11 @@ tpin!:any;
   }
   verifyTransactionPin()
   {
+    this.loading="block";
     let pin=""+this.tpin;
     if(pin.length<4)
     {
+      this.loading="none";
       this.toastr.success("enter a valid pin number");
     }
     else{
@@ -31,8 +34,10 @@ tpin!:any;
       let walletCredentials={"transactionPin":this.tpin,"mobile":mobile}
          const url="https://payment-apii.herokuapp.com/wallet/tpin/verification";
          this.http.post(url,walletCredentials).subscribe(res=>{
+          
           this.checkWalletBalanceAndUpdate();
          },err=>{
+          this.loading="none";
            this.toastr.error(err.error.message);
          })
     }
@@ -50,14 +55,17 @@ tpin!:any;
       this.http.get(url1).subscribe(res1=>{
        this.updateTransaction();  
       },err1=>{
+        this.loading="none";
         this.toastr.error(err1.error.message);
       });
     },err=>{
       let transactionDetails={"userId":userId,"orderId":orderId,"totalAmount":totalAmount,"paymentMode":"wallet"}
       const url1="https://payment-apii.herokuapp.com/payment/service/failed";
       this.http.post(url1,transactionDetails).subscribe(res1=>{
-        this.toastr.error("your products saved successfully in wallet");
+       // this.toastr.error("your products saved successfully in wallet");
+       this.loading="none";
     });
+    this.loading="none";
       this.toastr.error(err.error.message);
     })
   }
@@ -71,11 +79,15 @@ tpin!:any;
     let transactionDetails={"userId":userId,"orderId":orderId,"totalAmount":totalAmount,"paymentMode":"wallet"}
     const url="https://payment-apii.herokuapp.com/payment/service/success";
     this.http.post(url,transactionDetails).subscribe(res=>{
+      this.loading="none";
       this.toastr.success("payment successful");
+      this.router.navigate(["addmoneytowallet"]);
     },err=>{
       const url1="https://payment-apii.herokuapp.com/payment/service/failed";
       this.http.post(url,transactionDetails).subscribe(res=>{
+        this.loading="none";
     });
+    this.loading="none";
     this.toastr.error(err.error.message);
   });
 }

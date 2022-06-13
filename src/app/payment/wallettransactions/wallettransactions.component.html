@@ -29,15 +29,15 @@
                         <hr style="width:200px">
                         <div>
                             
-                          <a routerLink="/addmoneytowallet"><h6 style="padding-left:10px;color: black;"><b>Add money</b></h6></a>
+                          <a routerLink="/addmoneytowallet"><h6 style="padding-left:10px;color: blueviolet;"><b>Add Money</b></h6></a>
                       </div>
                       <hr>
                       <div>
-                          <a routerLink="/forgottransactionpin"><h6 style="padding-left:10px;color: black;"><b>change transaction pin</b></h6></a>
+                          <a routerLink="/forgottransactionpin"><h6 style="padding-left:10px;color: blueviolet;"><b>Change Transaction Pin</b></h6></a>
                       </div>
                       <hr>
                       <div>
-                          <a routerLink="/wallettransactions"><h6 style="padding-left:10px;color: black;"><b>Wallet transactions</b></h6></a>
+                          <a routerLink="/wallettransactions"><h6 style="padding-left:10px;color: blueviolet;"><b>Wallet Transactions</b></h6></a>
 
                       </div>
                     </aside>
@@ -47,7 +47,7 @@
         </div>
         <div class="col-8" *ngIf="transactions">
           <div class="accordion accordion-flush" id="display" style="width:70%" *ngFor="let transaction of transactions;let i=index">
-            <div class="accordion-item">
+            <div class="accordion-item" style="padding:5px;">
               <div class="shadow p-3 mb-0 bg-body rounded">
                 <h5 class="accordion-header" [id]="'heading'+i">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#flush-collapse'+i" aria-expanded="false" 

@@ -29,15 +29,15 @@
                         <hr style="width:200px">
                         <div>
                             
-                            <a routerLink="/addmoneytowallet"><h6 style="padding-left:10px;color: black;"><b>Add money</b></h6></a>
+                            <a routerLink="/addmoneytowallet"><h6 style="padding-left:10px;color:blueviolet;"><b>Add Money</b></h6></a>
                         </div>
                         <hr>
                         <div>
-                            <a routerLink="/forgottransactionpin"><h6 style="padding-left:10px;color: black;"><b>change transaction pin</b></h6></a>
+                            <a routerLink="/forgottransactionpin"><h6 style="padding-left:10px;color: blueviolet;"><b>Change Transaction Pin</b></h6></a>
                         </div>
                         <hr>
                         <div>
-                            <a routerLink="/wallettransactions"><h6 style="padding-left:10px;color: black;"><b>Wallet transactions</b></h6></a>
+                            <a routerLink="/wallettransactions"><h6 style="padding-left:10px;color: blueviolet;"><b>Wallet Transactions</b></h6></a>
 
                         </div>
                     </aside>
@@ -57,9 +57,17 @@
                         <input type="number" name="amount" id="amount" style="width:100%" placeholder="Enter amount" required [(ngModel)]="amount">
                     </div>
                     <hr>
-                    <div style="text-align:center;">
-                        <button type="button" class="btn btn-secondary" name="submit" id="submit" routerLink="/walletcardpayment/{{amount}}">Add</button>
-                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div [style.display]="loading"> 
+                              <img src="assets/tenor_1.gif"  style="width:30%;margin-left:100px;margin-top: 5px;">
+                            </div>
+                       </div>
+                       <div class="col-8">
+                          <button type="button" class="btn btn-secondary" name="submit" id="submit" style="margin-left: 20px;" routerLink="/walletcardpayment/{{amount}}">Add</button>
+                       </div>
+                     </div>
+                    
                </form>
             </div>
             </div>
