@@ -1,27 +1,26 @@
 ## GROCERY
-The Grocery E-Commerce App is designed to emulate an online marketplace allowing users to order groceries from an online platform. As a user, you can create an account and log into the application. Additionally, you can search for items, add items to their cart, and checkout.
+The Grocery E-Commerce App is designed to emulate an online marketplace allowing users to order groceries from an online platform. As a user, you can create an account and log into the application. And also add items to their cart, and checkout.
 
 ## Technologies Used
 . SpringBoot
 . MySQL 
-. ANGULAR
-. HTML
-. CSS
+. Angular
 . TypeScript
 . Git
 . Maven
 . AWS RDS 
 
 ## Features
-Module1:Admin
+Module1: Admin
   1. Add products(completed)
   2. Delete products(completed)
   3. Update products(completed)
-Module2:Display
+Module2: Display
   1. Display the products(completed)
 Module3:Cart
   *User can add all the products in cart(completed)
   *User ccan also see the price of all products.(completed)
+
 -These were the modules that the project holds.
 
 -Users to order groceries from an online platform and buy the products and add items to their cart.
@@ -29,12 +28,12 @@ Module3:Cart
 ## Getting Started
 In Windows command prompt >> git clone https://github.com/kv-b1-2022/ecommerceapp-angular.git
 
--Imported the project as an existing springBoot project  and extract zip file and import existing maven project in the Eclipse tool.
+-Imported the project as an existing springBoot project and extract zip file and import existing maven project in the Eclipse tool.
 
 -Added MySQL-java-connector dependency in pom.xml file.
--Added spring web dependencies
--Added lombok for automatic setter getter methods in pom.xml file.
--Added Spring boot dev tools for monitoriing in pom.xml file.
+-Added spring web dependency in pom.xml file.
+-Added lombok dependency can generate getters and setters for those objects automatically using annotations.
+-Added Spring boot dev tools dependency in the bulid file.
 -Added Spring data jpa and validation dependencies in pom.xml file.
 
 -To run this project, install git, we can clone this repository in our windows local machine.
