@@ -1,7 +1,7 @@
-## GROCERY
+**GROCERY**
 The Grocery E-Commerce App is designed to emulate an online marketplace allowing users to order groceries from an online platform. As a user, you can create an account and log into the application. And also add items to their cart, and checkout.
 
-## Technologies Used
+**Technologies Used**
 . SpringBoot
 . MySQL 
 . Angular
@@ -10,7 +10,7 @@ The Grocery E-Commerce App is designed to emulate an online marketplace allowing
 . Maven
 . AWS RDS 
 
-## Features
+**Features**
 Module1: Admin
   1. Add products(completed)
   2. Delete products(completed)
@@ -20,14 +20,14 @@ Module2: Display
   1. Display the products(completed)
   
 Module3: Cart
-  *User can add all the products in cart(completed)
-  *User ccan also see the price of all products.(completed)
+  User can add all the products in cart(completed)
+  User ccan also see the price of all products(completed)
 
 -These were the modules that the project holds.
 
 -Users to order groceries from an online platform and buy the products and add items to their cart.
 
-## Getting Started
+**Getting Started**
 In Windows command prompt >> git clone https://github.com/kv-b1-2022/ecommerceapp-angular.git
 
 -Imported the project as an existing springBoot project and extract zip file and import existing maven project in the Eclipse tool.
