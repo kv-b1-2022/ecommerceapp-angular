@@ -15,9 +15,11 @@ Module1: Admin
   1. Add products(completed)
   2. Delete products(completed)
   3. Update products(completed)
+  
 Module2: Display
   1. Display the products(completed)
-Module3:Cart
+  
+Module3: Cart
   *User can add all the products in cart(completed)
   *User ccan also see the price of all products.(completed)
 
