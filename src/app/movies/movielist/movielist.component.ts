@@ -16,9 +16,12 @@ export class MovielistComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllMovies();
+    
 
   }
   movies:any;
+  id:any;
+  
   getAllMovies()
   {
     //const url="http://localhost:8080/movies/list";
@@ -34,7 +37,7 @@ export class MovielistComponent implements OnInit {
 deleteMovie(id:any){
   let cfm=confirm("Do you want to delete?");
   if (cfm){
-    const url="http://localhost:8080/movies/delete/"+id;
+    const url="http://localhost:9001/movies/delete/"+id;
     this.http.delete(url).subscribe((res)=>{
       console.log(res);
       this.toastr.success('Successfully Deleted');
@@ -45,4 +48,5 @@ deleteMovie(id:any){
     )
 }
 }
+
 }

@@ -44,7 +44,7 @@ export class ViewCourseDetailsComponent implements OnInit {
 
     let cId=this.id;
     let uId=this.loggedUserId;
-    const url="http://localhost:9000/course/enroll/"+cId+"/"+uId;
+    const url="http://courses-api.herokuapp.com/course/enroll/"+cId+"/"+uId;
     this.http.get(url).subscribe(res=>{
       this.toastr.success("Successfully Enrolled");
     },err=>{

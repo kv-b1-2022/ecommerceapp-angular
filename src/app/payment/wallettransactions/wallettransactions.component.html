@@ -28,17 +28,18 @@
                         </div>
                         <hr style="width:200px">
                         <div>
-                            <a href="http://localhost:4200/addmoneytowallet"><h6 style="padding-left:10px;color: black;"><i><b>Add money</b></i></h6></a>
-                        </div>
-                        <hr>
-                        <div>
-                            <a href="http://localhost:4200/forgottransactionpin"><h6 style="padding-left:10px;color: black;"><i><b>change transaction pin</b></i></h6></a>
-                        </div>
-                        <hr>
-                        <div>
-                            <a href="http://localhost:4200/wallettransactions"><h6 style="padding-left:10px;color: black;"><i><b>Wallet transactions</b></i></h6></a>
+                            
+                          <a routerLink="/addmoneytowallet"><h6 style="padding-left:10px;color: blueviolet;"><b>Add Money</b></h6></a>
+                      </div>
+                      <hr>
+                      <div>
+                          <a routerLink="/forgottransactionpin"><h6 style="padding-left:10px;color: blueviolet;"><b>Change Transaction Pin</b></h6></a>
+                      </div>
+                      <hr>
+                      <div>
+                          <a routerLink="/wallettransactions"><h6 style="padding-left:10px;color: blueviolet;"><b>Wallet Transactions</b></h6></a>
 
-                        </div>
+                      </div>
                     </aside>
                 </div>
               </div>
@@ -46,7 +47,7 @@
         </div>
         <div class="col-8" *ngIf="transactions">
           <div class="accordion accordion-flush" id="display" style="width:70%" *ngFor="let transaction of transactions;let i=index">
-            <div class="accordion-item">
+            <div class="accordion-item" style="padding:5px;">
               <div class="shadow p-3 mb-0 bg-body rounded">
                 <h5 class="accordion-header" [id]="'heading'+i">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#flush-collapse'+i" aria-expanded="false" 

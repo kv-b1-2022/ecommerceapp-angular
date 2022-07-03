@@ -16,6 +16,8 @@ export class CardpaymentComponent implements OnInit {
  year!:any;
  name!:any;
  cvv!:any;
+ money=this.route.snapshot.params['amount'];
+ loading="none";
   constructor(private http:HttpClient,private toastr:ToastrService,private route:ActivatedRoute,private authService:AuthService) { }
  
 
@@ -24,6 +26,7 @@ export class CardpaymentComponent implements OnInit {
   
   verifyCardDetails()
   {
+   
      const currDate=new Date();
      const currYear=currDate.getFullYear();
      const currMonth=currDate.getMonth();
@@ -38,7 +41,11 @@ export class CardpaymentComponent implements OnInit {
      {
       this.toastr.error("please enter a valid name");
      }
-     else if(this.month<currMonth || this.year<currYear)
+     else if(this.year<currYear)
+     {
+      this.toastr.error("can not use expired card");
+     }
+     else if(this.month<currMonth && this.year==currYear)
      {
       this.toastr.error("can not use expired card");
      }
@@ -57,6 +64,7 @@ export class CardpaymentComponent implements OnInit {
      }
      else
      {
+        this.loading="block";
         const queryString = window.location.search;
          const urlParams = new URLSearchParams(queryString);
          let totalAmount=this.route.snapshot.params['amount'];
@@ -64,20 +72,26 @@ export class CardpaymentComponent implements OnInit {
          let userId=this.authService.getUser()?.id;
          let transactionDetails={"userId":userId,"orderId":orderId,"totalAmount":totalAmount,"paymentMode":"card"}
          let cardDetails={"cardNumber":this.cardNumber,"cvv":this.cvv,"month":this.month,"year":this.year,"amount":totalAmount}; 
-         const url="http://localhost:9000/payment/verifycards";
+         const url="https://payment-apii.herokuapp.com/payment/verifycards";
          this.http.post(url,cardDetails).subscribe(res=>{
-            const url1="http://localhost:9000/payment/service/success";
+            const url1="https://payment-apii.herokuapp.com/payment/service/success";
             this.http.post(url1,transactionDetails).subscribe(res=>{
-               this.toastr.success("success");
+               this.loading="none";
+               this.toastr.success("Payment successfull");
             },err1=>{
+               this.loading="none";
               this.toastr.error(err1.error.message);
             });
          },err=>{
-               const url12="http://localhost:9000/payment/service/failed";
+            
+               const url12="https://payment-apii.herokuapp.com/payment/service/failed";
                this.http.post(url,transactionDetails).subscribe(res=>{
+                  this.loading="none";
                },err2=>{
+                  this.loading="none";
                this.toastr.error(err2.error.message);
                });
+               this.loading="none";
            this.toastr.error(err.error.message);
          });
      }

@@ -1,0 +1,29 @@
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>User Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Assigned To</th>
+            <th>Priority</th>
+            <th>Status</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngIf="ticketsUsers">
+            <td>{{ticketsUsers.id}}</td>
+            <td>{{ticketsUsers.userId}}</td>
+            <td>{{ticketsUsers.ticketTitle}}</td>
+            <td>{{ticketsUsers.description}}</td>
+            <td>{{ticketsUsers.status}}</td>
+            <td></td>
+
+        </tr>
+    </tbody>
+</table>
+
+

@@ -15,12 +15,15 @@ export class AddmoneytowalletComponent implements OnInit {
  amount!:any;
  wallet!:any;
 balance!:any;
+loading="block";
+
 
   constructor(private http:HttpClient,private toastr:ToastrService,private authService:AuthService,private route:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
     this.verifyUserLogin();
     this.findWalletBalance();
+    // this.loading="true";
   }
   addMoney()
   {
@@ -34,9 +37,11 @@ balance!:any;
   }
   findWalletBalance()
   {
+     
      let mobile = this.authService.getUser()?.mobile;
-     const url="http://localhost:9000/wallet/user/find/balance?mobile="+mobile;
+     const url="https://payment-apii.herokuapp.com/wallet/user/find/balance?mobile="+mobile;
      this.http.get(url).subscribe(res=>{
+      this.loading="none";
      this.wallet=res;
      this.balance=this.wallet.balance;
     },err=>{
@@ -46,10 +51,11 @@ balance!:any;
   verifyUserLogin()
   {
     let mobile=this.authService.getUser()?.mobile;
-    const url="http://localhost:9000/wallet/verify/user/login?mobile="+mobile;
+    const url="https://payment-apii.herokuapp.com/wallet/verify/user/login?mobile="+mobile;
     this.http.get(url).subscribe(res=>
       {
-        this.toastr.success("welcome"+this.authService.getUser()?.name);
+        //this.spinner=false;
+       // this.toastr.success("welcome  "+this.authService.getUser()?.name);
       },err=>{
         this.router.navigate(["walletsetup"]);
       });

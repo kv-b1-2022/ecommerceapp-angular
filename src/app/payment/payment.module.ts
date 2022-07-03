@@ -24,7 +24,8 @@ import { WallettransactionsComponent } from './wallettransactions/wallettransact
     WalletcardpaymentComponent,
     BuyusingwalletComponent,
     ForgottransactionpinComponent,
-    WallettransactionsComponent
+    WallettransactionsComponent,
+   
    
   ],
   imports: [
@@ -35,6 +36,7 @@ import { WallettransactionsComponent } from './wallettransactions/wallettransact
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()
+     
   ]
 })
 export class PaymentModule { }

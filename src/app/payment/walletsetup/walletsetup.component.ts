@@ -29,10 +29,10 @@ tpin!:any;
         let mobile=this.authService.getUser()?.mobile;
         let name=this.authService.getUser()?.name;
         let userDetails={"mobile":mobile,"name":name,"transactionPin":this.tpin}
-        const url="http://localhost:9000/wallet/user/register";
+        const url="https://payment-apii.herokuapp.com/wallet/user/register";
         this.http.post(url,userDetails).subscribe(res=>
           {
-              this.toastr.success("wallet created successfully");
+              
               this.router.navigate(["addmoneytowallet"]);
           },err=>{
              this.toastr.error(err.error.message);
@@ -42,7 +42,7 @@ tpin!:any;
   verifyUserLogin()
   {
     let mobile=this.authService.getUser()?.mobile;
-    const url="http://localhost:9000/wallet/verify/user/login?mobile="+mobile;
+    const url="https://payment-apii.herokuapp.com/wallet/verify/user/login?mobile="+mobile;
     this.http.get(url).subscribe(res=>
       {
         this.router.navigate(["addmoneytowallet"]);

@@ -18,6 +18,7 @@ export class WalletcardpaymentComponent implements OnInit {
  year!:any;
  name!:any;
  cvv!:any;
+ loading="none";
   constructor(private http:HttpClient,private toastr:ToastrService,private route:ActivatedRoute,private authService:AuthService,private router:Router) { }
 
   ngOnInit(): void {
@@ -39,7 +40,11 @@ export class WalletcardpaymentComponent implements OnInit {
      {
       this.toastr.error("please enter a valid name");
      }
-     else if(this.month<currMonth || this.year<currYear)
+     else if(this.year<currYear)
+     {
+      this.toastr.error("can not use expired card");
+     }
+     else if(this.month<currMonth && this.year==currYear)
      {
       this.toastr.error("can not use expired card");
      }
@@ -62,26 +67,33 @@ export class WalletcardpaymentComponent implements OnInit {
         //  const urlParams = new URLSearchParams(queryString);
          // const totalAmount = urlParams.get('totalAmount');
         //  let orderId=this.route.snapshot.params['orderId'];
+        this.loading="block";
         let totalAmount=this.route.snapshot.params['amount'];
          let mobile=this.authService.getUser()?.mobile;
          let cardDetails={"cardNumber":this.cardNumber,"cvv":this.cvv,"month":this.month,"year":this.year,"amount":totalAmount}; 
-         const url="http://localhost:9000/payment/verifycards";
+         const url="https://payment-apii.herokuapp.com/payment/verifycards";
          this.http.post(url,cardDetails).subscribe(res=>{
-            const url1="http://localhost:9000/wallet/user/balance/updation/add?mobile="+mobile+"&amount="+totalAmount;
+            const url1="https://payment-apii.herokuapp.com/wallet/user/balance/updation/add?mobile="+mobile+"&amount="+totalAmount;
             this.http.get(url1).subscribe(res=>{
+              this.loading="none";
                this.toastr.success("successfully added to wallet");
+               this.router.navigate(["addmoneytowallet"]);
             },err=>{
+              this.loading="none";
               this.toastr.error(err.error.message);
+              //this.router.navigate(["walletcardpayment/{{totalAmount}}"]);
             });
          },err=>{
+          this.loading="none";
            this.toastr.error(err.error.message);
+           //this.router.navigate(["walletcardpayment/{{totalAmount}}"]);
          });
      }
     }
     verifyUserLogin()
   {
    let mobile=this.authService.getUser()?.mobile;
-   const url="http://localhost:9000/wallet/verify/user/login?mobile="+mobile;
+   const url="https://payment-apii.herokuapp.com/wallet/verify/user/login?mobile="+mobile;
    this.http.get(url).subscribe(res=>
      {
       // this.toastr.success("welcome"+this.authService.getUser()?.name);

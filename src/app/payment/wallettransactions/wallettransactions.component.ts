@@ -15,6 +15,7 @@ transactions!:any;
 // amount!:any;
  wallet!:any;
 balance!:any;
+trans!:any;
   constructor(private http:HttpClient,private toastr:ToastrService,private authService:AuthService,private router:Router) { }
 
   ngOnInit(): void {
@@ -25,7 +26,7 @@ balance!:any;
   verifyUserLogin()
   {
     let mobile=this.authService.getUser()?.mobile;
-    const url="http://localhost:9000/wallet/verify/user/login?mobile="+mobile;
+    const url="https://payment-apii.herokuapp.com/wallet/verify/user/login?mobile="+mobile;
     this.http.get(url).subscribe(res=>
       {
         
@@ -37,10 +38,17 @@ balance!:any;
   getTransactionDetails()
   {
      let mobile=this.authService.getUser()?.mobile;
-     const url="http://localhost:9000/wallet/user/all/transactions?mobile="+mobile;
+     const url="https://payment-apii.herokuapp.com/wallet/user/all/transactions?mobile="+mobile;
      this.http.get(url).subscribe(res=>
        {
-         this.transactions=res;
+          this.trans=res;
+         if(this.trans.length>0)
+         {
+           this.transactions=res;
+         }else
+         {
+          this.toastr.error("no records found");
+         }
          console.log(res);
        },err=>{
          this.toastr.error("no records found");
@@ -49,7 +57,7 @@ balance!:any;
   findWalletBalance()
   {
      let mobile = this.authService.getUser()?.mobile;
-     const url="http://localhost:9000/wallet/user/find/balance?mobile="+mobile;
+     const url="https://payment-apii.herokuapp.com/wallet/user/find/balance?mobile="+mobile;
      this.http.get(url).subscribe(res=>{
      this.wallet=res;
      this.balance=this.wallet.balance;

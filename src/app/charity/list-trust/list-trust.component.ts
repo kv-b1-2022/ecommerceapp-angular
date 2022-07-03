@@ -18,7 +18,7 @@ export class ListTrustComponent implements OnInit {
 
   getAllTrust()
   {
-    const url="http://localhost:9000/trust/list";
+    const url="https://charityapp-apii.herokuapp.com/trust/list";
 
     this.http.get(url).subscribe((res)=>{
       console.log(res);

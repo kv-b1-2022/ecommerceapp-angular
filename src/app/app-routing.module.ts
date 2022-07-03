@@ -5,13 +5,16 @@ import { HomeComponent } from './home/home.component';
 import { DeliveryStatusComponent } from './shippment/delivery-status/delivery-status.component';
 import { TrackingComponent } from './shippment/tracking/tracking.component';
 
+
+import { TransactiondetailsComponent } from './transaction/transactiondetails/transactiondetails.component';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-
-  
-  
-  
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'home', component: HomeComponent},
+  {path: 'spinner',component:SpinnerComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {path: 'transaction',component:TransactiondetailsComponent,canActivate:[AuthGuard]},
 ];
 
 @NgModule({
