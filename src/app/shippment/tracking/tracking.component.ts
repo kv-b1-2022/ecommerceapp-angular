@@ -12,7 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class TrackingComponent implements OnInit {
 
   constructor(private fb : FormBuilder,private router : Router,private route: ActivatedRoute,private http:HttpClient) { }
-
+listOrders!:any;
   customerId!:any;
   customerName!:string;
   orderId!:any;
@@ -44,8 +44,26 @@ export class TrackingComponent implements OnInit {
     });
 
   }
+  // list(){
+  //   // let obj={
+  //   //   customerId:this.customerId,
+  //   // customerName:this.customerName,
+  //   // orderId:this.orderId,
+  //   // deliveryLocation:this.deliveryLocation, 
+  //   // courierStatus:this.courierStatus};
+  //   const url="http://localhost:9000/tracking/GetAllDetails";
+  //   this.http.get(url).subscribe((res)=>{
+  //     this.listOrders=res;
+  //     console.log(res);
+  //     },
+  //   (err)=>{
+  //     console.log(err);
+  //     alert("no records found");
+  //   });
+  //   }
+  } 
   
 
-}
+// }
 
 

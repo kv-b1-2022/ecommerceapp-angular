@@ -8,12 +8,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { DeliveryStatusComponent } from './delivery-status/delivery-status.component';
+import { ListOrdersComponent } from './list-orders/list-orders.component';
 
 
 @NgModule({
   declarations: [
     TrackingComponent,
-    DeliveryStatusComponent
+    DeliveryStatusComponent,
+    ListOrdersComponent
   ],
   imports: [
     CommonModule,
