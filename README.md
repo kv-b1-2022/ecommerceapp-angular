@@ -11,11 +11,12 @@ Using our e-commerce web application, Customers are able to view a wide range of
 * Spring Boot 2.7.0
 * Node.js 17.3.0
 * Bootstrap v5.2
-* Aws S3
+* Aws S3, RDS
 * Maven
 * MySQL
-* RDS
 * Postman
+* Docker
+* Jenkin
 
 ## Features
 
@@ -35,7 +36,8 @@ Using our e-commerce web application, Customers are able to view a wide range of
 * Admin can able to manage stock details.
 * Admin can able to verify sellers KYC Document.
 * Admin can able to manage bus details.
-* user will be able to view bus details and book details.
+* Customers can able to add coupon details.
+* User will be able to view bus details and book details.
 
 ## Contributors
 
@@ -65,5 +67,3 @@ Using our e-commerce web application, Customers are able to view a wide range of
 23. Sunayanapandra
 24. Veera Varalakshmi S
 25. Antony vinothan
-
-
