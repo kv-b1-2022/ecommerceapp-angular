@@ -22,18 +22,20 @@ Using our e-commerce web application, Customers are able to view a wide range of
 * User would be able to register and login.
 * Admin would be able to view all users, sellers.
 * Admin would be able to add employees details.
+* Admin can view all oredr details.
+* Admin will be able to update the oredr features.
 * Sellers will able to register in the portal. 
 * Sellers can add product details and stock details.
-* Custumers will be able to view the product details.
+* Customers will be able to view the product details.
 * Customers will also be able to add and remove products from their shopping cart.
 * Customers will be able to checkout their order.
 * Customers will be able to complete their payment.
 * Customers can able to apply discount coupon codes.
-* add ratings for the products purchased
-* Document verification.
-* List leave information for employees.
-* Apply leave for employees. 
-* Adding status of a order.
+* Customers can able to add ratings for the products purchased.
+* Admin can able to manage stock details.
+* Admin can able to verify sellers KYC Document.
+* Admin can able to manage bus details.
+
 * Listing all the orders.
 * List all buses.
 * View bus for available.
@@ -42,9 +44,6 @@ Using our e-commerce web application, Customers are able to view a wide range of
 * Update  bus details.
 * Delete bus details.
 * View bus details.
-* Insert stock details.
-* Update stock details.
-* List stocks.
 
 ## Contributors
 
