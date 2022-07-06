@@ -38,6 +38,7 @@ Using our e-commerce web application, Customers are able to view a wide range of
 * Admin can able to manage bus details.
 * Customers can able to add coupon details.
 * User will be able to view bus details and book details.
+* Customers will be able to raise any issues.
 
 ## Contributors
 
