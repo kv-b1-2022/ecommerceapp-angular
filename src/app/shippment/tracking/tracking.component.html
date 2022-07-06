@@ -1,0 +1,29 @@
+<form (ngSubmit)="submit()">
+
+     <label for="customer id">Customer id:</label><br>
+        <input type="text" id="customer id" name="customerId" placeholder="123468" [(ngModel)]="customerId"required><br>
+
+        <label for="name">Customer Name:</label><br>
+        <input type="text" id="customer name" name="customerName" placeholder="name" [(ngModel)]="customerName"required><br>
+
+        <label for="Order id">Order Id:</label><br>
+        <input type="text" id="order id" name="orderId" placeholder="123456" [(ngModel)]="orderId"required><br>
+
+        <label for="phone no">Delivery Location:</label><br>
+        <input type="text" id="delivery location" name="deliveryLocation"  placeholder="To" [(ngModel)]="deliveryLocation"required><br>
+
+        <label for="status">Courier Status:</label><br>
+        <!-- <input type="text" id="courier status" name="courierStatus"  placeholder="status" [(ngModel)]="courierStatus"required><br> -->
+        <select name="courierStatus" [(ngModel)]="courierStatus">
+            <option value="pending">Pending</option>
+            <option value="Delivered">Delivered</option>
+        </select>
+
+        <button type="submit">Submit</button>
+        <td><a routerLink="/view-review" class="btn btn-info">view review</a></td>
+        
+      
+        
+
+</form>
+

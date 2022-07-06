@@ -1,0 +1,25 @@
+<h3>List Delivery Details</h3>
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>customerId</th>
+            <th>customerName</th>
+            <th>orderId</th>  
+            <th>deliveryLocation</th>
+            <th>courierStatus</th> 
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let ld of delivery;">
+            
+            <td>{{ld.customerId}}</td>
+            <td>{{ld.customerName}}</td>
+            <td>{{ld.orderId}}</td> 
+            <td>{{ld.deliveryLocation}}</td>
+            <td>{{ld.courierStatus}}</td>
+            <!-- <td><button type="submit" routerLink="/view-product-stock/{{stock.id}}">view</button></td> -->
+        </tr>
+    </tbody>
+</table>
