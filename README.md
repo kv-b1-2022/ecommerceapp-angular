@@ -1,6 +1,4 @@
-# EcommerceappUi
-
-This project was generated with Angular CLI version 13.3.5.
+# Ecommerceapp
 
 ## Project Description
 
@@ -13,15 +11,25 @@ Using our e-commerce web application, Customers are able to view a wide range of
 * Spring Boot 2.7.0
 * Node.js 17.3.0
 * Bootstrap v5.2
+* Aws S3
+* Maven
+* MySQL
+* RDS
+* Postman
 
 ## Features
 
-* Authendication feaures
-* list all users.
-* List all sellers.
-* List all employees.
-* Add employee details.
-* Add sellers details.
+* User would be able to register and login.
+* Admin would be able to view all users, sellers.
+* Admin would be able to add employees details.
+* Sellers will able to register in the portal. 
+* Sellers can add product details and stock details.
+* Custumers will be able to view the product details.
+* Customers will also be able to add and remove products from their shopping cart.
+* Customers will be able to checkout their order.
+* Customers will be able to complete their payment.
+* Customers can able to apply discount coupon codes.
+* add ratings for the products purchased
 * Document verification.
 * List leave information for employees.
 * Apply leave for employees. 
